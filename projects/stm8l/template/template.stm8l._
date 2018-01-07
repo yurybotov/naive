@@ -1,0 +1,60 @@
+// select (uncomment) chip family
+
+//include stm8l001x3._
+//include stm8l101x1._
+//include stm8l101x2._
+//include stm8l101x3._
+include stm8lx5xx3._
+//include stm8lx5xx4._
+//include stm8lx5xx6._
+//include stm8lx5xx8._
+
+//
+// application template
+// 
+//
+
+// interrupt vectors
+interrupt reset@0x8000: (f32) {0x82000000+start}
+interrupt trap:         (f32) {0x82000000+dumb}
+interrupt flash:        (f32) {0x82000000+dumb}
+interrupt dma1 01:      (f32) {0x82000000+dumb}
+interrupt dma1 23:      (f32) {0x82000000+dumb}
+interrupt rtc:          (f32) {0x82000000+dumb}
+interrupt exti ef:      (f32) {0x82000000+dumb}
+interrupt exti bg:      (f32) {0x82000000+dumb}
+interrupt exti dh:      (f32) {0x82000000+dumb}
+interrupt exti0:        (f32) {0x82000000+dumb}
+interrupt exti1:        (f32) {0x82000000+dumb}
+interrupt exti2:        (f32) {0x82000000+dumb}
+interrupt exti3:        (f32) {0x82000000+dumb}
+interrupt exti4:        (f32) {0x82000000+dumb}
+interrupt exti5:        (f32) {0x82000000+dumb}
+interrupt exti6:        (f32) {0x82000000+dumb}
+interrupt exti7:        (f32) {0x82000000+dumb}
+interrupt lcd:          (f32) {0x82000000+dumb}
+interrupt clktim1dac:   (f32) {0x82000000+dumb}
+interrupt comp1comp2adc1: (f32) {0x82000000+dumb}
+interrupt timusart2t:   (f32) {0x82000000+dumb}
+interrupt timusart2r:   (f32) {0x82000000+dumb}
+interrupt timusart3t:   (f32) {0x82000000+dumb}
+interrupt timusart3r:   (f32) {0x82000000+dumb}
+interrupt tim1u:        (f32) {0x82000000+dumb}
+interrupt tim1c:        (f32) {0x82000000+dumb}
+interrupt tim4u:        (f32) {0x82000000+dumb}
+interrupt spi1:        (f32) {0x82000000+dumb}
+interrupt tim5usart1t:  (f32) {0x82000000+dumb}
+interrupt tim5usart1r:  (f32) {0x82000000+dumb}
+interrupt i2cspi2:      (f32) {0x82000000+dumb}
+
+dumb: iret
+
+// main block
+start:	x = #ramend; sp = x                       	// initialise stack pointer (it is assembler!!!)
+
+
+loop:   nop                                             
+	go near loop					// forever cycle
+
+ 
+ 

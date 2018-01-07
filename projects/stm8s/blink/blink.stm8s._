@@ -1,0 +1,53 @@
+include stm8s003._
+//include stm8s105x4._
+
+//
+// classical 'blink' 30 bytes length
+// no external quarz, use hsi
+//
+
+//003
+define gpio	gpioa
+define led	3
+//105
+//define gpio	gpioe
+//define led	5
+
+define stackInit(stackponter) x=stackponter;sp=x 
+define gpioAsOutput(port,pin) portddr#pin=#1;portcr1#pin=#1
+
+
+// interrupt vectors
+interrupt reset@0x8000: (f32) {0x82000000+start} 	// set reset vector to start of flash
+// other interrupt vectors no needed for primitive blink
+
+// delay procedure
+delay60k: x = #65530                          	 	// 65530 tacts delay
+delay60local: x--
+        if z==0 delay60local 
+        ret
+
+//systemclockinit:
+//	clk eckr#0 = #1					// hse switch on
+//	clk swcr#1 = #1					// grant switch to hsi if need	
+//wait1:	if clk eckr#1==0 wait1				// ready wait
+//	clk ckdivr = #3					// prescaler
+//	clk swr = #0xb4					// select hse as source
+//wait2:	if clk swcr#3 ==0 wait2				// ready wait
+//	ret
+
+
+
+
+// main block
+start:                                            	// default entry point (see interrupt vectors in stm8s._) 
+        stackInit(#ramend)                       	// initialise stack pointer (it is assembler!!!)
+//	call systemclockinit
+        gpioAsOutput(gpio,led)                        	// for output     
+
+loop:   call near delay60k              	   	// call delay
+	! gpio odr#led     			   	// invert led
+        go near loop                               	// next...
+ 
+
+

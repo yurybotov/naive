@@ -1,0 +1,43 @@
+//
+// stack virtual mashine library
+// 
+
+//vm registers
+dsp:	(r16)	// data stack pointer
+rsp:	(r16)   // returns stack pointer
+nxt:	(r16)	// next command pointer
+tmp:	(r16)	// temporary register
+
+//vm config
+dss:	(f16)	0x100	// data stack start
+dsm:	(f16)	0x1ff	// data stack max
+rss:	(f16)	0x200	// returns stack start
+rsm:	(f16)	0x2ff	// returns stack max
+
+svminit: x=dsm; dsp=x; x=rsm; rsp=x; nxt=#0; ret	// vm initialisation on reset
+
+incdsp: dsp++; dsp++; x=dsp; x?dsm; if <u tl0; go error; tl0: ret	// increment dsp with bounds check
+decdsp: dsp--; dsp--; x=dsp; x?dss; if >u tl0; go error; 		// decrement dsp with bounds check
+incrsp: rsp++; rsp++; x=rsp; x?rsm; if <u tl0; go error; 		// increment rsp with bounds check
+decrsp: rsp--; rsp--; x=rsp; x?rss; if >u tl0; go error; 		// decrement rsp with bounds check
+
+// get to X and put from X
+peekdsp0: x=#2; go near tl1;			// get value from top of data stack
+peekdsp1: x=#4; tl1: x=dsp[x]; ret		// get value from [sp+1] data stack
+peekdsp2: x=#6; go near tl1;			// get value from [sp+2] data stack
+peekdsp3: x=#8; go near tl1;			// get value from [sp+3] data stack
+pokedsp0: y=#2; go near tl2;			// put value to top of data stack
+pokedsp1: y=#4; tl2: dsp[y]=x; ret		// put value to [sp+1] data stack
+pokedsp2: y=#6; go near tl2;			// put value to [sp+2] data stack
+pokedsp3: y=#8; go near tl2;			// put value to [sp+3] data stack
+peekrsp0: x=[rsp]; ret				// get value from top of returns stack
+pokersp0: [rsp]=x; ret				// put value to top of returns stack
+pushdsp: [dsp]=x; call decdsp; ret
+popdsp: call incdsp; x=[dsp]; ret
+pushrsp: [rsp]=x; call decrsp; ret
+poprsp: call incrsp; x=[rsp]; ret
+
+
+
+error: ret	// error signalisation
+ 

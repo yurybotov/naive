@@ -1,0 +1,1168 @@
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 1  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+   1                         stm8      
+   2                         
+   3                         
+   4                         ports     segment  byte at 5000 'ports'
+   5  005000                       gpioaodr  ds.b     
+   6  005001                       gpioaidr  ds.b     
+   7  005002                       gpioaddr  ds.b     
+   8  005003                       gpioacr1  ds.b     
+   9  005004                       gpioacr2  ds.b     
+  10  005005                       gpiobodr  ds.b     
+  11  005006                       gpiobidr  ds.b     
+  12  005007                       gpiobddr  ds.b     
+  13  005008                       gpiobcr1  ds.b     
+  14  005009                       gpiobcr2  ds.b     
+  15  00500A                       gpiocodr  ds.b     
+  16  00500B                       gpiocidr  ds.b     
+  17  00500C                       gpiocddr  ds.b     
+  18  00500D                       gpioccr1  ds.b     
+  19  00500E                       gpioccr2  ds.b     
+  20  00500F                       gpiododr  ds.b     
+  21  005010                       gpiodidr  ds.b     
+  22  005011                       gpiodddr  ds.b     
+  23  005012                       gpiodcr1  ds.b     
+  24  005013                       gpiodcr2  ds.b     
+  25  005014                       gpioeodr  ds.b     
+  26  005015                       gpioeidr  ds.b     
+  27  005016                       gpioeddr  ds.b     
+  28  005017                       gpioecr1  ds.b     
+  29  005018                       gpioecr2  ds.b     
+  30  005019                       gpiofodr  ds.b     
+  31  00501A                       gpiofidr  ds.b     
+  32  00501B                       gpiofddr  ds.b     
+  33  00501C                       gpiofcr1  ds.b     
+  34  00501D                       gpiofcr2  ds.b     
+  35  00501E                       gpiogodr  ds.b     
+  36  00501F                       gpiogidr  ds.b     
+  37  005020                       gpiogddr  ds.b     
+  38  005021                       gpiogcr1  ds.b     
+  39  005022                       gpiogcr2  ds.b     
+  40  005023                       gpiohodr  ds.b     
+  41  005024                       gpiohidr  ds.b     
+  42  005025                       gpiohddr  ds.b     
+  43  005026                       gpiohcr1  ds.b     
+  44  005027                       gpiohcr2  ds.b     
+  45  005028                       gpioiodr  ds.b     
+  46  005029                       gpioiidr  ds.b     
+  47  00502A                       gpioiddr  ds.b     
+  48  00502B                       gpioicr1  ds.b     
+  49  00502C                       gpioicr2  ds.b     
+  50                         ports     segment  byte at 505A 'ports'
+  51  00505A                       flashcr1  ds.b     
+  52  00505B                       flashcr2  ds.b     
+  53  00505C                       flashncr2  ds.b     
+  54  00505D                       flashfpr  ds.b     
+  55  00505E                       flashnfpr  ds.b     
+  56  00505F                       flashiapsr  ds.b     
+  57                         ports     segment  byte at 5062 'ports'
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 2  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+  58  005062                       flashpukr  ds.b     
+  59                         ports     segment  byte at 5064 'ports'
+  60  005064                       flashdukr  ds.b     
+  61                         ports     segment  byte at 50A0 'ports'
+  62  0050A0                       itcexticr1  ds.b     
+  63  0050A1                       itcexticr2  ds.b     
+  64                         ports     segment  byte at 50B3 'ports'
+  65  0050B3                       rstsr     ds.b     
+  66                         ports     segment  byte at 50C0 'ports'
+  67  0050C0                       clkickr   ds.b     
+  68  0050C1                       clkeckr   ds.b     
+  69                         ports     segment  byte at 50C3 'ports'
+  70  0050C3                       clkcmsr   ds.b     
+  71  0050C4                       clkswr    ds.b     
+  72  0050C5                       clkswcr   ds.b     
+  73  0050C6                       clkckdivr  ds.b     
+  74  0050C7                       clkpckenr1  ds.b     
+  75  0050C8                       clkcssr   ds.b     
+  76  0050C9                       clkccor   ds.b     
+  77  0050CA                       clkpckenr2  ds.b     
+  78  0050CB                       clkcanccr  ds.b     
+  79  0050CC                       clkhsitrimr  ds.b     
+  80  0050CD                       clkswimccr  ds.b     
+  81                         ports     segment  byte at 50D1 'ports'
+  82  0050D1                       wwdgcr    ds.b     
+  83  0050D2                       wwdgwr    ds.b     
+  84                         ports     segment  byte at 50E0 'ports'
+  85  0050E0                       iwdgkr    ds.b     
+  86  0050E1                       iwdgpr    ds.b     
+  87  0050E2                       iwdgrlr   ds.b     
+  88                         ports     segment  byte at 50F0 'ports'
+  89  0050F0                       awucsr1   ds.b     
+  90  0050F1                       awuapr    ds.b     
+  91  0050F2                       awutbr    ds.b     
+  92  0050F3                       beepcsr   ds.b     
+  93                         ports     segment  byte at 5200 'ports'
+  94  005200                       spicr1    ds.b     
+  95  005201                       spicr2    ds.b     
+  96  005202                       spiicr    ds.b     
+  97  005203                       spisr     ds.b     
+  98  005204                       spidr     ds.b     
+  99  005205                       spicrcpr  ds.b     
+ 100  005206                       spirxcrcr  ds.b     
+ 101  005207                       spitxcrcr  ds.b     
+ 102                         ports     segment  byte at 5210 'ports'
+ 103  005210                       i2ccr1    ds.b     
+ 104  005211                       i2ccr2    ds.b     
+ 105  005212                       i2cfreqr  ds.b     
+ 106  005213                       i2coarl   ds.b     
+ 107  005214                       i2coarh   ds.b     
+ 108                         ports     segment  byte at 5216 'ports'
+ 109  005216                       i2cdr     ds.b     
+ 110  005217                       i2csr1    ds.b     
+ 111  005218                       i2csr2    ds.b     
+ 112  005219                       i2csr3    ds.b     
+ 113  00521A                       i2citr    ds.b     
+ 114  00521B                       i2cccrl   ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 3  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 115  00521C                       i2cccrh   ds.b     
+ 116  00521D                       i2ctriser  ds.b     
+ 117                         ports     segment  byte at 5230 'ports'
+ 118  005230                       uart1sr   ds.b     
+ 119  005231                       uart1dr   ds.b     
+ 120  005232                       uart1brr1  ds.b     
+ 121  005233                       uart1brr2  ds.b     
+ 122  005234                       uart1cr1  ds.b     
+ 123  005235                       uart1cr2  ds.b     
+ 124  005236                       uart1cr3  ds.b     
+ 125  005237                       uart1cr4  ds.b     
+ 126  005238                       uart1cr5  ds.b     
+ 127  005239                       uart1gtr  ds.b     
+ 128  00523A                       uart1pstr  ds.b     
+ 129                         ports     segment  byte at 5240 'ports'
+ 130  005240                       uart3sr   ds.b     
+ 131  005241                       uart3dr   ds.b     
+ 132  005242                       uart3brr1  ds.b     
+ 133  005243                       uart3brr2  ds.b     
+ 134  005244                       uart3cr1  ds.b     
+ 135  005245                       uart3cr2  ds.b     
+ 136  005246                       uart3cr3  ds.b     
+ 137  005247                       uart3cr4  ds.b     
+ 138                         ports     segment  byte at 5249 'ports'
+ 139  005249                       uart3cr6  ds.b     
+ 140                         ports     segment  byte at 5250 'ports'
+ 141  005250                       tim1cr1   ds.b     
+ 142  005251                       tim1cr2   ds.b     
+ 143  005252                       tim1smcr  ds.b     
+ 144  005253                       tim1etr   ds.b     
+ 145  005254                       tim1ier   ds.b     
+ 146  005255                       tim1sr1   ds.b     
+ 147  005256                       tim1sr2   ds.b     
+ 148  005257                       tim1egr   ds.b     
+ 149  005258                       tim1ccmr1  ds.b     
+ 150  005259                       tim1ccmr2  ds.b     
+ 151  00525A                       tim1ccmr3  ds.b     
+ 152  00525B                       tim1ccmr4  ds.b     
+ 153  00525C                       tim1ccer1  ds.b     
+ 154  00525D                       tim1ccer2  ds.b     
+ 155  00525E                       tim1cntrh  ds.b     
+ 156  00525F                       tim1cntrl  ds.b     
+ 157  005260                       tim1pscrh  ds.b     
+ 158  005261                       tim1pscrl  ds.b     
+ 159  005262                       tim1arrh  ds.b     
+ 160  005263                       tim1arrl  ds.b     
+ 161  005264                       tim1rcr   ds.b     
+ 162  005265                       tim1ccr1h  ds.b     
+ 163  005266                       tim1ccr1l  ds.b     
+ 164  005267                       tim1ccr2h  ds.b     
+ 165  005268                       tim1ccr2l  ds.b     
+ 166  005269                       tim1ccr3h  ds.b     
+ 167  00526A                       tim1ccr3l  ds.b     
+ 168  00526B                       tim1ccr4h  ds.b     
+ 169  00526C                       tim1ccr4l  ds.b     
+ 170  00526D                       tim1bkr   ds.b     
+ 171  00526E                       tim1dtr   ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 4  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 172  00526F                       tim1oisr  ds.b     
+ 173                         ports     segment  byte at 5300 'ports'
+ 174  005300                       tim2cr1   ds.b     
+ 175  005301                       tim2ier   ds.b     
+ 176  005302                       tim2sr1   ds.b     
+ 177  005303                       tim2sr2   ds.b     
+ 178  005304                       tim2egr   ds.b     
+ 179  005305                       tim2ccmr1  ds.b     
+ 180  005306                       tim2ccmr2  ds.b     
+ 181  005307                       tim2ccmr3  ds.b     
+ 182  005308                       tim2ccer1  ds.b     
+ 183  005309                       tim2ccer2  ds.b     
+ 184  00530A                       tim2cntrh  ds.b     
+ 185  00530B                       tim2cntrl  ds.b     
+ 186  00530C                       tim2pscr  ds.b     
+ 187  00530D                       tim2arrh  ds.b     
+ 188  00530E                       tim2arrl  ds.b     
+ 189  00530F                       tim2ccr1h  ds.b     
+ 190  005310                       tim2ccr1l  ds.b     
+ 191  005311                       tim2ccr2h  ds.b     
+ 192  005312                       tim2ccr2l  ds.b     
+ 193  005313                       tim2ccr3h  ds.b     
+ 194  005314                       tim2ccr3l  ds.b     
+ 195                         ports     segment  byte at 5320 'ports'
+ 196  005320                       tim3cr1   ds.b     
+ 197  005321                       tim3ier   ds.b     
+ 198  005322                       tim3sr1   ds.b     
+ 199  005323                       tim3sr2   ds.b     
+ 200  005324                       tim3egr   ds.b     
+ 201  005325                       tim3ccmr1  ds.b     
+ 202  005326                       tim3ccmr2  ds.b     
+ 203  005327                       tim3ccer1  ds.b     
+ 204  005328                       tim3cntrh  ds.b     
+ 205  005329                       tim3cntrl  ds.b     
+ 206  00532A                       tim3pscr  ds.b     
+ 207  00532B                       tim3arrh  ds.b     
+ 208  00532C                       tim3arrl  ds.b     
+ 209  00532D                       tim3ccr1h  ds.b     
+ 210  00532E                       tim3ccr1l  ds.b     
+ 211  00532F                       tim3ccr2h  ds.b     
+ 212  005330                       tim3ccr2l  ds.b     
+ 213                         ports     segment  byte at 5340 'ports'
+ 214  005340                       tim4cr1   ds.b     
+ 215  005341                       tim4ier   ds.b     
+ 216  005342                       tim4sr    ds.b     
+ 217  005343                       tim4egr   ds.b     
+ 218  005344                       tim4cntr  ds.b     
+ 219  005345                       tim4pscr  ds.b     
+ 220  005346                       tim4arr   ds.b     
+ 221                         ports     segment  byte at 5400 'ports'
+ 222  005400                       adc2csr   ds.b     
+ 223  005401                       adc2cr1   ds.b     
+ 224  005402                       adc2cr2   ds.b     
+ 225  005403                       adc2cr3   ds.b     
+ 226  005404                       adc2drh   ds.b     
+ 227  005405                       adc2drl   ds.b     
+ 228  005406                       adc2tdrh  ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 5  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 229  005407                       adc2tdrl  ds.b     
+ 230                         ports     segment  byte at 5420 'ports'
+ 231  005420                       canmcr    ds.b     
+ 232  005421                       canmsr    ds.b     
+ 233  005422                       cantsr    ds.b     
+ 234  005423                       cantpr    ds.b     
+ 235  005424                       canrfr    ds.b     
+ 236  005425                       canier    ds.b     
+ 237  005426                       candgr    ds.b     
+ 238  005427                       canfpsr   ds.b     
+ 239  005428                       canp0     ds.b     
+ 240  005429                       canp1     ds.b     
+ 241  00542A                       canp2     ds.b     
+ 242  00542B                       canp3     ds.b     
+ 243  00542C                       canp4     ds.b     
+ 244  00542D                       canp5     ds.b     
+ 245  00542E                       canp6     ds.b     
+ 246  00542F                       canp7     ds.b     
+ 247  005430                       canp8     ds.b     
+ 248  005431                       canp9     ds.b     
+ 249  005432                       canpa     ds.b     
+ 250  005433                       canpb     ds.b     
+ 251  005434                       canpc     ds.b     
+ 252  005435                       canpd     ds.b     
+ 253  005436                       canpe     ds.b     
+ 254  005437                       canpf     ds.b     
+ 255                         ports     segment  byte at 48CD 'ports'
+ 256  0048CD                       unicidx   ds.w     
+ 257  0048CF                       unicidy   ds.w     
+ 258  0048D1                       unicidwafer  ds.b     
+ 259  0048D2                       unicidlot0  ds.b     
+ 260  0048D3                       unicidlot1  ds.b     
+ 261  0048D4                       unicidlot2  ds.b     
+ 262  0048D5                       unicidlot3  ds.b     
+ 263  0048D6                       unicidlot4  ds.b     
+ 264  0048D7                       unicidlot5  ds.b     
+ 265  0048D8                       unicidlot6  ds.b     
+ 266                         ports     segment  byte at 4800 'ports'
+ 267  004800                       optionopt0  ds.b     
+ 268  004801                       optionopt1  ds.b     
+ 269  004802                       optionnopt1  ds.b     
+ 270  004803                       optionopt2  ds.b     
+ 271  004804                       optionnopt2  ds.b     
+ 272  004805                       optionopt3  ds.b     
+ 273  004806                       optionnopt3  ds.b     
+ 274  004807                       optionopt4  ds.b     
+ 275  004808                       optionnopt4  ds.b     
+ 276  004809                       optionopt5  ds.b     
+ 277  00480A                       optionnopt5  ds.b     
+ 278  00480B                       optionopt6  ds.b     
+ 279  00480C                       optionnopt6  ds.b     
+ 280  00480D                       optionopt7  ds.b     
+ 281  00480E                       optionnopt7  ds.b     
+ 282                         ports     segment  byte at 487E 'ports'
+ 283  00487E                       bootloaderoptbl  ds.b     
+ 284  00487F                       bootloadernoptbl  ds.b     
+ 285                         ports     segment  byte at 7F00 'ports'
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 6  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 286  007F00                       cpua      ds.b     
+ 287  007F01                       cpupce    ds.b     
+ 288  007F02                       cpupch    ds.b     
+ 289  007F03                       cpupcl    ds.b     
+ 290  007F04                       cpuxh     ds.b     
+ 291  007F05                       cpuxl     ds.b     
+ 292  007F06                       cpuyh     ds.b     
+ 293  007F07                       cpuyl     ds.b     
+ 294  007F08                       cpusph    ds.b     
+ 295  007F09                       cpuspl    ds.b     
+ 296  007F0A                       cpuccr    ds.b     
+ 297                         ports     segment  byte at 7F60 'ports'
+ 298  007F60                       cpugcr    ds.b     
+ 299                         ports     segment  byte at 7F70 'ports'
+ 300  007F70                       itcspr1   ds.b     
+ 301  007F71                       itcspr2   ds.b     
+ 302  007F72                       itcspr3   ds.b     
+ 303  007F73                       itcspr4   ds.b     
+ 304  007F74                       itcspr5   ds.b     
+ 305  007F75                       itcspr6   ds.b     
+ 306  007F76                       itcspr7   ds.b     
+ 307  007F77                       itcspr8   ds.b     
+ 308                         ports     segment  byte at 7F80 'ports'
+ 309  007F80                       swimcsr   ds.b     
+ 310                         ports     segment  byte at 7F90 'ports'
+ 311  007F90                       dmbk1re   ds.b     
+ 312  007F91                       dmbk1rh   ds.b     
+ 313  007F92                       dmbk1rl   ds.b     
+ 314  007F93                       dmbk2re   ds.b     
+ 315  007F94                       dmbk2rh   ds.b     
+ 316  007F95                       dmbk2rl   ds.b     
+ 317  007F96                       dmcr1     ds.b     
+ 318  007F97                       dmcr2     ds.b     
+ 319  007F98                       dmcsr1    ds.b     
+ 320  007F99                       dmcsr2    ds.b     
+ 321  007F9A                       dmenfctr  ds.b     
+ 322                         flash     segment  byte at 8000-9FFF 'rom'
+ 323  008000 R 00000000            interruptreset  dc.l     {$82000000+start}
+ 324  008004 R 00000000            interrupttrap  dc.l     {$82000000+sweet16}
+ 325  008008   8200806C            interrupttli  dc.l     {$82000000+dumb}
+ 326  00800C   8200806C            interruptawu  dc.l     {$82000000+dumb}
+ 327  008010   8200806C            interruptclk  dc.l     {$82000000+dumb}
+ 328  008014   8200806C            interruptexti0  dc.l     {$82000000+dumb}
+ 329  008018   8200806C            interruptexti1  dc.l     {$82000000+dumb}
+ 330  00801C   8200806C            interruptexti2  dc.l     {$82000000+dumb}
+ 331  008020   8200806C            interruptexti3  dc.l     {$82000000+dumb}
+ 332  008024   8200806C            interruptexti4  dc.l     {$82000000+dumb}
+ 333  008028   8200806C            interruptcanrx  dc.l     {$82000000+dumb}
+ 334  00802C   8200806C            interruptcantx  dc.l     {$82000000+dumb}
+ 335  008030   8200806C            interruptspi  dc.l     {$82000000+dumb}
+ 336  008034   8200806C            interrupttim1u  dc.l     {$82000000+dumb}
+ 337  008038   8200806C            interrupttim1c  dc.l     {$82000000+dumb}
+ 338  00803C   8200806C            interrupttim2u  dc.l     {$82000000+dumb}
+ 339  008040   8200806C            interrupttim2c  dc.l     {$82000000+dumb}
+ 340  008044   8200806C            interrupttim3u  dc.l     {$82000000+dumb}
+ 341  008048   8200806C            interrupttim3c  dc.l     {$82000000+dumb}
+ 342  00804C   8200806C            interruptuart1tx  dc.l     {$82000000+dumb}
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 7  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 343  008050   8200806C            interruptuart1rx  dc.l     {$82000000+dumb}
+ 344  008054   8200806C            interrupti2c  dc.l     {$82000000+dumb}
+ 345  008058   8200806C            interruptuart3tx  dc.l     {$82000000+dumb}
+ 346  00805C   8200806C            interruptuart3rx  dc.l     {$82000000+dumb}
+ 347  008060   8200806C            interruptadc1  dc.l     {$82000000+dumb}
+ 348  008064   8200806C            interrupttim4u  dc.l     {$82000000+dumb}
+ 349  008068   8200806C            interruptflash  dc.l     {$82000000+dumb}
+ 350                         dumb      
+ 351  00806C   80                            iret                   ; iret in sweet16.stm8s._ : 45
+ 352                         regs      segment  byte at 0-FF 'ram0'
+ 353  000000                       r0        ds.w     
+ 354  000002                       r1        ds.w     
+ 355  000004                       r2        ds.w     
+ 356  000006                       r3        ds.w     
+ 357  000008                       r4        ds.w     
+ 358  00000A                       r5        ds.w     
+ 359  00000C                       r6        ds.w     
+ 360  00000E                       r7        ds.w     
+ 361  000010                       r8        ds.w     
+ 362  000012                       r9        ds.w     
+ 363  000014                       ra        ds.w     
+ 364  000016                       rb        ds.w     
+ 365  000018                       rc        ds.w     
+ 366  00001A                       rd        ds.w     
+ 367  00001C                       re        ds.w     
+ 368  00001E                       rf        ds.w     
+ 369  000020                       sw_stack  ds.b     15
+ 370  00002F                       sw_tos    ds.b     
+ 371                         flash     segment  byte 'rom'
+ 372  000000 R 0000                lcmds     dc.w     sw_rtn
+ 373  000002 R 0000                          dc.w     sw_br
+ 374  000004 R 0000                          dc.w     sw_bnc
+ 375  000006 R 0000                          dc.w     sw_bc
+ 376  000008 R 0000                          dc.w     sw_bp
+ 377  00000A R 0000                          dc.w     sw_bm
+ 378  00000C R 0000                          dc.w     sw_bz
+ 379  00000E R 0000                          dc.w     sw_bnz
+ 380  000010 R 0000                          dc.w     sw_bm1
+ 381  000012 R 0000                          dc.w     sw_bnm1
+ 382  000014 R 0000                          dc.w     sw_bk
+ 383  000016 R 0000                          dc.w     sw_rs
+ 384  000018 R 0000                          dc.w     sw_bs
+ 385  00001A R 0000                          dc.w     sw_err
+ 386  00001C R 0000                          dc.w     sw_err
+ 387  00001E R 0000                          dc.w     sw_err
+ 388  000020 R 0000                scmds     dc.w     sw_set
+ 389  000022 R 0000                          dc.w     sw_ldr
+ 390  000024 R 0000                          dc.w     sw_str
+ 391  000026 R 0000                          dc.w     sw_ldi
+ 392  000028 R 0000                          dc.w     sw_sti
+ 393  00002A R 0000                          dc.w     sw_ldd
+ 394  00002C R 0000                          dc.w     sw_std
+ 395  00002E R 0000                          dc.w     sw_pop
+ 396  000030 R 0000                          dc.w     sw_stp
+ 397  000032 R 0000                          dc.w     sw_add
+ 398  000034 R 0000                          dc.w     sw_sub
+ 399  000036 R 0000                          dc.w     sw_popd
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 8  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 400  000038 R 0000                          dc.w     sw_cpr
+ 401  00003A R 0000                          dc.w     sw_inr
+ 402  00003C R 0000                          dc.w     sw_dcr
+ 403  00003E R 0000                          dc.w     sw_err
+ 404                         sw_rtn    
+ 405  000040   BE1E                          ldw      x,rf          ; x=rf in sweet16.stm8s._ : 64
+ 406  000042   5C                            incw     x             ; x++ in sweet16.stm8s._ : 64
+ 407  000043   1F08                          ldw      (8,sp),x      ; sp[8]=x in sweet16.stm8s._ : 
+                                                                ;64
+ 408  000045   80                            iret                   ; iret in sweet16.stm8s._ : 64
+ 409                         sw_br     
+ 410  000046 R AD68                          callr    next1x        ; callnearnext1x in 
+                                                                ;sweet16.stm8s._ : 65
+ 411  000048   72B9001E                      addw     y,rf          ; y+=rf in sweet16.stm8s._ : 65
+ 412  00004C   90BF1E                        ldw      rf,y          ; rf=y in sweet16.stm8s._ : 65
+ 413  00004F R 2033                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 65
+ 414                         sw_bnc    
+ 415  000051 R 2031                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 66
+ 416                         sw_bc     
+ 417  000053 R 202F                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 67
+ 418                         sw_bp     
+ 419  000055 R 202D                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 68
+ 420                         sw_bm     
+ 421  000057 R 202B                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 69
+ 422                         sw_bz     
+ 423  000059 R 2029                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 70
+ 424                         sw_bnz    
+ 425  00005B R 2027                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 71
+ 426                         sw_bm1    
+ 427  00005D R 2025                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 72
+ 428                         sw_bnm1   
+ 429  00005F R 2023                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 73
+ 430                         sw_bk     
+ 431  000061 R 2021                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 74
+ 432                         sw_rs     
+ 433  000063   3C18                          inc      rc            ; rc++ in sweet16.stm8s._ : 75
+ 434  000065   3C18                          inc      rc            ; rc++ in sweet16.stm8s._ : 75
+ 435  000067   92CE18                        ldw      x,[rc.w]      ; x=[rc] in sweet16.stm8s._ : 
+                                                                ;75
+ 436  00006A   BF1E                          ldw      rf,x          ; rf=x in sweet16.stm8s._ : 75
+ 437  00006C R 2016                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 75
+ 438                         sw_bs     
+ 439  00006E R AD40                          callr    next1x        ; callnearnext1x in 
+                                                                ;sweet16.stm8s._ : 76
+ 440  000070   BE1E                          ldw      x,rf          ; x=rf in sweet16.stm8s._ : 76
+ 441  000072   92CF18                        ldw      [rc.w],x      ; [rc]=x in sweet16.stm8s._ : 
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 9  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+                                                                ;76
+ 442  000075   3A18                          dec      rc            ; rc-- in sweet16.stm8s._ : 76
+ 443  000077   3A18                          dec      rc            ; rc-- in sweet16.stm8s._ : 76
+ 444  000079   72B9001E                      addw     y,rf          ; y+=rf in sweet16.stm8s._ : 76
+ 445  00007D   90BF1E                        ldw      rf,y          ; rf=y in sweet16.stm8s._ : 76
+ 446  000080 R 2002                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 76
+ 447                         sw_err    
+ 448  000082 R 2000                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 77
+ 449                         sweetnext  
+ 450  000084   BE1E                          ldw      x,rf          ; x=rf in sweet16.stm8s._ : 79
+ 451  000086   5C                            incw     x             ; x++ in sweet16.stm8s._ : 79
+ 452  000087   F6                            ld       a,(x)         ; a=[x] in sweet16.stm8s._ : 79
+ 453  000088   A5F0                          bcp      a,#$f0        ; a&?#0xf0 in sweet16.stm8s._ : 
+                                                                ;79
+ 454  00008A R 260A                          jrne     shortcmd      ; ifz==0shortcmd in 
+                                                                ;sweet16.stm8s._ : 80
+ 455  00008C   88                            push     a             ; pusha in sweet16.stm8s._ : 81
+ 456  00008D   4E                            swap     a             ; swapa in sweet16.stm8s._ : 81
+ 457  00008E   5F                            clrw     x             ; x=#0 in sweet16.stm8s._ : 81
+ 458  00008F   A40F                          and      a,#$0f        ; a&=#0x0f in sweet16.stm8s._ : 
+                                                                ;81
+ 459  000091   97                            ld       xl,a          ; xl=a in sweet16.stm8s._ : 81
+ 460  000092   84                            pop      a             ; popa in sweet16.stm8s._ : 81
+ 461  000093 R DC0000                        jp       (lcmds,x)     ; golcmds[x] in sweet16.stm8s._ 
+                                                                ;: 81
+ 462                         shortcmd  
+ 463  000096   5F                            clrw     x             ; x=#0 in sweet16.stm8s._ : 82
+ 464  000097   B40F                          and      a,$0f         ; a&=0x0f in sweet16.stm8s._ : 
+                                                                ;82
+ 465  000099   97                            ld       xl,a          ; xl=a in sweet16.stm8s._ : 82
+ 466  00009A R DC0000                        jp       (scmds,x)     ; goscmds[x] in sweet16.stm8s._ 
+                                                                ;: 82
+ 467                         next2x    
+ 468  00009D   BE1E                          ldw      x,rf          ; x=rf in sweet16.stm8s._ : 83
+ 469  00009F   5C                            incw     x             ; x++ in sweet16.stm8s._ : 83
+ 470  0000A0   5C                            incw     x             ; x++ in sweet16.stm8s._ : 83
+ 471  0000A1   5C                            incw     x             ; x++ in sweet16.stm8s._ : 83
+ 472  0000A2   BF1E                          ldw      rf,x          ; rf=x in sweet16.stm8s._ : 83
+ 473  0000A4   5A                            decw     x             ; x-- in sweet16.stm8s._ : 83
+ 474  0000A5   5A                            decw     x             ; x-- in sweet16.stm8s._ : 83
+ 475  0000A6   FE                            ldw      x,(x)         ; x=[x] in sweet16.stm8s._ : 83
+ 476  0000A7   A40F                          and      a,#$0f        ; a&=#0x0f in sweet16.stm8s._ : 
+                                                                ;83
+ 477  0000A9   905F                          clrw     y             ; y=#0 in sweet16.stm8s._ : 83
+ 478  0000AB   9097                          ld       yl,a          ; yl=a in sweet16.stm8s._ : 83
+ 479  0000AD   9058                          sllw     y             ; c<<0y in sweet16.stm8s._ : 83
+ 480  0000AF   81                            ret                    ; ret in sweet16.stm8s._ : 83
+ 481                         next1x    
+ 482  0000B0   BE1E                          ldw      x,rf          ; x=rf in sweet16.stm8s._ : 84
+ 483  0000B2   5C                            incw     x             ; x++ in sweet16.stm8s._ : 84
+ 484  0000B3   5C                            incw     x             ; x++ in sweet16.stm8s._ : 84
+ 485  0000B4   BF1E                          ldw      rf,x          ; rf=x in sweet16.stm8s._ : 84
+ 486  0000B6   5A                            decw     x             ; x-- in sweet16.stm8s._ : 84
+ 487  0000B7   F6                            ld       a,(x)         ; a=[x] in sweet16.stm8s._ : 84
+ 488  0000B8   905F                          clrw     y             ; y=#0 in sweet16.stm8s._ : 84
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 10  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 489  0000BA   9097                          ld       yl,a          ; yl=a in sweet16.stm8s._ : 84
+ 490  0000BC   81                            ret                    ; ret in sweet16.stm8s._ : 84
+ 491                         cur1x     
+ 492  0000BD   A40F                          and      a,#$0f        ; a&=#0x0f in sweet16.stm8s._ : 
+                                                                ;85
+ 493  0000BF   905F                          clrw     y             ; y=#0 in sweet16.stm8s._ : 85
+ 494  0000C1   9097                          ld       yl,a          ; yl=a in sweet16.stm8s._ : 85
+ 495  0000C3   9058                          sllw     y             ; c<<0y in sweet16.stm8s._ : 85
+ 496  0000C5   81                            ret                    ; ret in sweet16.stm8s._ : 85
+ 497                         sw_set    
+ 498  0000C6 R ADD5                          callr    next2x        ; callnearnext2x in 
+                                                                ;sweet16.stm8s._ : 87
+ 499  0000C8   90EF00                        ldw      (r0,y),x      ; r0[y]=x in sweet16.stm8s._ : 
+                                                                ;87
+ 500  0000CB R 20B7                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 87
+ 501                         sw_ldr    
+ 502  0000CD R ADEE                          callr    cur1x         ; callnearcur1x in 
+                                                                ;sweet16.stm8s._ : 88
+ 503  0000CF   90EE00                        ldw      y,(r0,y)      ; y=r0[y] in sweet16.stm8s._ : 
+                                                                ;88
+ 504  0000D2   90BF00                        ldw      r0,y          ; r0=y in sweet16.stm8s._ : 88
+ 505  0000D5 R 20AD                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 88
+ 506                         sw_str    
+ 507  0000D7 R ADE4                          callr    cur1x         ; callnearcur1x in 
+                                                                ;sweet16.stm8s._ : 89
+ 508  0000D9   BE00                          ldw      x,r0          ; x=r0 in sweet16.stm8s._ : 89
+ 509  0000DB   90EF00                        ldw      (r0,y),x      ; r0[y]=x in sweet16.stm8s._ : 
+                                                                ;89
+ 510  0000DE R 20A4                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 89
+ 511                         sw_ldi    
+ 512  0000E0 R ADDB                          callr    cur1x         ; callnearcur1x in 
+                                                                ;sweet16.stm8s._ : 90
+ 513  0000E2   91D600                        ld       a,([r0.w],y)  ; a=[r0[y]] in sweet16.stm8s._ :
+                                                                ; 90
+ 514  0000E5   5F                            clrw     x             ; x=#0 in sweet16.stm8s._ : 90
+ 515  0000E6   97                            ld       xl,a          ; xl=a in sweet16.stm8s._ : 90
+ 516  0000E7   BF00                          ldw      r0,x          ; r0=x in sweet16.stm8s._ : 90
+ 517  0000E9   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;90
+ 518  0000EC R 2096                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 90
+ 519                         sw_sti    
+ 520  0000EE R ADCD                          callr    cur1x         ; callnearcur1x in 
+                                                                ;sweet16.stm8s._ : 91
+ 521  0000F0   BE00                          ldw      x,r0          ; x=r0 in sweet16.stm8s._ : 91
+ 522  0000F2   9F                            ld       a,xl          ; a=xl in sweet16.stm8s._ : 91
+ 523  0000F3   91D700                        ld       ([r0.w],y),a  ; [r0[y]]=a in sweet16.stm8s._ :
+                                                                ; 91
+ 524  0000F6   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;91
+ 525  0000F9 R 2089                          jra      sweetnext     ; gonearsweetnext in 
+                                                                ;sweet16.stm8s._ : 91
+ 526                         sw_ldd    
+ 527  0000FB R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 11  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+                                                                ; 92
+ 528  0000FE   91DE00                        ldw      y,([r0.w],y)  ; y=[r0[y]] in sweet16.stm8s._ :
+                                                                ; 92
+ 529  000101   90BF00                        ldw      r0,y          ; r0=y in sweet16.stm8s._ : 92
+ 530  000104   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;92
+ 531  000107   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;92
+ 532  00010A R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 92
+ 533                         sw_std    
+ 534  00010D R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 93
+ 535  000110   BE00                          ldw      x,r0          ; x=r0 in sweet16.stm8s._ : 93
+ 536  000112   91DF00                        ldw      ([r0.w],y),x  ; [r0[y]]=x in sweet16.stm8s._ :
+                                                                ; 93
+ 537                                   inc      (Or0,y)       ; Or0[y]++ in sweet16.stm8s._ : 
+                                                                ;93
+ 538  000115   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;93
+ 539  000118 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 93
+ 540                         sw_pop    
+ 541  00011B R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 94
+ 542  00011E   91D600                        ld       a,([r0.w],y)  ; a=[r0[y]] in sweet16.stm8s._ :
+                                                                ; 94
+ 543  000121   5F                            clrw     x             ; x=#0 in sweet16.stm8s._ : 94
+ 544  000122   97                            ld       xl,a          ; xl=a in sweet16.stm8s._ : 94
+ 545  000123   BF00                          ldw      r0,x          ; r0=x in sweet16.stm8s._ : 94
+ 546  000125   906A00                        dec      (r0,y)        ; r0[y]-- in sweet16.stm8s._ : 
+                                                                ;94
+ 547  000128 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 94
+ 548                         sw_stp    
+ 549  00012B R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 95
+ 550  00012E   BE00                          ldw      x,r0          ; x=r0 in sweet16.stm8s._ : 95
+ 551  000130   9F                            ld       a,xl          ; a=xl in sweet16.stm8s._ : 95
+ 552  000131   91D700                        ld       ([r0.w],y),a  ; [r0[y]]=a in sweet16.stm8s._ :
+                                                                ; 95
+ 553  000134   906A00                        dec      (r0,y)        ; r0[y]-- in sweet16.stm8s._ : 
+                                                                ;95
+ 554  000137 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 95
+ 555                         sw_add    
+ 556  00013A R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 96
+ 557  00013D   90EE00                        ldw      y,(r0,y)      ; y=r0[y] in sweet16.stm8s._ : 
+                                                                ;96
+ 558  000140   72B90000                      addw     y,r0          ; y+=r0 in sweet16.stm8s._ : 96
+ 559  000144   90BF00                        ldw      r0,y          ; r0=y in sweet16.stm8s._ : 96
+ 560  000147 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 96
+ 561                         sw_sub    
+ 562  00014A R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 97
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 12  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 563  00014D   90EE00                        ldw      y,(r0,y)      ; y=r0[y] in sweet16.stm8s._ : 
+                                                                ;97
+ 564  000150   72B20000                      subw     y,r0          ; y-=r0 in sweet16.stm8s._ : 97
+ 565  000154   9050                          negw     y             ; -y in sweet16.stm8s._ : 97
+ 566  000156   90BF00                        ldw      r0,y          ; r0=y in sweet16.stm8s._ : 97
+ 567  000159 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 97
+ 568                         sw_popd   
+ 569  00015C R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 98
+ 570  00015F   906A00                        dec      (r0,y)        ; r0[y]-- in sweet16.stm8s._ : 
+                                                                ;98
+ 571  000162   906A00                        dec      (r0,y)        ; r0[y]-- in sweet16.stm8s._ : 
+                                                                ;98
+ 572  000165   BE00                          ldw      x,r0          ; x=r0 in sweet16.stm8s._ : 98
+ 573  000167   91DF00                        ldw      ([r0.w],y),x  ; [r0[y]]=x in sweet16.stm8s._ :
+                                                                ; 98
+ 574  00016A R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 98
+ 575                         sw_cpr    
+ 576  00016D R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 99
+ 577  000170   90EE00                        ldw      y,(r0,y)      ; y=r0[y] in sweet16.stm8s._ : 
+                                                                ;99
+ 578  000173   90B300                        cpw      y,r0          ; y?r0 in sweet16.stm8s._ : 99
+ 579  000176   8A                            push     cc            ; pushcc in sweet16.stm8s._ : 
+                                                                ;99
+ 580  000177   84                            pop      a             ; popa in sweet16.stm8s._ : 99
+ 581  000178   5F                            clrw     x             ; x=#0 in sweet16.stm8s._ : 99
+ 582  000179   97                            ld       xl,a          ; xl=a in sweet16.stm8s._ : 99
+ 583  00017A   BF1C                          ldw      re,x          ; re=x in sweet16.stm8s._ : 99
+ 584  00017C R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 99
+ 585                         sw_inr    
+ 586  00017F R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 100
+ 587  000182   906C00                        inc      (r0,y)        ; r0[y]++ in sweet16.stm8s._ : 
+                                                                ;100
+ 588  000185 R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 100
+ 589                         sw_dcr    
+ 590  000188 R CD0000                        call     cur1x         ; callcur1x in sweet16.stm8s._ :
+                                                                ; 101
+ 591  00018B   906A00                        dec      (r0,y)        ; r0[y]-- in sweet16.stm8s._ : 
+                                                                ;101
+ 592  00018E R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 101
+ 593                         sweet16   
+ 594  000191   1E08                          ldw      x,(8,sp)      ; x=sp[8] in sweet16.stm8s._ : 
+                                                                ;104
+ 595  000193   BF1E                          ldw      rf,x          ; rf=x in sweet16.stm8s._ : 104
+ 596  000195   AE0020                        ldw      x,#sw_stack   ; x=#sw_stack in sweet16.stm8s._
+                                                                ; : 105
+ 597  000198   BF18                          ldw      rc,x          ; rc=x in sweet16.stm8s._ : 105
+ 598  00019A R CC0000                        jp       sweetnext     ; gosweetnext in sweet16.stm8s._
+                                                                ; : 106
+ 599                         start     
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 13  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+ 600  00019D   AE03FF                        ldw      x,#$03ff      ; x=#0x03ff in sweet16.stm8s._ :
+                                                                ; 109
+ 601  0001A0   94                            ldw      sp,x          ; sp=x in sweet16.stm8s._ : 109
+ 602  0001A1   83                            trap                   ; trap in sweet16.stm8s._ : 111
+ 603  0001A2   1055AA                        dc.b     $10,$55,$aa
+ 604  0001A5   00                            dc.b     $00
+ 605                         loop      
+ 606  0001A6   9D                            nop                    ; nop in sweet16.stm8s._ : 115
+ 607  0001A7 R CC0000                        jp       loop          ; goloop in sweet16.stm8s._ : 
+                                                                ;119
+ 608                         
+ 609  0001AA                                 end      
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 14  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
+
+awucsr1                               50F0         no  WORD  Internal   ABS     89  private  bss          1     1  -
+awuapr                                50F1         no  WORD  Internal   ABS     90  private  bss          1     1  -
+awutbr                                50F2         no  WORD  Internal   ABS     91  private  bss          1     1  -
+adc2csr                               5400         no  WORD  Internal   ABS    222  private  bss          1     1  -
+adc2cr1                               5401         no  WORD  Internal   ABS    223  private  bss          1     1  -
+adc2cr2                               5402         no  WORD  Internal   ABS    224  private  bss          1     1  -
+adc2cr3                               5403         no  WORD  Internal   ABS    225  private  bss          1     1  -
+adc2drh                               5404         no  WORD  Internal   ABS    226  private  bss          1     1  -
+adc2drl                               5405         no  WORD  Internal   ABS    227  private  bss          1     1  -
+adc2tdrh                              5406         no  WORD  Internal   ABS    228  private  bss          1     1  -
+adc2tdrl                              5407         no  WORD  Internal   ABS    229  private  bss          1     1  -
+
+beepcsr                               50F3         no  WORD  Internal   ABS     92  private  bss          1     1  -
+bootloaderoptbl                       487E         no  WORD  Internal   ABS    283  private  bss          1     1  -
+bootloadernoptbl                      487F         no  WORD  Internal   ABS    284  private  bss          1     1  -
+
+clkickr                               50C0         no  WORD  Internal   ABS     67  private  bss          1     1  -
+clkeckr                               50C1         no  WORD  Internal   ABS     68  private  bss          1     1  -
+clkcmsr                               50C3         no  WORD  Internal   ABS     70  private  bss          1     1  -
+clkswr                                50C4         no  WORD  Internal   ABS     71  private  bss          1     1  -
+clkswcr                               50C5         no  WORD  Internal   ABS     72  private  bss          1     1  -
+clkckdivr                             50C6         no  WORD  Internal   ABS     73  private  bss          1     1  -
+clkpckenr1                            50C7         no  WORD  Internal   ABS     74  private  bss          1     1  -
+clkcssr                               50C8         no  WORD  Internal   ABS     75  private  bss          1     1  -
+clkccor                               50C9         no  WORD  Internal   ABS     76  private  bss          1     1  -
+clkpckenr2                            50CA         no  WORD  Internal   ABS     77  private  bss          1     1  -
+clkcanccr                             50CB         no  WORD  Internal   ABS     78  private  bss          1     1  -
+clkhsitrimr                           50CC         no  WORD  Internal   ABS     79  private  bss          1     1  -
+clkswimccr                            50CD         no  WORD  Internal   ABS     80  private  bss          1     1  -
+canmcr                                5420         no  WORD  Internal   ABS    231  private  bss          1     1  -
+canmsr                                5421         no  WORD  Internal   ABS    232  private  bss          1     1  -
+cantsr                                5422         no  WORD  Internal   ABS    233  private  bss          1     1  -
+cantpr                                5423         no  WORD  Internal   ABS    234  private  bss          1     1  -
+canrfr                                5424         no  WORD  Internal   ABS    235  private  bss          1     1  -
+canier                                5425         no  WORD  Internal   ABS    236  private  bss          1     1  -
+candgr                                5426         no  WORD  Internal   ABS    237  private  bss          1     1  -
+canfpsr                               5427         no  WORD  Internal   ABS    238  private  bss          1     1  -
+canp0                                 5428         no  WORD  Internal   ABS    239  private  bss          1     1  -
+canp1                                 5429         no  WORD  Internal   ABS    240  private  bss          1     1  -
+canp2                                 542A         no  WORD  Internal   ABS    241  private  bss          1     1  -
+canp3                                 542B         no  WORD  Internal   ABS    242  private  bss          1     1  -
+canp4                                 542C         no  WORD  Internal   ABS    243  private  bss          1     1  -
+canp5                                 542D         no  WORD  Internal   ABS    244  private  bss          1     1  -
+canp6                                 542E         no  WORD  Internal   ABS    245  private  bss          1     1  -
+canp7                                 542F         no  WORD  Internal   ABS    246  private  bss          1     1  -
+canp8                                 5430         no  WORD  Internal   ABS    247  private  bss          1     1  -
+canp9                                 5431         no  WORD  Internal   ABS    248  private  bss          1     1  -
+canpa                                 5432         no  WORD  Internal   ABS    249  private  bss          1     1  -
+canpb                                 5433         no  WORD  Internal   ABS    250  private  bss          1     1  -
+canpc                                 5434         no  WORD  Internal   ABS    251  private  bss          1     1  -
+canpd                                 5435         no  WORD  Internal   ABS    252  private  bss          1     1  -
+canpe                                 5436         no  WORD  Internal   ABS    253  private  bss          1     1  -
+canpf                                 5437         no  WORD  Internal   ABS    254  private  bss          1     1  -
+cpua                                  7F00         no  WORD  Internal   ABS    286  private  bss          1     1  -
+cpupce                                7F01         no  WORD  Internal   ABS    287  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 15  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+cpupch                                7F02         no  WORD  Internal   ABS    288  private  bss          1     1  -
+cpupcl                                7F03         no  WORD  Internal   ABS    289  private  bss          1     1  -
+cpuxh                                 7F04         no  WORD  Internal   ABS    290  private  bss          1     1  -
+cpuxl                                 7F05         no  WORD  Internal   ABS    291  private  bss          1     1  -
+cpuyh                                 7F06         no  WORD  Internal   ABS    292  private  bss          1     1  -
+cpuyl                                 7F07         no  WORD  Internal   ABS    293  private  bss          1     1  -
+cpusph                                7F08         no  WORD  Internal   ABS    294  private  bss          1     1  -
+cpuspl                                7F09         no  WORD  Internal   ABS    295  private  bss          1     1  -
+cpuccr                                7F0A         no  WORD  Internal   ABS    296  private  bss          1     1  -
+cpugcr                                7F60         no  WORD  Internal   ABS    298  private  bss          1     1  -
+cur1x                                 00BD         no  WORD  Internal   rel    491  private  textdata     9     0  -
+
+dmbk1re                               7F90         no  WORD  Internal   ABS    311  private  bss          1     1  -
+dmbk1rh                               7F91         no  WORD  Internal   ABS    312  private  bss          1     1  -
+dmbk1rl                               7F92         no  WORD  Internal   ABS    313  private  bss          1     1  -
+dmbk2re                               7F93         no  WORD  Internal   ABS    314  private  bss          1     1  -
+dmbk2rh                               7F94         no  WORD  Internal   ABS    315  private  bss          1     1  -
+dmbk2rl                               7F95         no  WORD  Internal   ABS    316  private  bss          1     1  -
+dmcr1                                 7F96         no  WORD  Internal   ABS    317  private  bss          1     1  -
+dmcr2                                 7F97         no  WORD  Internal   ABS    318  private  bss          1     1  -
+dmcsr1                                7F98         no  WORD  Internal   ABS    319  private  bss          1     1  -
+dmcsr2                                7F99         no  WORD  Internal   ABS    320  private  bss          1     1  -
+dmenfctr                              7F9A         no  WORD  Internal   ABS    321  private  bss          1     1  -
+dumb                                  806C         no  WORD  Internal   ABS    350  private  textdata     1     0  -
+
+flashcr1                              505A         no  WORD  Internal   ABS     51  private  bss          1     1  -
+flashcr2                              505B         no  WORD  Internal   ABS     52  private  bss          1     1  -
+flashncr2                             505C         no  WORD  Internal   ABS     53  private  bss          1     1  -
+flashfpr                              505D         no  WORD  Internal   ABS     54  private  bss          1     1  -
+flashnfpr                             505E         no  WORD  Internal   ABS     55  private  bss          1     1  -
+flashiapsr                            505F         no  WORD  Internal   ABS     56  private  bss          1     1  -
+flashpukr                             5062         no  WORD  Internal   ABS     58  private  bss          1     1  -
+flashdukr                             5064         no  WORD  Internal   ABS     60  private  bss          1     1  -
+
+gpioaodr                              5000         no  WORD  Internal   ABS      5  private  bss          1     1  -
+gpioaidr                              5001         no  WORD  Internal   ABS      6  private  bss          1     1  -
+gpioaddr                              5002         no  WORD  Internal   ABS      7  private  bss          1     1  -
+gpioacr1                              5003         no  WORD  Internal   ABS      8  private  bss          1     1  -
+gpioacr2                              5004         no  WORD  Internal   ABS      9  private  bss          1     1  -
+gpiobodr                              5005         no  WORD  Internal   ABS     10  private  bss          1     1  -
+gpiobidr                              5006         no  WORD  Internal   ABS     11  private  bss          1     1  -
+gpiobddr                              5007         no  WORD  Internal   ABS     12  private  bss          1     1  -
+gpiobcr1                              5008         no  WORD  Internal   ABS     13  private  bss          1     1  -
+gpiobcr2                              5009         no  WORD  Internal   ABS     14  private  bss          1     1  -
+gpiocodr                              500A         no  WORD  Internal   ABS     15  private  bss          1     1  -
+gpiocidr                              500B         no  WORD  Internal   ABS     16  private  bss          1     1  -
+gpiocddr                              500C         no  WORD  Internal   ABS     17  private  bss          1     1  -
+gpioccr1                              500D         no  WORD  Internal   ABS     18  private  bss          1     1  -
+gpioccr2                              500E         no  WORD  Internal   ABS     19  private  bss          1     1  -
+gpiododr                              500F         no  WORD  Internal   ABS     20  private  bss          1     1  -
+gpiodidr                              5010         no  WORD  Internal   ABS     21  private  bss          1     1  -
+gpiodddr                              5011         no  WORD  Internal   ABS     22  private  bss          1     1  -
+gpiodcr1                              5012         no  WORD  Internal   ABS     23  private  bss          1     1  -
+gpiodcr2                              5013         no  WORD  Internal   ABS     24  private  bss          1     1  -
+gpioeodr                              5014         no  WORD  Internal   ABS     25  private  bss          1     1  -
+gpioeidr                              5015         no  WORD  Internal   ABS     26  private  bss          1     1  -
+gpioeddr                              5016         no  WORD  Internal   ABS     27  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 16  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+gpioecr1                              5017         no  WORD  Internal   ABS     28  private  bss          1     1  -
+gpioecr2                              5018         no  WORD  Internal   ABS     29  private  bss          1     1  -
+gpiofodr                              5019         no  WORD  Internal   ABS     30  private  bss          1     1  -
+gpiofidr                              501A         no  WORD  Internal   ABS     31  private  bss          1     1  -
+gpiofddr                              501B         no  WORD  Internal   ABS     32  private  bss          1     1  -
+gpiofcr1                              501C         no  WORD  Internal   ABS     33  private  bss          1     1  -
+gpiofcr2                              501D         no  WORD  Internal   ABS     34  private  bss          1     1  -
+gpiogodr                              501E         no  WORD  Internal   ABS     35  private  bss          1     1  -
+gpiogidr                              501F         no  WORD  Internal   ABS     36  private  bss          1     1  -
+gpiogddr                              5020         no  WORD  Internal   ABS     37  private  bss          1     1  -
+gpiogcr1                              5021         no  WORD  Internal   ABS     38  private  bss          1     1  -
+gpiogcr2                              5022         no  WORD  Internal   ABS     39  private  bss          1     1  -
+gpiohodr                              5023         no  WORD  Internal   ABS     40  private  bss          1     1  -
+gpiohidr                              5024         no  WORD  Internal   ABS     41  private  bss          1     1  -
+gpiohddr                              5025         no  WORD  Internal   ABS     42  private  bss          1     1  -
+gpiohcr1                              5026         no  WORD  Internal   ABS     43  private  bss          1     1  -
+gpiohcr2                              5027         no  WORD  Internal   ABS     44  private  bss          1     1  -
+gpioiodr                              5028         no  WORD  Internal   ABS     45  private  bss          1     1  -
+gpioiidr                              5029         no  WORD  Internal   ABS     46  private  bss          1     1  -
+gpioiddr                              502A         no  WORD  Internal   ABS     47  private  bss          1     1  -
+gpioicr1                              502B         no  WORD  Internal   ABS     48  private  bss          1     1  -
+gpioicr2                              502C         no  WORD  Internal   ABS     49  private  bss          1     1  -
+
+itcexticr1                            50A0         no  WORD  Internal   ABS     62  private  bss          1     1  -
+itcexticr2                            50A1         no  WORD  Internal   ABS     63  private  bss          1     1  -
+iwdgkr                                50E0         no  WORD  Internal   ABS     85  private  bss          1     1  -
+iwdgpr                                50E1         no  WORD  Internal   ABS     86  private  bss          1     1  -
+iwdgrlr                               50E2         no  WORD  Internal   ABS     87  private  bss          1     1  -
+i2ccr1                                5210         no  WORD  Internal   ABS    103  private  bss          1     1  -
+i2ccr2                                5211         no  WORD  Internal   ABS    104  private  bss          1     1  -
+i2cfreqr                              5212         no  WORD  Internal   ABS    105  private  bss          1     1  -
+i2coarl                               5213         no  WORD  Internal   ABS    106  private  bss          1     1  -
+i2coarh                               5214         no  WORD  Internal   ABS    107  private  bss          1     1  -
+i2cdr                                 5216         no  WORD  Internal   ABS    109  private  bss          1     1  -
+i2csr1                                5217         no  WORD  Internal   ABS    110  private  bss          1     1  -
+i2csr2                                5218         no  WORD  Internal   ABS    111  private  bss          1     1  -
+i2csr3                                5219         no  WORD  Internal   ABS    112  private  bss          1     1  -
+i2citr                                521A         no  WORD  Internal   ABS    113  private  bss          1     1  -
+i2cccrl                               521B         no  WORD  Internal   ABS    114  private  bss          1     1  -
+i2cccrh                               521C         no  WORD  Internal   ABS    115  private  bss          1     1  -
+i2ctriser                             521D         no  WORD  Internal   ABS    116  private  bss          1     1  -
+itcspr1                               7F70         no  WORD  Internal   ABS    300  private  bss          1     1  -
+itcspr2                               7F71         no  WORD  Internal   ABS    301  private  bss          1     1  -
+itcspr3                               7F72         no  WORD  Internal   ABS    302  private  bss          1     1  -
+itcspr4                               7F73         no  WORD  Internal   ABS    303  private  bss          1     1  -
+itcspr5                               7F74         no  WORD  Internal   ABS    304  private  bss          1     1  -
+itcspr6                               7F75         no  WORD  Internal   ABS    305  private  bss          1     1  -
+itcspr7                               7F76         no  WORD  Internal   ABS    306  private  bss          1     1  -
+itcspr8                               7F77         no  WORD  Internal   ABS    307  private  bss          1     1  -
+interruptreset                        8000         no  WORD  Internal   ABS    323  private  textdata     4     4  -
+interrupttrap                         8004         no  WORD  Internal   ABS    324  private  textdata     4     4  -
+interrupttli                          8008         no  WORD  Internal   ABS    325  private  textdata     4     4  -
+interruptawu                          800C         no  WORD  Internal   ABS    326  private  textdata     4     4  -
+interruptclk                          8010         no  WORD  Internal   ABS    327  private  textdata     4     4  -
+interruptexti0                        8014         no  WORD  Internal   ABS    328  private  textdata     4     4  -
+interruptexti1                        8018         no  WORD  Internal   ABS    329  private  textdata     4     4  -
+interruptexti2                        801C         no  WORD  Internal   ABS    330  private  textdata     4     4  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 17  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+interruptexti3                        8020         no  WORD  Internal   ABS    331  private  textdata     4     4  -
+interruptexti4                        8024         no  WORD  Internal   ABS    332  private  textdata     4     4  -
+interruptcanrx                        8028         no  WORD  Internal   ABS    333  private  textdata     4     4  -
+interruptcantx                        802C         no  WORD  Internal   ABS    334  private  textdata     4     4  -
+interruptspi                          8030         no  WORD  Internal   ABS    335  private  textdata     4     4  -
+interrupttim1u                        8034         no  WORD  Internal   ABS    336  private  textdata     4     4  -
+interrupttim1c                        8038         no  WORD  Internal   ABS    337  private  textdata     4     4  -
+interrupttim2u                        803C         no  WORD  Internal   ABS    338  private  textdata     4     4  -
+interrupttim2c                        8040         no  WORD  Internal   ABS    339  private  textdata     4     4  -
+interrupttim3u                        8044         no  WORD  Internal   ABS    340  private  textdata     4     4  -
+interrupttim3c                        8048         no  WORD  Internal   ABS    341  private  textdata     4     4  -
+interruptuart1tx                      804C         no  WORD  Internal   ABS    342  private  textdata     4     4  -
+interruptuart1rx                      8050         no  WORD  Internal   ABS    343  private  textdata     4     4  -
+interrupti2c                          8054         no  WORD  Internal   ABS    344  private  textdata     4     4  -
+interruptuart3tx                      8058         no  WORD  Internal   ABS    345  private  textdata     4     4  -
+interruptuart3rx                      805C         no  WORD  Internal   ABS    346  private  textdata     4     4  -
+interruptadc1                         8060         no  WORD  Internal   ABS    347  private  textdata     4     4  -
+interrupttim4u                        8064         no  WORD  Internal   ABS    348  private  textdata     4     4  -
+interruptflash                        8068         no  WORD  Internal   ABS    349  private  textdata     4     4  -
+
+lcmds                                 0000         no  WORD  Internal   rel    372  private  textdata    32     2  -
+loop                                  01AA         no  WORD  Internal   rel    605  private  textdata     0     0  -
+
+next2x                                009D         no  WORD  Internal   rel    467  private  textdata    19     0  -
+next1x                                00B0         no  WORD  Internal   rel    481  private  textdata    13     0  -
+
+optionopt0                            4800         no  WORD  Internal   ABS    267  private  bss          1     1  -
+optionopt1                            4801         no  WORD  Internal   ABS    268  private  bss          1     1  -
+optionnopt1                           4802         no  WORD  Internal   ABS    269  private  bss          1     1  -
+optionopt2                            4803         no  WORD  Internal   ABS    270  private  bss          1     1  -
+optionnopt2                           4804         no  WORD  Internal   ABS    271  private  bss          1     1  -
+optionopt3                            4805         no  WORD  Internal   ABS    272  private  bss          1     1  -
+optionnopt3                           4806         no  WORD  Internal   ABS    273  private  bss          1     1  -
+optionopt4                            4807         no  WORD  Internal   ABS    274  private  bss          1     1  -
+optionnopt4                           4808         no  WORD  Internal   ABS    275  private  bss          1     1  -
+optionopt5                            4809         no  WORD  Internal   ABS    276  private  bss          1     1  -
+optionnopt5                           480A         no  WORD  Internal   ABS    277  private  bss          1     1  -
+optionopt6                            480B         no  WORD  Internal   ABS    278  private  bss          1     1  -
+optionnopt6                           480C         no  WORD  Internal   ABS    279  private  bss          1     1  -
+optionopt7                            480D         no  WORD  Internal   ABS    280  private  bss          1     1  -
+optionnopt7                           480E         no  WORD  Internal   ABS    281  private  bss          1     1  -
+
+rstsr                                 50B3         no  WORD  Internal   ABS     65  private  bss          1     1  -
+r0                                    0000         no  WORD  Internal   ABS    353  private  bss          2     2  -
+r1                                    0002         no  WORD  Internal   ABS    354  private  bss          2     2  -
+r2                                    0004         no  WORD  Internal   ABS    355  private  bss          2     2  -
+r3                                    0006         no  WORD  Internal   ABS    356  private  bss          2     2  -
+r4                                    0008         no  WORD  Internal   ABS    357  private  bss          2     2  -
+r5                                    000A         no  WORD  Internal   ABS    358  private  bss          2     2  -
+r6                                    000C         no  WORD  Internal   ABS    359  private  bss          2     2  -
+r7                                    000E         no  WORD  Internal   ABS    360  private  bss          2     2  -
+r8                                    0010         no  WORD  Internal   ABS    361  private  bss          2     2  -
+r9                                    0012         no  WORD  Internal   ABS    362  private  bss          2     2  -
+ra                                    0014         no  WORD  Internal   ABS    363  private  bss          2     2  -
+rb                                    0016         no  WORD  Internal   ABS    364  private  bss          2     2  -
+rc                                    0018         no  WORD  Internal   ABS    365  private  bss          2     2  -
+rd                                    001A         no  WORD  Internal   ABS    366  private  bss          2     2  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 18  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+re                                    001C         no  WORD  Internal   ABS    367  private  bss          2     2  -
+rf                                    001E         no  WORD  Internal   ABS    368  private  bss          2     2  -
+
+spicr1                                5200         no  WORD  Internal   ABS     94  private  bss          1     1  -
+spicr2                                5201         no  WORD  Internal   ABS     95  private  bss          1     1  -
+spiicr                                5202         no  WORD  Internal   ABS     96  private  bss          1     1  -
+spisr                                 5203         no  WORD  Internal   ABS     97  private  bss          1     1  -
+spidr                                 5204         no  WORD  Internal   ABS     98  private  bss          1     1  -
+spicrcpr                              5205         no  WORD  Internal   ABS     99  private  bss          1     1  -
+spirxcrcr                             5206         no  WORD  Internal   ABS    100  private  bss          1     1  -
+spitxcrcr                             5207         no  WORD  Internal   ABS    101  private  bss          1     1  -
+swimcsr                               7F80         no  WORD  Internal   ABS    309  private  bss          1     1  -
+sw_stack                              0020         no  WORD  Internal   ABS    369  private  bss         15     1  -
+sw_tos                                002F         no  WORD  Internal   ABS    370  private  bss          1     1  -
+scmds                                 0020         no  WORD  Internal   rel    388  private  textdata    32     2  -
+sw_rtn                                0040         no  WORD  Internal   rel    404  private  textdata     6     0  -
+sw_br                                 0046         no  WORD  Internal   rel    409  private  textdata    11     0  -
+sw_bnc                                0051         no  WORD  Internal   rel    414  private  textdata     2     0  -
+sw_bc                                 0053         no  WORD  Internal   rel    416  private  textdata     2     0  -
+sw_bp                                 0055         no  WORD  Internal   rel    418  private  textdata     2     0  -
+sw_bm                                 0057         no  WORD  Internal   rel    420  private  textdata     2     0  -
+sw_bz                                 0059         no  WORD  Internal   rel    422  private  textdata     2     0  -
+sw_bnz                                005B         no  WORD  Internal   rel    424  private  textdata     2     0  -
+sw_bm1                                005D         no  WORD  Internal   rel    426  private  textdata     2     0  -
+sw_bnm1                               005F         no  WORD  Internal   rel    428  private  textdata     2     0  -
+sw_bk                                 0061         no  WORD  Internal   rel    430  private  textdata     2     0  -
+sw_rs                                 0063         no  WORD  Internal   rel    432  private  textdata    11     0  -
+sw_bs                                 006E         no  WORD  Internal   rel    438  private  textdata    20     0  -
+sw_err                                0082         no  WORD  Internal   rel    447  private  textdata     2     0  -
+sweetnext                             0084         no  WORD  Internal   rel    449  private  textdata    18     0  -
+shortcmd                              0096         no  WORD  Internal   rel    462  private  textdata     7     0  -
+sw_set                                00C6         no  WORD  Internal   rel    497  private  textdata     7     0  -
+sw_ldr                                00CD         no  WORD  Internal   rel    501  private  textdata    10     0  -
+sw_str                                00D7         no  WORD  Internal   rel    506  private  textdata     9     0  -
+sw_ldi                                00E0         no  WORD  Internal   rel    511  private  textdata    14     0  -
+sw_sti                                00EE         no  WORD  Internal   rel    519  private  textdata    13     0  -
+sw_ldd                                00FB         no  WORD  Internal   rel    526  private  textdata    18     0  -
+sw_std                                010D         no  WORD  Internal   rel    533  private  textdata    18     0  -
+sw_pop                                011F         no  WORD  Internal   rel    540  private  textdata    16     0  -
+sw_stp                                012F         no  WORD  Internal   rel    548  private  textdata    15     0  -
+sw_add                                013E         no  WORD  Internal   rel    555  private  textdata    16     0  -
+sw_sub                                014E         no  WORD  Internal   rel    561  private  textdata    18     0  -
+sw_popd                               0160         no  WORD  Internal   rel    568  private  textdata    17     0  -
+sw_cpr                                0171         no  WORD  Internal   rel    575  private  textdata    18     0  -
+sw_inr                                0183         no  WORD  Internal   rel    585  private  textdata     9     0  -
+sw_dcr                                018C         no  WORD  Internal   rel    589  private  textdata     9     0  -
+sweet16                               0195         no  WORD  Internal   rel    593  private  textdata    12     0  -
+start                                 01A1         no  WORD  Internal   rel    599  private  textdata     9     0  -
+
+tim1cr1                               5250         no  WORD  Internal   ABS    141  private  bss          1     1  -
+tim1cr2                               5251         no  WORD  Internal   ABS    142  private  bss          1     1  -
+tim1smcr                              5252         no  WORD  Internal   ABS    143  private  bss          1     1  -
+tim1etr                               5253         no  WORD  Internal   ABS    144  private  bss          1     1  -
+tim1ier                               5254         no  WORD  Internal   ABS    145  private  bss          1     1  -
+tim1sr1                               5255         no  WORD  Internal   ABS    146  private  bss          1     1  -
+tim1sr2                               5256         no  WORD  Internal   ABS    147  private  bss          1     1  -
+tim1egr                               5257         no  WORD  Internal   ABS    148  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 19  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+tim1ccmr1                             5258         no  WORD  Internal   ABS    149  private  bss          1     1  -
+tim1ccmr2                             5259         no  WORD  Internal   ABS    150  private  bss          1     1  -
+tim1ccmr3                             525A         no  WORD  Internal   ABS    151  private  bss          1     1  -
+tim1ccmr4                             525B         no  WORD  Internal   ABS    152  private  bss          1     1  -
+tim1ccer1                             525C         no  WORD  Internal   ABS    153  private  bss          1     1  -
+tim1ccer2                             525D         no  WORD  Internal   ABS    154  private  bss          1     1  -
+tim1cntrh                             525E         no  WORD  Internal   ABS    155  private  bss          1     1  -
+tim1cntrl                             525F         no  WORD  Internal   ABS    156  private  bss          1     1  -
+tim1pscrh                             5260         no  WORD  Internal   ABS    157  private  bss          1     1  -
+tim1pscrl                             5261         no  WORD  Internal   ABS    158  private  bss          1     1  -
+tim1arrh                              5262         no  WORD  Internal   ABS    159  private  bss          1     1  -
+tim1arrl                              5263         no  WORD  Internal   ABS    160  private  bss          1     1  -
+tim1rcr                               5264         no  WORD  Internal   ABS    161  private  bss          1     1  -
+tim1ccr1h                             5265         no  WORD  Internal   ABS    162  private  bss          1     1  -
+tim1ccr1l                             5266         no  WORD  Internal   ABS    163  private  bss          1     1  -
+tim1ccr2h                             5267         no  WORD  Internal   ABS    164  private  bss          1     1  -
+tim1ccr2l                             5268         no  WORD  Internal   ABS    165  private  bss          1     1  -
+tim1ccr3h                             5269         no  WORD  Internal   ABS    166  private  bss          1     1  -
+tim1ccr3l                             526A         no  WORD  Internal   ABS    167  private  bss          1     1  -
+tim1ccr4h                             526B         no  WORD  Internal   ABS    168  private  bss          1     1  -
+tim1ccr4l                             526C         no  WORD  Internal   ABS    169  private  bss          1     1  -
+tim1bkr                               526D         no  WORD  Internal   ABS    170  private  bss          1     1  -
+tim1dtr                               526E         no  WORD  Internal   ABS    171  private  bss          1     1  -
+tim1oisr                              526F         no  WORD  Internal   ABS    172  private  bss          1     1  -
+tim2cr1                               5300         no  WORD  Internal   ABS    174  private  bss          1     1  -
+tim2ier                               5301         no  WORD  Internal   ABS    175  private  bss          1     1  -
+tim2sr1                               5302         no  WORD  Internal   ABS    176  private  bss          1     1  -
+tim2sr2                               5303         no  WORD  Internal   ABS    177  private  bss          1     1  -
+tim2egr                               5304         no  WORD  Internal   ABS    178  private  bss          1     1  -
+tim2ccmr1                             5305         no  WORD  Internal   ABS    179  private  bss          1     1  -
+tim2ccmr2                             5306         no  WORD  Internal   ABS    180  private  bss          1     1  -
+tim2ccmr3                             5307         no  WORD  Internal   ABS    181  private  bss          1     1  -
+tim2ccer1                             5308         no  WORD  Internal   ABS    182  private  bss          1     1  -
+tim2ccer2                             5309         no  WORD  Internal   ABS    183  private  bss          1     1  -
+tim2cntrh                             530A         no  WORD  Internal   ABS    184  private  bss          1     1  -
+tim2cntrl                             530B         no  WORD  Internal   ABS    185  private  bss          1     1  -
+tim2pscr                              530C         no  WORD  Internal   ABS    186  private  bss          1     1  -
+tim2arrh                              530D         no  WORD  Internal   ABS    187  private  bss          1     1  -
+tim2arrl                              530E         no  WORD  Internal   ABS    188  private  bss          1     1  -
+tim2ccr1h                             530F         no  WORD  Internal   ABS    189  private  bss          1     1  -
+tim2ccr1l                             5310         no  WORD  Internal   ABS    190  private  bss          1     1  -
+tim2ccr2h                             5311         no  WORD  Internal   ABS    191  private  bss          1     1  -
+tim2ccr2l                             5312         no  WORD  Internal   ABS    192  private  bss          1     1  -
+tim2ccr3h                             5313         no  WORD  Internal   ABS    193  private  bss          1     1  -
+tim2ccr3l                             5314         no  WORD  Internal   ABS    194  private  bss          1     1  -
+tim3cr1                               5320         no  WORD  Internal   ABS    196  private  bss          1     1  -
+tim3ier                               5321         no  WORD  Internal   ABS    197  private  bss          1     1  -
+tim3sr1                               5322         no  WORD  Internal   ABS    198  private  bss          1     1  -
+tim3sr2                               5323         no  WORD  Internal   ABS    199  private  bss          1     1  -
+tim3egr                               5324         no  WORD  Internal   ABS    200  private  bss          1     1  -
+tim3ccmr1                             5325         no  WORD  Internal   ABS    201  private  bss          1     1  -
+tim3ccmr2                             5326         no  WORD  Internal   ABS    202  private  bss          1     1  -
+tim3ccer1                             5327         no  WORD  Internal   ABS    203  private  bss          1     1  -
+tim3cntrh                             5328         no  WORD  Internal   ABS    204  private  bss          1     1  -
+tim3cntrl                             5329         no  WORD  Internal   ABS    205  private  bss          1     1  -
+tim3pscr                              532A         no  WORD  Internal   ABS    206  private  bss          1     1  -
+tim3arrh                              532B         no  WORD  Internal   ABS    207  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Mon Dec 18 19:30:25 2017
+Page 20  Assembler
+                                               d:\naive\projects\stm8s\sweet16\out\sweet16.asm
+
+tim3arrl                              532C         no  WORD  Internal   ABS    208  private  bss          1     1  -
+tim3ccr1h                             532D         no  WORD  Internal   ABS    209  private  bss          1     1  -
+tim3ccr1l                             532E         no  WORD  Internal   ABS    210  private  bss          1     1  -
+tim3ccr2h                             532F         no  WORD  Internal   ABS    211  private  bss          1     1  -
+tim3ccr2l                             5330         no  WORD  Internal   ABS    212  private  bss          1     1  -
+tim4cr1                               5340         no  WORD  Internal   ABS    214  private  bss          1     1  -
+tim4ier                               5341         no  WORD  Internal   ABS    215  private  bss          1     1  -
+tim4sr                                5342         no  WORD  Internal   ABS    216  private  bss          1     1  -
+tim4egr                               5343         no  WORD  Internal   ABS    217  private  bss          1     1  -
+tim4cntr                              5344         no  WORD  Internal   ABS    218  private  bss          1     1  -
+tim4pscr                              5345         no  WORD  Internal   ABS    219  private  bss          1     1  -
+tim4arr                               5346         no  WORD  Internal   ABS    220  private  bss          1     1  -
+
+uart1sr                               5230         no  WORD  Internal   ABS    118  private  bss          1     1  -
+uart1dr                               5231         no  WORD  Internal   ABS    119  private  bss          1     1  -
+uart1brr1                             5232         no  WORD  Internal   ABS    120  private  bss          1     1  -
+uart1brr2                             5233         no  WORD  Internal   ABS    121  private  bss          1     1  -
+uart1cr1                              5234         no  WORD  Internal   ABS    122  private  bss          1     1  -
+uart1cr2                              5235         no  WORD  Internal   ABS    123  private  bss          1     1  -
+uart1cr3                              5236         no  WORD  Internal   ABS    124  private  bss          1     1  -
+uart1cr4                              5237         no  WORD  Internal   ABS    125  private  bss          1     1  -
+uart1cr5                              5238         no  WORD  Internal   ABS    126  private  bss          1     1  -
+uart1gtr                              5239         no  WORD  Internal   ABS    127  private  bss          1     1  -
+uart1pstr                             523A         no  WORD  Internal   ABS    128  private  bss          1     1  -
+uart3sr                               5240         no  WORD  Internal   ABS    130  private  bss          1     1  -
+uart3dr                               5241         no  WORD  Internal   ABS    131  private  bss          1     1  -
+uart3brr1                             5242         no  WORD  Internal   ABS    132  private  bss          1     1  -
+uart3brr2                             5243         no  WORD  Internal   ABS    133  private  bss          1     1  -
+uart3cr1                              5244         no  WORD  Internal   ABS    134  private  bss          1     1  -
+uart3cr2                              5245         no  WORD  Internal   ABS    135  private  bss          1     1  -
+uart3cr3                              5246         no  WORD  Internal   ABS    136  private  bss          1     1  -
+uart3cr4                              5247         no  WORD  Internal   ABS    137  private  bss          1     1  -
+uart3cr6                              5249         no  WORD  Internal   ABS    139  private  bss          1     1  -
+unicidx                               48CD         no  WORD  Internal   ABS    256  private  bss          2     2  -
+unicidy                               48CF         no  WORD  Internal   ABS    257  private  bss          2     2  -
+unicidwafer                           48D1         no  WORD  Internal   ABS    258  private  bss          1     1  -
+unicidlot0                            48D2         no  WORD  Internal   ABS    259  private  bss          1     1  -
+unicidlot1                            48D3         no  WORD  Internal   ABS    260  private  bss          1     1  -
+unicidlot2                            48D4         no  WORD  Internal   ABS    261  private  bss          1     1  -
+unicidlot3                            48D5         no  WORD  Internal   ABS    262  private  bss          1     1  -
+unicidlot4                            48D6         no  WORD  Internal   ABS    263  private  bss          1     1  -
+unicidlot5                            48D7         no  WORD  Internal   ABS    264  private  bss          1     1  -
+unicidlot6                            48D8         no  WORD  Internal   ABS    265  private  bss          1     1  -
+
+wwdgcr                                50D1         no  WORD  Internal   ABS     82  private  bss          1     1  -
+wwdgwr                                50D2         no  WORD  Internal   ABS     83  private  bss          1     1  -
+
+
+372 labels
+1 error on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'

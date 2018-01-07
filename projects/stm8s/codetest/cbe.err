@@ -1,0 +1,8 @@
+No errors on assembly of 'd:\naive\projects\stm8s\codetest\out\test.asm'
+No errors on assembly of 'd:\naive\projects\stm8s\codetest\out\test.asm'
+d:\naive\projects\stm8s\codetest\out\test.asm(385): as1 : Error 54: Can't match Addressing mode '	ld x,#1		; x=#1 in test.stm8s._ : 51'
+d:\naive\projects\stm8s\codetest\out\test.asm(387): as1 : Error 54: Can't match Addressing mode '	ld y,#1		; y=#1 in test.stm8s._ : 51'
+2 errors on assembly of 'd:\naive\projects\stm8s\codetest\out\test.asm'
+d:\naive\projects\stm8s\codetest\out\test.asm(385): as1 : Error 54: Can't match Addressing mode '	ld x,#1		; x=#1 in test.stm8s._ : 51'
+d:\naive\projects\stm8s\codetest\out\test.asm(387): as1 : Error 54: Can't match Addressing mode '	ld y,#1		; y=#1 in test.stm8s._ : 51'
+2 errors on assembly of 'd:\naive\projects\stm8s\codetest\out\test.asm'

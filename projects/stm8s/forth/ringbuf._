@@ -1,0 +1,44 @@
+//
+// Bytes ring buffer
+//
+
+define buflen 64
+
+rstart: (r8)
+rend:	(r8)
+rsize:	(r8)
+rlen:	(r8)
+rbuf:	(r8)[buflen]
+        // move a to the end of ringbuf
+atoringbuf: 
+	push x ; push a 
+	x = #0 ; a = rstart ; xl = a ; a++
+	a?rsize
+	if z==0 atoringbuf_notzero
+	pop a ;	rbuf[x]=a ; rstart=#0 ; go near atoringbuf_end
+atoringbuf_notzero:
+	pop a ; rbuf[x]=a ; rstart++
+atoringbuf_end:
+	rlen++ ; pop x
+	ret
+	// move ringbuf first to a
+ringbuftoa:
+	push x
+	x = #0 ; a = rend ; xl = a ; a++ 
+	a?rsize
+	if z==0 ringbuftoa_notzero
+	a = rbuf[x] ; rend = #0 ; go near ringbuftoa_end
+ringbuftoa_notzero:
+	a = rbuf[x] ; rend++ 
+ringbuftoa_end:
+	rlen-- ; pop x
+	ret
+	// test is ringbuf free or not
+ringbufready:
+	?rlen
+	if z==0 ringbufready_ifzero
+	a = #1
+	ret
+ringbufready_ifzero: 
+	a = #0
+	ret

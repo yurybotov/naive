@@ -1,0 +1,1168 @@
+ ΰ¨«®¦¥­¨¥ 1.
+
+ ®¤¥«μ δ®ΰβ-α¨αβ¥¬λ
+
+     ΰ¨Ά®¤¨¬λ©  ­¨¦¥  β¥ªαβ  ―ΰ¥¤αβ Ά«ο¥β  α®΅®©  ο¤ΰ®  α¨αβ¥¬λ ”’-…‘ (α¬.
+ ―ΰ¨«®¦¥­¨¥  2),  ¨§  ª®β®ΰ®£®  ¨αª«ξη¥­λ § ―γαª ξι ο η αβμ ¨ ΰ¥ «¨§ ζ¨¨ α«®Ά
+ ­¨¦­¥£®  γΰ®Ά­ο  ¤«ο  ®΅¬¥­   α  β¥ΰ¬¨­ «®¬ ¨ Ά­¥θ­¥© ―  ¬οβμξ). ΅ι¨© ®΅κ¥¬
+ ο¤ΰ -8    ΅ ©β (αΆλθ¥ 200 α«®Ά). ’¥ªαβ α®αβ®¨β ¨§ ¤Άγε η αβ¥© - α―¨αª  α«®Ά
+ α  ¨ε  ªΰ βª¨¬¨ α―¥ζ¨δ¨ª ζ¨ο¬¨ ¨ νªΰ ­®Ά α ®―ΰ¥¤¥«¥­¨ο¬¨ ­  Άαβΰ®¥­­®¬ ο§λª¥
+  αα¥¬΅«¥ΰ  ¨ ­  ο§λª¥ ”®ΰβ.
+     ®¬¨¬® α«®Ά, ª®β®ΰλ¬ α®®βΆ¥βαβΆγξβ αβ βμ¨ Ά α«®Ά ΰ¥, Ά­γβΰ¨  αα¥¬΅«¥ΰ­λε
+ ®―ΰ¥¤¥«¥­¨©  ¨α―®«μ§γξβαο  ¬¥βª¨  ¨   ¤ΰ¥α .  ‚  α―¥ζ¨δ¨ª ζ¨οε  νβ¨  ®΅κ¥ªβλ
+ ®β¬¥η¥­λ   ΅γªΆ ¬¨    ¨  €.  ­¨  ®―ΰ¥¤¥«οξβαο  α  ―®¬®ιμξ  α«®Ά  :  ¨  €:
+ α®®βΆ¥βαβΆ¥­­®.  ¥βª¨  ¨α―®«μ§γξβαο Ά ¬ θ¨­­λε ª®¬ ­¤ ε,    ¤ΰ¥α  ―®ΰ®¦¤ ξβ
+ ¤Άγε΅ ©β­®¥  §­ η¥­¨¥,  α®¤¥ΰ¦ ι¥¥  ¤ ­­λ©   ¤ΰ¥α. €¤ΰ¥α­λ¥ ®―¥ΰ ­¤λ FIRST ¨
+ SECOND   ®΅®§­ η ξβ   α®®βΆ¥βαβΆ¥­­®   ―¥ΰΆλ©   ¨   Άβ®ΰ®©  ν«¥¬¥­βλ  αβ¥ª .
+  ªΰ®ª®¬ ­¤λ  PUSH,  POP,  ¨  PULL  ¬®¦­®  ΰ αα¬ βΰ¨Ά βμ ª ª ª®¬ ­¤λ α ®¤­¨¬
+ ΰ¥£¨αβΰ®Άλ¬   ®―¥ΰ ­¤®¬.   ―¥ΰ ζ¨ο  PUSH,  ―®¬¥ι ¥β  ­   αβ¥ª  §­ η¥­¨¥  ¨§
+ ΰ¥£¨αβΰ ,  POP,  α­¨¬ ¥β Ά¥ΰε­¥¥ §­ η¥­¨¥ α® αβ¥ª , § αλ« ο ¥£® Ά ΰ¥£¨αβΰ, ¨
+ PULL,   ª®―¨ΰγ¥β   Ά¥ΰε­¥¥   §­ η¥­¨¥   αβ¥ª    Ά   ΰ¥£¨αβΰ.  ΰ®¬¥  β®£®, Ά
+  αα¥¬΅«¥ΰ­λε   ®―ΰ¥¤¥«¥­¨οε   ¨α―®«μ§γξβαο   «®ª «μ­λ¥  ¬¥βª¨  [11,  α.191],
+ ®΅®§­ η ¥¬λ¥  ζ¥«λ¬¨  η¨α« ¬¨  ¨  α«®Ά ¬¨  =F  (¤«ο ααλ«ª¨ Ά―¥ΰ¥¤) ¨ =‚ (¤«ο
+ ααλ«ª¨ ­ § ¤). ―ΰ¥¤¥«ο¥βαο «®ª «μ­ ο ¬¥βª  η¥ΰ¥§ α«®Ά® =, ª®β®ΰ®¥ ―®« £ ¥β
+ ¥¥  ΰ Ά­®©  β¥ªγι¥¬γ  §­ η¥­¨ξ  αη¥βη¨ª    ¤ΰ¥α . ¥£¨αβΰλ ®΅ι¥£® ­ §­ η¥­¨ο
+ ®΅®§­ η ξβαο α―¥ζ¨ «μ­λ¬¨ α«®Ά ¬¨ ¨ ¨¬¥ξβ α«¥¤γξι¨© α¬λα«:
+     RW1 - ΰ ΅®η¨© ΰ¥£¨αβΰ, αβ ΰθ¨© Ά ― ΰ¥;
+     RW2 - ΰ ΅®η¨© ΰ¥£¨αβΰ, ¬« ¤θ¨© Ά ― ΰ¥;
+     RI-γª § β¥«μ  ¤ΰ¥α­®£® ¨­β¥ΰ―ΰ¥β β®ΰ ;
+     RRET -  ΅α®«ξβ­λ©  ¤ΰ¥α Ά¥ΰθ¨­λ αβ¥ª  Ά®§Άΰ β®Ά;
+     RSTACK -  ΅α®«ξβ­λ©  ¤ΰ¥α Ά¥ΰθ¨­λ αβ¥ª  ¤ ­­λε;
+     RD - δ®ΰβ- ¤ΰ¥α β¥ªγι¥© Ά¥ΰθ¨­λ α«®Ά ΰο;
+     RFORTH  -   ΅α®«ξβ­λ©   ¤ΰ¥α  ­ η «   α«®Ά ΰο,  α®®βΆ¥βαβΆγξι¨© ­γ«¥Ά®¬γ
+ δ®ΰβ- ¤ΰ¥αγ;
+     RNEXT -  ¤ΰ¥α β®ηª¨ NEXT  ¤ΰ¥α­®£® ¨­β¥ΰ―ΰ¥β β®ΰ  (β®β ¦¥  ¤ΰ¥α, ηβ® ¨ Ά
+ RFORTH);
+     RTWO - ª®­αβ ­β  2;
+     RMASK - ª®­αβ ­β  65535.
+     ΰ¥¤―®« £ ¥βαο   β ª¦¥,  ηβ®  Ά  ΰ¥£¨αβΰ¥  13  ­ ε®¤¨βαο   ¤ΰ¥α  ®΅« αβ¨
+ α®εΰ ­¥­¨ο   ¨   ΰ¥£¨αβΰλ   0,   1,  14,  15  αΆ®΅®¤­®  ¨α―®«μ§γξβαο  Ά­γβΰ¨
+ ®―ΰ¥¤¥«¥­¨© ª ª ΰ ΅®η¨¥.
+     ’¥ªαβλ   ®―ΰ¥¤¥«¥­¨©   ―ΰ¥¤αβ Ά«¥­λ   Ά   Ά¨¤¥   ΰ α―¥η β®ª  αβ ­¤ ΰβ­λε
+ δ®ΰβ-β¥ªαβ®Ά  ¨  § ­¨¬ ξβ  νª­ ΰλ α ­®¬¥ΰ ¬¨ ®β 1 ¤® 47. ‚ ―®α«¥¤­¥¬ αβ®«΅ζ¥
+ α―¥ζ¨δ¨ª ζ¨¨   ¤«ο  ª ¦¤®£®  α«®Ά   γª § ­  ­®¬¥ΰ  νªΰ ­ ;  ­   ª®β®ΰ®¬  ®­®
+ ®―ΰ¥¤¥«¥­®. ƒ« Ά­λ¬ α«®Ά®¬ ¬®¤¥«¨ οΆ«ο¥βαο α«®Ά® ”’-‘‘’…€.
+     ‚ α―¨αª¥ α―¥ζ¨δ¨ª ζ¨© α«®Ά  ΰ α―®«®¦¥­λ ―® Ά®§ΰ αβ ­¨ξ Ά ª®¤¨ΰ®Άª¥ „.
+ ­¨ ¬®£γβ ¨¬¥βμ α«¥¤γξι¨¥ ®β¬¥βª¨:
+     € -  ¤ΰ¥α;
+      - ¬¥βª ;
+      - α«®Ά® ­¥¬¥¤«¥­­®£® ¨α―®«­¥­¨ο;
+      - βΰ¥΅γ¥βαο ΰ¥¦¨¬ ª®¬―¨«οζ¨¨;
+      - ―¥ΰ¥¬¥­­ ο, ΰ §¬¥ι¥­­ ο Ά ―®«μ§®Ά β¥«μαª®© ®΅« αβ¨;
+     ‘ - α¨αβ¥¬­ ο ―¥ΰ¥¬¥­­ ο, ΰ §¬¥ι¥­­ ο Ά α«®Ά ΰ¥;
+      - βΰ¥΅γ¥βαο ΰ¥¦¨¬ ®΅ΰ ΅®βª¨ νªΰ ­ ;
+     + - α«®Ά® ¨§ ¤®―®«­¥­¨ο ª αβ ­¤ ΰβγ "”®ΰβ-83";
+     * - ­¥αβ ­¤ ΰβ­®¥ α«®Ά®.
+     „«ο  ª ¦¤®£®  α«®Ά   γª §λΆ ξβαο  §­ η¥­¨ο, ª®β®ΰλ¥ ®­® α­¨¬ ¥β α® αβ¥ª 
+ (α«¥Ά   ®β  §­ ª   ->),  ¨ ΰ¥§γ«μβ β, ª®β®ΰλ© ®­® ®αβ Ά«ο¥β ­  αβ¥ª¥ (α―ΰ Ά 
+ ®β  §­ ª  ->). …α«¨ ―¥ΰ¥η¨α«ο¥βαο ­¥αª®«μª® §­ η¥­¨©, β® Ά¥ΰε­¥¥ (­  Ά¥ΰθ¨­¥
+ αβ¥ª ) ­ ε®¤¨βαο α―ΰ Ά .
+     „«ο  § ¤ ­¨ο  ― ΰ ¬¥βΰ®Ά  ¨ ΰ¥§γ«μβ β®Ά, ―¥ΰ¥¤ Ά ¥¬λε η¥ΰ¥§ αβ¥ª ¤ ­­ζε,
+ ¨α―®«μ§γξβαο α«¥¤γξι¨¥ ®΅®§­ η¥­¨ο:
+     +N - ­¥®βΰ¨ζ β¥«μ­®¥ ζ¥«®¥ α® §­ ª®¬;
+     € - ¤Άγε΅ ©β­λ© δ®ΰβ- ¤ΰ¥α;
+     ‘ - ®¤­®΅ ©β­®¥ §­ η¥­¨¥ (αβ ΰθ¨© ΅ ©β, ª ª ―ΰ Ά¨«®, ­γ«¥Ά®©);
+     CFA - ¤Άγε΅ ©β­λ©  ¤ΰ¥α ―®«ο ª®¤  α«®Ά ΰ­®© αβ βμ¨;
+     D - η¥βλΰ¥ε΅ ©β­®¥ ζ¥«®¥ α® §­ ª®¬;
+     F - ΅γ«¥Άαª®¥ §­ η¥­¨¥ (0 - ‹†, ­¥ 0 - ‘’€);
+     FF - ΅γ«¥Άαª®¥ §­ η¥­¨¥ ‹† (0);
+     L -  ΅α®«ξβ­λ© ¬ θ¨­­λ©  ¤ΰ¥α (η¥βλΰ¥ε΅ ©β­λ©);
+     LFA - ¤Άγε΅ ©β­λ©  ¤ΰ¥α ―®«ο α«®Ά ΰ­®© αβ βμ¨;
+     N - ¤Άγε΅ ©β­®¥ ζ¥«®¥ α® §­ ª®¬;
+     NFA - ¤Άγε΅ ©β­λ©  ¤ΰ¥α ―®«ο ¨¬¥­¨ α«®Ά ΰ­®© αβ βμ¨;
+     PFA - ¤Άγε΅ ©β­λ©  ¤ΰ¥α ―®«ο ― ΰ ¬¥βΰ®Ά α«®Ά ΰ­®© αβ βμ¨;
+     ’ - ¤Άγε΅ ©β­λ©  ¤ΰ¥α αβΰ®ª¨ α® αη¥βη¨ª®¬;
+     TF - ΅γ«¥Άαª®¥ §­ η¥­¨¥ ‘’€ (­¥ 0, ®΅λη­® -1);                     2
+     U - ¤Άγε΅ ©β­®¥ ζ¥«®¥ ΅¥§ §­ ª ;
+     UD - η¥βλΰ¥ε΅ ©β­®¥ ζ¥«®¥ ΅¥§ §­ ª ;
+     W - ¤Άγε΅ ©β­®¥ ζ¥«®¥ α® §­ ª®¬ ¨«¨ ΅¥§ ­¥£® (N ¨«¨ U);
+     WD - η¥βλΰ¥ε΅ ©β­®¥ ζ¥«®¥ α® §­ ª®¬ ¨«¨ ΅¥§ ­¥£® (D ¨«¨ UD).
+     „«ο  ­¥ª®β®ΰλε  α«®Ά  γª § ­λ ¤Ά¥ £ΰγ――λ ΰ¥§γ«μβ β®Ά, ®β¤¥«ο¥¬λ¥ ¤ΰγ£ ®β
+ ¤ΰγ£   ª®α®©  η¥ΰβ®©  (/). ­¨ ΰ §«¨η ξβαο ―® ΅γ«¥Άαª®¬γ §­ η¥­¨ξ ­  Ά¥ΰθ¨­¥
+ αβ¥ª : ­¥ 0 (‘’€) ®§­ η ¥β γα―¥ε, 0 (‹†) - ­¥γ¤ ηγ.
+
+           * ->                (“‘’… ‘‹‚) - ‡€—’ ’……’€–  40
+                                                         ‚•„ƒ ’€
+  [          ->                     ……‹—’ ’…‘’‚›‰ ’……’€’  22
+                                                      ‚ …† ‘‹…
+  [']       -> /‹–/                         ‘‹‚€’ CFA  41
+              -> CFA /‘‹……/                   ‘‹…„“™…ƒ ‘‹‚€ €
+                                                        —‘‹‚‰ ‹’…€‹
+  [COMPILE]  ->                         ‘‹‚€’ ‘‹…„“™…… ‘‹‚  41
+                                  …‡€‚‘ ’ …ƒ ‡€€ "IMMEDIATE"
+  .         N ->                 €…—€’€’ N € ’…€‹…  „€’ …‹  38
+  .(          ->                         €…—€’€’ ‘‹…„“™… ‹’…› „  28
+                                        ‡€›‚€™…‰ ‘ ‚‘‹—’…‹
+  ."        ->                   ‘‹… €…—€’€’ € ’…€‹…  28
+                               ‘‹…„“™… ‹’…› „ €‚›— ‚‘‹—’…‹
+  .R        + N1, +N2->                       €…—€’€’ N1 € ’…€‹…
+                                                 ‚ ‹… „‹› +N2 ‘€‚€
+  .VOC      * PFA+2->                        €…—€’€’ € ’…€‹…   43
+                                        ‘‹‚€‰ ‘’€’ „‹ ‘‘€ ‘‹‚
+  <           N1,N2->F                      F … “‹, …‘‹ N1 …… N2  49
+  <>        + W1,W2->F                    F … “‹, …‘‹ N1 … €‚ N2  14
+  <#           ->                       €—€’ ”€’…  …€‡‚€…  37
+  <MARK      ->€                ’…’’ ’…“™‰ €„…‘ „‹ ‘‘›‹ €‡€„  19
+  <RESOLVE   € ->                      €‡…’ ‘‘›‹“ €‡€„ ‚ €„…‘ €  19
+  (          ->                …’€ - “‘’’ ‘‹…„“™‰ ’…‘’  28
+                                           „ ‡€›‚€™…‰ “ƒ‹‰ ‘
+  (.")     * ->                         –…„“€, ‹“…€ ‚ ".""  28
+  (+LOOP)   * N->                    ’…‘’ € ‡€‚……… –‹€ "DO +LOOP"   5
+                                                               ‘ €ƒ N
+  (;CODE)  * ->                   ‡€‘€’ ‚ ‹… „€ ‘‹…„…‰ ‘’€’  31
+                                 ‘‹…„“™‰ €„…‘  ‡€—’ …„…‹……
+  (#SCR)    * N->€,’                    ……‚…‘’ … ‡€€ N ‚ ’…‘’  46
+  (A")      * F ->                   –…„“€, ‹“…€ ‚ "ABORT""  29
+  (DO)     * W1,W2 ->              ‚•„ ‚ –‹ ‘ ‘—…’— ’ N2 „ N1  24
+  (EXPECT)  * €,+N1->€,+N2                            ‚‚…‘’ ‘ ’…€‹€   6
+                               +N1 ‹’…  €„…‘“ € „ ……‚„€ ‘’;
+                                 +N2 - ”€’—…‘… —‘‹ ‚‚…„…›• ‹’…
+  (FIND)    * -1,AN,,,A1,T->CFA,C,TF/FF                   ‘€’ ‘‹‚ T  34
+                                   ‚ ‘‘€• A1,,,AN  “‘…•… „€’ CFA
+                                …ƒ ‘’€’  C - €‰’ „‹› ‘ ‡€€
+  (FORGET)  * A->                “„€‹’ ‘‹‚€›… ‘’€’ ‘‹… €„…‘€ A  45
+  (LOOP)    * ->                      ’…‘’ € ‡€‚……… –‹€ "DO LOOP"   5
+  (VOC)     * PFA1+2->PFA2,N/O,N                   „€’ —‘‹ ‘’€’…‰ N ‚  43
+                                   ‘‘… PFA1+2  PFA ‘‹…„“™…ƒ ‘‘€
+                                                  ‹ “‹, …‘‹ …ƒ …’
+  +           W1,W2->W3                              ‘“€ —‘…‹ W1  W2  17
+  +!          W,A ->                 “‚…‹—’ ‡€—……  €„…‘“ A € W  17
+  +BUF      * A1->A2,F                ……‰’  ‘‹…„“™…“ “”…“ ‚ “‹…  25
+  +LOOP     A1,A2,3 -> /‹–/                        …– –‹€  47
+              N ->       /‘‹……/               "DO +LOOP" ‘ €ƒ N
+  !           W,A->                       ‡€‘‹€’ ‡€—…… W  €„…‘“ A  11
+  !CSP      * ->                   ‡€’ €„…‘ ‚…› ‘’…€ ‚ "CSP"  29
+  ]           ->                     ……‹—’ ’…‘’‚›‰ ’……’€’  22
+                                                      ‚ …† ‹–
+  *           N1,N2->N3                       ‡‚…„…… —‘…‹ N1  N2  13
+  */          N1,N2,N3->N4                —€‘’… ’ „…‹… N1*N2 € N3  18
+  */MOD       N1,N2,N3->N4,N5                    ‘’€’ N4  —€‘’… N5  18
+                                     ’ „…‹… ‡‚…„… N1*N2 € N3
+  ;        HK ->                   ‡€—’ …„…‹…… —……‡ „‚…’—…  32
+  ;S      + ->                          ‡€—’ ’……’€– ‡€€  41
+  -           W1,W2->W3                                 ‚›—…‘’ W2 ‡ W1  17
+  -->     +H ->                        ’……’‚€’ ‘‹…„“™‰ €  41
+  -FIND     * ->A,N                     ‚‚…‘’ ‘‹‚  ‘€’ ‚ ‘‹‚€…;  35
+                                        …‡“‹’€’ ’’ †…, —’  “ "FIND"
+  -TRAILING   A,N1->A,N2                         ’‘…— …—›… …‹›  41
+
+
+/         N1,N2->N3 —€‘’… ’ „…‹… N1 € N2                 18
+/MOD      N1,N2->N3,N4 ‘’€’ N3  —€‘’… N4                  16
+          ’ „…‹… N1 € N2
+,         W-> ‘‹‚€’ W € ‚…1“ ‘‹‚€               11
+,"        * -> ‘‹‚€’ ‘’“ ‘ ‘—…’—               28
+>         N1,N2->F F … “‹, …‘‹ N1 ‹… N2                 19
+>=      * N1,N2->F F … “‹, …‘‹ N1 … …›1… N2              19
+>BODY     CFA->PFA ’ ‹ „€  ‹ €€…’‚               30
+>IN      ->€ ………€ - ‘……… —……„‰ ‹’…›            8
+          ‚ ‚•„ ’…‘’‚ “”…… ‹ €…
+>LINK   * CFA->LFA ……‰’ ’ ‹ „€  ‹ ‘‚‡            30
+>MARK    ->€ ’…’’ ’…“™‰ €„…‘ „‹ ‘‘›‹ ‚……„          19
+>NAME   * CFA->NFA ……‰’ ’ ‹ „€  ‹ …            30
+>R       W-> ………‘’ W € ‘’… ‚‡‚€’‚                     9
+>RESOLVE  €-> €‡…’ ‘‘›‹“ ‚……„ ‚ €„…‘… €               19
+?       * €-> €…—€’€’ ‡€—……  €„…‘“ €                   38
+?+      * +N->+N ‚…’, —’ +N …’–€’…‹               29
+?ABORT  * F,T-> …‘‹ F … “‹, ’ €…—€’€’ €                29
+          ’…€‹… ‘’“ ’  “‰’ € "ABORT"
+?BRANCH  F-> …‘‹ F "‹†", ’ € "BRANCH", €—…             5
+          „‹†’ ’……’€– ’ €„…‘€,
+          ‘‹…„“™…ƒ ‡€ €„…‘ ……•„€
+7COMP   * -> ‚…’, —’ ’…“™ …† - ‹–          29
+?CSP    * -> ‚›„€’ “ "‘‹‘ “€‡€’…‹ ‘’…€"             29
+          …‘‹  … €‚… ‡€—… ‚ "CSP"
+?DUP      W->W,W „“‹‚€’ W, …‘‹ ’ … “‹             9
+?GAP    * N-> ‚›„€’ “ "‘—…€… €’", …‘‹           29
+          ‡€‡ …•„“ ‚…€ ‘’…€  ‘‹‚€ ……… N €‰’‚
+?LOADING * -> ‚›„€’ “ "…’ €’ €€",             29
+          …‘‹ ‚•„‰ ’…‘’ „…’ … ‘ €€
+?PAIRS  * W1,W2-> ‚›„€’ “, "…€›… ‘",             29
+          …‘‹ W1 … €‚ W2
+7STACK  * -> ‚›„€’ “ "‘—…€… ‘’…€", …‘‹             29
+           ‹……, —… “‘’,  "‘—…€… €’"
+           ‡€‡…, …… 10 €‰’‚
+:         -> €—€’ …„…‹…… ‘‹‚€ —……‡ „‚…’—…           32
+#         D1->D2 „…‹…… D1 € ‡€—…… "BASE"                 37
+          ‚›„…‹’ 1 –”“ ‘ –€  „€‚’ ……
+          ‚ “”… "PAD", ‘’€‚‚ —€‘’… D2
+#>        D->A,+N ‡€—’ ”€’… …€‡‚€…;           37
+          „€’ €„…‘ € €—€‹€ ‹’…  • —‘‹ +N
+#S        D1->0,0 ‚›„…‹’ –”› D1  ‘‹‚“ "#" „             37
+          ‹“—… “‹
+#TIB    ->€ ………€ - —‘‹ ‹’… ‚ “”…… "TIB"            8
+@       €-> „€’ ‡€—……  €„…‘“ €                          11
+'        ->CFA „€’ CFA „‹ ‘‹…„“™…ƒ ‘‹‚€                    41
+=         W1,W2->F F … “‹, …‘‹ W1 €‚ W2                  19
+"       *HK -> /‹–/ ‘‹‚€’ ‘‹…„“™…            28
+          ->’ /‘‹……/ ‹’…› „ €‚›—
+          ‘‹—’…‹ € ‘’“ ‘ ‘—…’—
+".      * ’-> €…—€’€’ € ’…€‹… ‘’“ ’                  28
+ABORT    ‘‘’ ‘’…  “‰’  "QUIT"                         28
+ABORT"   -> /‹–/ …‘‹ F "‘’€" (… “‹)            29
+          F-> /‘‹……/ ’ €…—€’€’ € ’…€‹…
+          ‘‹…„“™‰ ’…‘’ „ €‚›—  “‰’ € "ABORT"
+ABORT8  * -> ‚›„€’ “ "…€‚‹… ‡€—……"              29
+ABS       N1->N2 €‘‹’€ ‚…‹—€                            17
+AGAIN   + €,1-> /‹–/ …– –‹€ "BEGIN AGAIN"        47
+          -> /‘‹……/
+ALIGN   * +N-> ‚›‚’ ‚…“ ‘‹‚€ € +N                  10
+ALIGNH  * -> ‚›‚’ ‚…“ ‘‹‚€ € ‹“‘‹‚             10
+ALLOT     W-> ‘…‘’’ ‚…“ ‘‹‚€ € W €‰’‚              10
+ALPHA   * N->C …€‡‚€’ N ‚ ‹’…“ ‘ € –”              37
+AND       W1,W2->W3 €‡„… ‹ƒ—…‘… ""                  13
+B/BUF   * ->1024 —‘‹ €‰’‚ ‚ ‹— “”……                  7
+BFLDWORD  €-> ‘™’  …‡€ ‘‹‚…                     29
+BASE     ->€ ………€ - ’…“™…… ‘‚€… ‘‘’…›            8
+          ‘—‘‹…  ‚‚„…-‚›‚„… —‘…‹
+BEGIN   HK->€,1 /‹–/ €—€‹ –‹€ "BEGIN"               47
+          -> /‘‹……/
+BL      +->64 ‘’€’€ - „ …‹€ ‚ „                    7
+BLANK   +A,U-> ‡€‘‹€’ …‹› ‚ U €‰’‚  €„…‘“ €           22
+BLK      ->€ ………€ - … ‚•„ƒ ‹€-€€          8
+BLOCK     +N->A „€’ €„…‘ € “”…€ ‘ ‹ +N                 25
+BODY>   * PFA->CFA ’ ‹ €€…’‚  ‹ „€               30
+BRANCH   -> „‹†’ ’……’€– ’ ‡€—…               5
+          ‘‹…„“™…ƒ ‘‹‚€ƒ €„…‘€
+BRANCH# M „‹†…… ’……’€– ’ €„…‘€ ‚                 5
+          ‘‹…„“… ‹“‘‹‚…
+BUFFER    +N->A ‘€’ ‹“ +N “”…                        23
+C!        ‘,€-> ‡€‘‹€’ €‰’ ‘  €„…‘“ €                      11
+C,     +  ‘-> ‘‹‚€’ €‰’ ‘ € ‚…“ ‘‹‚€          11
+C@        A->‘ „€’ €‰’  €„…‘“ €                            11
+C"     *H -> /‹–/ ‘‹‚€’ „ …‚‰             23
+          ->‘ /‘‹……/ ‹’…› ‘‹…„“™…ƒ ‘‹‚€
+          € ‹’…€‹
+CMOVE     A1,A2,U-> ……‘‹€’ U €‰’‚ ’ €1 ‚ €2               21
+CMOVE>    A1,A2,U-> ……‘‹€’ U €‰’‚ ’ €„…‘€ €1             21
+           €„…‘“ €2 €—€ ‘ ‹• €„…‘‚
+COMPILE   -> ‹‚€’ ‘‹…„“™‰ €„…‘                     22
+CONSTANT  W-> …„…‹’ ‘‹…„“™…… ‘‹‚                        32
+          € ‘’€’“ ‘ ‡€—…… W
+CONTEXT   ->€ ………€ - ‘‘, ‘ ’ƒ                   7
+          €—€…’‘ ‘ ‚‚„›• ‘‹‚
+CONVERT   WD1,A1,->WD2,A2 …€‡‚€’ WD1  ‹’…›            39
+          ’ €1+1 ‚ WD2  €2 - €„…‘ 1-‰ … –”›
+COUNT     ’->€,N „€’ €„…‘ …‚‰ ‹’…›  —‘‹               28
+          ‹’… N ‘’ ‘ ‘—…’— ’
+CR        -> ‚›‚…‘’ € ’…€‹ ……‚„ ‘’                 6
+CREATE    -> ‘‡„€’ €—€‹ ‘’€’ („ PFA) „‹                 36
+          ‘‹…„“™…ƒ ‘‹‚€)
+          …ƒ ‘‹…… ‹€„…’ PFA € ‘’…
+CREATE#   A   €—€‹ ‘‹’…‹‰ —€‘’ "VARIABLE"            3
+CSP     * ->€ ………€ „‹ ’‹ƒ •€…             8
+          ‡€—… “€‡€’…‹ ‘’…€
+CURRENT  ->€ ………€ - ‘‘ „‹ „€‚‹… ‘‹‚           7
+D.        D-> €…—€’€’ D € ’…€‹…  „€’ …‹           38
+D.R       D,+N-> €…—€’€’ D ‚ ‹… „‹› +N ‘€‚€            38
+D<        D1,D2->F F "‘’€", …‘‹ D1 …… D2                15
+D+        WD1,WD2->WD3 ‘“€ „‚‰›• —‘…‹ WD1  WD2            14
+D-        WD1,WD2->WD3 €‡‘’ „‚‰›• —‘…‹ WD1-WD2           14
+D/     *  D1,D2->D3 —€‘’… D3 ’ „…‹… D1 € D2              15
+D/MOD  *  D1,D2->D3,D4 ‘’€’ D3  —€‘’… D4 ’               15
+          „…‹… „‚‰›• —‘…‹ D1 € D2
+D=        WD1,WD2->F F "‘’€", …‘‹ WD1  WD2 €‚›           15
+DABS      D1->D2 €‘‹’€ ‚…‹—€ „‚‰ƒ —‘‹€             14
+DECIMAL   -> ……‰’ ‚ „…‘’—“ ‘‘’…“                       22
+DEFINITIONS -> “‘’€‚’ ‘‘ "CURRENT" € "CONTEXT"         31
+DEPTH     ->+N ‹—…‘’‚ ‡€—… € ‘’…… „ +N               20
+DIGIT Δ   C,N1->N2,TP/FF N2 - ‡€—…… ‹’…› ‘ €             39
+          –”› ‚ ‘‘’…… ‘—‘‹…  ‘‚€ N1
+DMAX      WD1,WD2->WD3 ‹›…… ‡ „‚“• —‘…‹                     16
+OMIN      WD1,WD2->WD3 ……… ‡ „‚“• —‘…‹                    LI
+DMOD    * D1,D2->D3 ‘’€’ D3 ’ „…‹… D1 € D2              15
+DNEGATE   D1->D2 …‡“‹’€’ ‚›—’€ D1 ‡ “‹                 14
+DO     HK ->€1,€2,3 /‹–/ €—€‹ –‹€ "DO" CO           47
+          N1,N2-> /‘‹……/ ‘—…’— ’ N2 „ N1
+DOES>  HK -> €—€‹ "‘‹…" ‚ …„…‹™… ‘‹‚…           34
+DOES#  M  „ƒ€€ - €—€‹ €‘… "DOES>"              3
+DP!    * A-> “‘’€‚’ ‚…“ ‘‹‚€ € €„…‘ A              10
+DPL   +->€ ………€ - ‡– ‘‹…„…‰ ’—                 8
+          ‚ ‘‹…„… ‚‚…„… —‘‹… ’ –€
+DROP      W-> “€’ ‘ ‘’…€ ‚…•…… ‡€—……                  9
+DU<       UD1,UD2->F F "‘’€", …‘‹ UD1 …›1… UB2            14
+DUMP   +  A,U-> €‘…—€’€’ € ’…‰‹… U €‰’‚               42
+          ’ €„…‘€ U
+DUP       W->W,W „“‹‚€’ ‚…•…… ‡€—……                9
+D0<       D->F F "‘’€", …‘‹ D …… “‹                   15
+D0=       WD->F F "‘’€", …‘‹ WD “‹                        15
+D2/       D1->D2 €‡„…‹’ € „‚€                               15
+ELSE   HK A1,2->A2,2 /‹–/ €—€‹ 2-‰ ‚…’‚             47
+          -> /‘‹……/ ‚…’‚‹… "IF"
+EMIT      ‘-> ‚›‚…‘’  ’…€‹ ‹’…“ ‘ „ ‘              6
+EMPTY-BUFFERS + -> —‘’’ “”…›‰ “‹                        25
+ENCLOSE  * A,C->A,N1,N2,N3 ‚‚„ ‘‹‚€                           27
+ERASE    + A,U-> ‡€‘‹€’ “‹ ‚ U €‰’‚  €„…‘“ €            22
+ERCOND8  H ‘ƒ€‹‡€–  …€‚‹ ‡€—…                  4
+EXECUTE   CFA-> ‘‹’ ‘‹‚  CFA …ƒ ‘’€’               11
+EXIT      -> ‡€—’ ‘‹…… ’…“™…ƒ …„…‹…          4
+EXIT#    M   ’—€ "EXIT" €„…‘ƒ ’……’€’€               4
+                                 ‡€—… ‚ ‘’……
+EXPECT    A,+N-> ‚‚…‘’ ‘ ’…€‹€ +N ‹’…                  40
+          €„…‘“ A,‚ ………“ "SPAN" ‡€‘‹€’
+          ”€’—…‘… —‘‹ ‚‚…„…›• ‹’…)
+          ‹’…› €…—€’€’  ’…€‹…
+FENCE   *->A ………€ - ƒ€–€ ‡€™’› ’ "FORGET"           7
+FILL      A,U,C-> ‡€‘‹€’ ‘ ‚ U €‰’‚  €„…‘“ €              22
+FIND      T->A,N ‘€’ ‘‹‚ ’ ‚ ’…“™… ’…‘’…             35
+          …‘‹ N=0, ’ €=’  ‘‹‚ … €‰„…;
+          €—… A=CFA €‰„…‰ ‘’€’, N=1 „‹
+          ‘‹‚ "IMMEDIATE"  N=-1 „‹ ‘’€‹›•
+FIRST *   ->€ ‘’€’€ - €„…‘ €—€‹€ “”…ƒ “‹€           2
+FIRST# M  ‡€—…… ‘’€’› "FIRST"                            2
+FL#    €  ‹… ‘‚‡ „‹ ‘‘‚ ‚ ‹… €€…’‚              33
+          ‘‹‚€‰ ‘’€’ ‘‹‚€ "FORTH"
+FLUSH     -> ‡€‘€’ ‹ € „‘  —‘’’ “‹              24
+FORGET    -> “„€‹’ ‘‹‚€“ ‘’€’ ‘‹…„“™…ƒ ‘‹‚€          45
+           ‚‘…• ‘‹‚, …„…‹…›• ‘‹… …ƒ
+FORTH     -> “‘’€‚’ "CONTEXT" € €—€‹›‰ ‘‘           33
+FORTH-83  -> ‘’€„€’›‰ ’…‘’ ”’-‘‘’…›                  33
+FORTH#  A  PFA+2 „‹ ‘‹‚€‰ ‘’€’ "FORTH"                   33
+GOTO      „ƒ€€ ……•„€  ‘‘›‹…                       4
+H.     +  U-> €…—€’€’ U € ’…€‹…                         38
+          ‚ 16-‰ ‘‘’……  „€’ …‹
+HERE      ->A „€’ €„…‘ ’…“™…‰ ‚…› ‘‹‚€                10
+HEX    +  -> ……‰’ ‚ …‘’€„–€’—“ ‘‘’…“                22
+HLD   *  ->A ………€ - ‡– ‘‹…„…‰ ‹’…›,            8
+          ………‘…‰ ‚ “”… "PAD"  "HOLD"
+HOLD      ‘-> ………‘’ ‹’…“ ‘ € ‚…“ “”…€ PAD          37
+I        ->W ’…“™…… ‡€—…… W ‘—…’—€ –‹€ ""            24
+I'     +K ->W …—… ‡€—…… W ‘—…’—€ –‹€ "DO"           24
+ID.     * NFA-> €…—€’€’  ‘‹‚€  „€’ …‹              31
+IF     H->€,2 /‹–/ €—€‹ ‚…’‚‹… "IF"               47
+          F-> /‘‹……/
+IMMEDIATE -> „€’ ‡€ "IMMEDIATE" ‘‹…„…‰                 31
+          ‘‡„€‰ ‘‹‚€‰ ‘’€’…
+INDEX   + N1,N2-> €‘…—€’€’ €—€‹“ ‘’“ €‚          46
+          ‘ …€ ’ N1 „ N2
+INTERPRET + -> ’……’‚€’ ‚•„‰ ’                   40
+IPUSH    „ƒ€€ - …‘’’ € ‘’… “€‡€’…‹            4
+          ’……’€–  ‰’ ‘‹…„“™“‰ ‘’“
+J        ->W TEK“™EE ‡€—…… W ‘—…’—€ ‚’ƒ               24
+             …‹™…ƒ –‹€ "DO"
+KEY    ->‘ ‚‚…‘’ ‹’…“ ‘ ’…€‹€                             6
+
+L>NAME    *  LFA->NFA ……‰’ ’ ‹ ‘‚‡  ‹ …        30
+LATEST    *  ->NFA „€’ NFA ‘‹…„…‰ ‘‡„€‰ ‘’€’          31
+LEAVE       -> ‡€—’ ‘‹…… –‹€ "DO"                 24
+LENGMASK  M  ‹… ‘‹‚ - €‘€ „‹ “„€‹…                   2
+             ’€ "IMMEDIATE" ‡ €‰’€ „‹›
+LENG1MSK  M  ‹… ‘‹‚ - €‘€ „‹ “„€‹…                   2
+             ’‚ "IMMEDIATE"  "SMUDGE" ‡ €‰’€ „‹›
+LENG2MSK  M  ‹… ‘‹‚ - €‘€ „‹ ‚›‘…—…                  2
+             —‘’‰ „‹› ‡ €‰’€ „‹› ‘ ‡€€
+LHRW12    M  „ƒ€€ ‡€ƒ“‡ „‚‚• ‚…•• ‡€—…‰         4
+             € ‘’…… ‚ …ƒ‘’› RH2 (‚…•……)  RM1
+LIMIT     *  ->A ‘’€’€ - €„…‘ –€ “”…ƒ “‹€          2
+LIMIT#    M  ‡€—…… ‘’€’› "LIMIT"                          2
+LINK>     *  LFA->CFA ……‰’ ’ ‹ ‘‚‡  ‹ „€         30
+LIST      +  N-> €‘…—€’€’ € ’…€‹… € N               46
+LIT       *K ->W …‘’’ € ‘’… ‘‹…„“™‰ „                23
+LIT"      *K ->’ „€’ €„…‘ ‘‹‚€‰ ‘’            28
+             „‹†’ ’……’€–, ‰„ ……
+LITERAL   H  W-> /‹–/ ‘‹‚€’ W €              23
+             ->W /‘‹……/ ‹’…€‹
+LOAD      +N-> ’……’‚€’ € ‘ … +N              41
+LOOP      HK A1,A2,3-> /‹–/ …– –‹€ "DO LOOP"       47
+             -> /‘‹……/
+LRW1      M  „ƒ€€ ‡€ƒ“‡ „‚‰ƒ ‡€—… €          4
+             ‚…… ‘’…€ ‚ …ƒ‘’ RW1
+LRW12     M „ƒ€€ ‡€ƒ“‡ „‚“• ‚…•• „‚‰›•          4
+            ‡€—…‰ € ‘’…… ‚ …ƒ‘’› RW2 (‚…•……)  RW1
+M*        T  N1,N2->D ‡‚…„…… „‚‰‰ „‹› N1  N2        18
+M/        *  D,N1->N2,N3 ‘’€’ N2  —€‘’… N3 ’             16
+             „…‹… „‚‰ƒ D € „€… N1
+M/MOD     Δ  UD1,U2->U3,UD4 ‘’€’ U3  „‚‰…                16
+             —€‘’… UD4 ’ „…‹… UD1 € U2
+€•          N1,N2->N3 ‹……… ‡ —‘…‹ N1  N2                 22
+MIN          N1,N2->N3 ……… ‡ —‘…‹ N1  N2                 22
+MOD         N1,N2->N3 ‘’€’ ’ „…‹… N1 € N2               18
+MSG       *  ->€ ‘’€’‰ - €„…‘ €—€‹€ “”…€ MSG             2
+MS#      M  ‡€—…… ‘’€’› "MSG"                            2
+N>LINK    *  NFA->LFA ……‰’ ’ ‹ …  ‹ ‘‚‡        30
+NAKE>     *  NFA->CFA ……‰’ ’ ‹ …  ‹ „€         30
+NEGATE       W1->2 …‡“‹’€’ ‚›—’€ W1 ‡ “‹              17
+NEXT      M  ‚•„ ‚ €„…‘›‰ ’……’€’                       1
+NEXT1     M  „‹†…… €„…‘‰ ’……’€– ’               1
+             ”’-€„…‘€ ‚ …ƒ‘’… 14
+NOT          N1->N2 €‡„… ‚…’‚€…                  13
+NUMBER    +  T->WD …€‡‚€’ ‘’“ ’ ‚ —‘‹ WD            39
+OFFSET    + ->€ ………€ - „€‚€  …“ ‹€            8
+OR           W1,W2->W3 €‡„… ‹ƒ—…‘… "‹"             13
+OVER         W1,W2->W1,W2,W1 „“‹‚€’ ‚’… ‘‚…•“        9
+PAD          ->A „€’ €„…‘ ’…“™…‰ ‚…› “”…€ PAD          37
+PICK         WN,..,,W0,+N->WN,...,W0,WN „“‹‚€’          12
+             N-E ‘‚…•“ ‡€—……
+POP       M  ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‘’…            3
+             ‚…•…ƒ ‡€—… ‘ ‚…› ‘’…€
+POPPUT1   M  ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‘’…            3
+             ‚…•…ƒ  ‡€…‰ …„›„“™…ƒ € ‡€—……
+             ‡ …ƒ‘’€ RW1
+PREV      *C ->€ ………€ - ’…“™‰ ‹—›‰ “”…              7
+PUSHRW1   M  ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ …™……          3
+             ‡€—… ‡ …ƒ‘’€ RW1 € ‚…“ ‘’…€
+PUSH2RW1  M  ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‡€…‰             3
+             ‚…•…ƒ € „‚‰… ‡€—…… ‡ …ƒ‘’€ RW1
+PUTRW1    M  ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‡€…‰             3
+             ‚…•…ƒ ‡€—…  €—…… ‡ RW1
+QUERY    *  -> ‚‚…‘’ ‘ ’…€‹€ ‹’…› ‚ “”… "TIB" ;        40
+             —‘‹ ‚‚…„…›• ‹’… ‡€‘‹€’ ‚ "#TIB"
+QUIT         ‘‘’ ‘’… ‚‡‚€’‚, ……‰’ ‚ …†           28
+             ‘‹…  „‹†’ ’……’€–
+R.       *   -> €‘…—€’€’ € ’…€‹… ‘’… ‚‡‚€’‚         42
+R>          ->W ………‘’ ‡€—…… ‘ ‘’…€ ‚‡‚€’‚           9
+R@          ->W ‘‚€’ ‚…“ ‘’…€ ‚‡‚€’‚             9
+RBLK     *   €,+N-> —…‘’ € +N  €„…‘“ A                6
+RDROP    *   K->‘’ ‡€—…… ‘ ‘’…€ ‚‡‚€’‚                9
+RECURSE +HK  -> ‘‹‚€’ €™……  ‹“…“       31
+             ‚ „€›‰ …’ …„…‹…
+REMEMBER +   -> …„…‹’ ‘‹‚, ‘‹…… ’ƒ           45
+             “—’†€…’ ‚‘… ‘‹…„… …„…‹…
+……€’   HK  €1,1,€2,2-> /‹–/ …– –‹€               47
+             -> /‘‹……/ "BEGIN WHILE REPEAT"
+ROLL         WN,WN-1,...,W0,+N->WN-1,..,W0,WN –‹—…‘        12
+             ……‘’€‚’ N ‚…•• ‡€—…‰
+ROT          W1,W2,W3->W2,W3,W1 ……‘’€‚’ ’                  9
+             ‚…•• ‡€—…  —€‘‚‰ ‘’…‹…
+RP!      *   A-> “‘’€‚’ “€‡€’…‹ ‚…› ‘’…€             20
+             ‚‡‚€’‚ € A
+RP@      *   ->A €„…‘ ’…“™…‰ ‚…›-‘’…€ ‚‡‚€’‚          20
+R0       *C  ->€ ………€ - €„…‘ „€ ‘’…€ ‚‡‚€’‚          7
+S.       *   -> €‘…—€’€’  ’…€‹… ‘’… „€›•            42
+S>D      *   N->D €‘’ N „ —‘‹€ „‚‰‰ „‹› D          14
+SAVE-BUFFERS -> ‡€‘€’ € „‘ ‚‘… ‘€‚‹…›… ‹         26
+SCR     + ->€ ………€ - … €€ ‚ "LIST"               8
+SIGN     N-> „€‚’ ‚ ”€’“ ‘’“ ‡€                   37
+             “‘, …‘‹ —‘‹ N ’–€’…‹
+SMUDGE   *-> “‘’€‚’ ‚ …„–“ ”‹€ƒ "SMUDGE"                 31
+             ‚ ‘‹…„…‰ ‘‡„€‰ ‘’€’…
+SNAPSTK *   €1,€2,€‡-> €‘…—€’€ ‘’…€ ’ €1 „ €2             42
+             ‘ ’…‘’ A3; ‚‡‚€’ "—……‡ „"
+SP!     *   €-> “‘’€‚’ “€‡€’…‹ ‚…‚› ‘’…€ € A         20
+SP@     +   ->€ €„…‘ ’…“™…‰ ‚…› ‘’…€ „€›•              20
+SPACE        -> €…—€’€’  ’…€‹… …‹                  23
+SPACES      +N-> €…—€’€’ € ’…€‹… +N …‹‚            23
+SPAN       ->€ ………€ „‹ …‡“‹’€’€ "EXPECT"              8
+STATE      ->€ ………€ ‘ ‘‘’… ’…‘’‚ƒ              8
+             ’……’€’€: "‘’€" - ‹–
+SWAP         W1,W2->W2,W1 …’ …‘’€ 2 ‚…••            9
+S0       +->€ ………€ - €„…‘ „€ ‘’…€ „€›•              7
+TEMP      M  €—€ ‹€‘’ ‡ „‚“• „‚‰›• ‘‹‚               2
+THEN     HK €,2-> /‹–/ …– ‚…’‚‹… "IF"            47
+             -> /‘‹……/
+THRU     + +N1,+N2-> ’……’‚€’ €› ‘ …€        41
+             ’ +N1 „ +N2 ‚‹—’…‹
+TIB         ->€ €„…‘ ‚•„ƒ ’…‘’‚ƒ “”…€                2
+             „‹ ‚‚„€ ‘ ’…€‹€
+TIB#    M    ”’-€„…‘ €—€‹ “”…€ TIB                       2
+TYPE        A,+N-> €…—€’€’ € ’…€‹… +N ‹’…             6
+            ’ €„…‘€ €
+U.           U-> €…—€’€’ U € ’…€‹… €                 35
+             —‘‹ …‡ ‡€€
+U.R     +  U,+N-> €…—€’€’ € ’…€‹… —‘‹ U              38
+             ‚ ‹… „‹› +N ‘€‚€
+U<           U1,U2->F F ‘’€, …‘‹ U1 …… U2              16
+UM*          U1,U2->UD ‡‚…„…… UD —‘…‹ U1  U2           16
+UM/MOD       UD,U1->U2,U3 ‘’€’ U2  —€‘’… U3 ’           16
+             „…‹… UD € U1
+UNSMUDGE  *  -> “‘’€‚’ ‚ “‹ ”‹€ƒ "SMUDGE"                31
+             ‚ ‘‹…„…‰ ‘‡„€‰ ‘’€’…
+UNTIL    HK  A,1-> /‹–/ …– –‹€ "BEGIN UNTIL"      47
+             F-> /‘‹……/
+UPDATE       -> ’…’’ ’…“™‰ ‹ K€K ‡……›‰           25
+USE      *C  ->€ ………€ - ‘‹…„“™‰ ‹—›‰ “”…           7
+VARIABLE     -> …„…‹’ ‘‹…„“™…… ‘‹‚ K€K                 32
+             ………“ ‘ €—€‹› ‡€—…… “‹
+VOC-LINK * ->€ ………€ - €„…‘ ‹ ‘‚‡ ‘‹…„…ƒ       33
+             ‘‡„€ƒ  "VOCABULARY" ‘‘€ ‘‹‚
+VOCABULARY   -> …„…‹’ ‘‹…„“™…… ‘‹‚ €                 33
+             ‘‘ €„ ’…“™ ‡€—…… "CURRENT"
+VOCABULARY# €   €—€‹ ‘‹’…‹‰ —€‘’ "VOCABULARY"       33
+VOCS     *  -> €‘…—€’€’  ’…€‹… ’…“™‰                43
+             „ ‘€ ‘‹‚ ‚ ‘‹‚€…
+WBLK     *  A,+N-> ‡€‘€’ € +N ‡ €„…‘€ A               6
+WHILE   HK 1->€,2 /‹–/ ‚…’‚‹…… "WHILE" ‚             47
+             F-> /‘‹……/ –‹… "BEGIN WHILE REPEAT"
+WIDTH   *  ->N ‘’€’€ - €‘€‹€ „‹€ …            7
+WORD      ‘->’  ‚‚…‘’ ‘‹‚ „ ‘’-‹’…› C;                 27
+             „€’ …ƒ €„…‘ € ‘’ ‘ ‘—…’—
+WORDS   +  -> €‘…—€’€’ € ’…€‹… …€ ‘‹‚              44
+             ‡ ‘‘€ "CONTEXT"
+XOR          W1,W2->W3 €‡„… "‘‹—€™…… ‹"           13
+0       *  ->0 ‘’€’€ “‹ (‡€—…… "‹†")                7
+0<           N->F F "‘’€", …‘‹ N ’–€’…‹              13
+0<>          N->F F "‘’€", …‘‹ N … “‹                   19
+!      *    €-> ‡€‘‹€’ “‹  €„…‘“ €                      11
+0=           W->F F "‘’€", …‘‹ N €‚ “‹                13
+1+           W1->W2 “‚…‹—’ W1 € 1                          17
+1+!     +    €-> “‚…‹—’ A 1 ‡€—……  €„…‘“ €           17
+1-           W1->W2 “…›’ W1 € 1                          17
+2+           W1->W2 “‚…‹—’ W1 € 2                          17
+2!           UD,A-> ‡€‘‹€’ „‚€… WD  €„…‘“ €             20
+2*      +    W1->W2 €”…’—…‘‰ ‘„‚ƒ ‚‹…‚ € 1            20
+2-           W1->W2 “…’ W1 € 2                          17
+2/           W1->W2 €”…’—…‘‰ ‘„‚ƒ ‚€‚ € 1           20
+2@           A->WD „€’ „‚‰… ‡€—……  €„…‘“ €           20
+2CONSTANT    WD-> …„…‹’ ‘‹…„“™…… ‘‹‚ €               32
+             ‘’€’“ ‘ ‡€—…… WD
+2DROP        WD-> ‘’ ‚…•…… „‚‰… ‡€—……               12
+2DUP         WD->WD,WD „“‹‚€’ „‚‰… ‡€—……         12
+2LIT    * ->WD …‘’’ € ‘’… ‘‹…„“™… 2 „€             23
+2LITERAL *  WD-> /‹–/ ‘‹‚€’ WD €           23
+             ->WD /‘‹……/ ‹’…€‹
+20VER        WD1,WD2->WD1,WD2,WD1 „“‹‚€’ ‚’…        12
+             „‚‰… ‘‚…•“
+2        ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‘’…           3
+             „‚‰ƒ ‡€—… ‘ ‚…› ‘’…€
+2POPPUT1 M   ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‘’…           3
+             „‚‰ƒ ‚…•…ƒ ‡€—… ‘ ‘’…€ 
+             ‡€…‰ …„›„“™…ƒ „‚‰ƒ € 4-€‰’…
+             ‡€—…… ‡ …ƒ‘’€ RW1
+2PUSHRW1 M   ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ …™……         3
+             „‚‰ƒ ‡€—… ‡ RW1 € ‚…“ ‘’…€
+2PUTRW1  M   ‚•„ ‚ €„…‘›‰ ’……’€’ ‘ ‡€…‰            3
+             „‚‰ƒ ‚…•…ƒ ‡€—…  4-€‰’…
+             ‡€—…… ‡ …ƒ‘’€ RW1
+2ROT         WD1,WD2,WD3->WD2,WD3,WD1 ……‘’€‚’ ’           12
+             ‚…•• „‚‰›•  —€‘‚‰ ‘’…‹…
+2SWAP        WD1,WD2->WD2,WD1 …’ …‘’€ „‚€              12
+             ‚…•• „‚‰›• ‡€—…
+2VARIABLE    -> …„…‹’ ‘‹…„“™…… ‘‹‚ € ………“       32
+             „‚‰‰ „‹› ‘ €—€‹› ‡€—…… “‹
+”’-‘‘’…€ * -> ’…‘’‚›‰ ’……’€’ ”’-‘‘’…›          40
+
+                      ªΰ ­ ­®¬¥ΰ 1
+( 09.09.86      €—€‹ „…‹ ”’-‘‘’…›         )
+DECIMAL ( ‘’€’› …„€ ‹– )
+128  CONSTANT  &IFLAG ( ‡€ "IMMEDIATE")
+32   CONSTANT  &SFLAG ( ‡€ "SMUDGE")
+31   CONSTANT  &LENG  ( €‘€ „‹ ‚›‘…—… „‹›)
+&SFLAG 256 * 64 + CONSTANT &DWORD  ( ”’‚…  )
+(  €—€‹… „ ‘ €„…‘€–…‰ ’ …ƒ‘’€ RFORTH)
+START-CODE *, RFORTH USING,  ( €„…‘›‰ ’……’€’)
+M:  NEXT    14 0 (, RI P.FORTH LH,  RI RTWO AR,
+M:  NEXT1   14 RMASK NR,   15 0 (, 14 RFORTH LH,
+15 RMASK NR,   15 RFORTH AR,  14  RTWO AR,   15 BR,
+
+                      ªΰ ­ ­®¬¥ΰ 2
+( 09,09.86  ‘‘’…›… ………›…  ‘’€’› )
+CONST MSG      M: MSG#  0 ,    ( €„…‘ €—€‹€ “… MSG)
+CONST FIRST    M: FIRST# 0 , ( €„…‘ €—€‹€ “‹€)
+CONST LIMIT    M: LIMIT# 0 , ( €„…‘ –€ “‹€)
+CONST TIB      M: TIB#   0 ,  ( €„…‘ €—€‹€ “”…€ ’I‚ )
+ 4 ALIGN
+M: LENGMASK 255 &IFLAG - S>D  F, (  €‰’  „‹›  …‡ IMMEDIATE)
+M: LENGMASK 255 &IFLAG - &SFLAG -  S>D F,  ( …‡ IMMD  SMDG)
+M: LENG2MSK &LENG  S>D  F,     ( €‰’ „‹›  ‘ —‘’‰ „‹‰)
+ 8  ALIGN
+M:  ’…MP 16  ALLOT ( €—€ ‹€‘’ )
+
+                      ªΰ ­ ­®¬¥ΰ 3
+(  09.09.86 „‹’…‹›… ‚•„›  ‚ €„…‘›‰ ’……’€’)
+M: DOES# RI  RPUSH,  RI 4 (,  15  LA,  RI RFORTH  SR,
+A: CREATE#   RW1 14 LR,            (  …‘’’  FA ‘’€’)
+M: PUSHRW1   RSTACK  RTWO  SR,    ( …‘’’ ‡€—…… ‡ RW1)
+M: PUTRW1    RW1 PUT,   RNEXT BR, (   ‡€…’   ‚…•……)
+M: 2POP      RSTACK  RTWO AR,     (  ‘’ „‚€  ‚…••)
+Mi POP       RSTACK  RTWO AR,   RNEXT  BR,   ( ‘’ ‚…•……)
+M: POPPUT1   RSTACK  RTWO AR,    ( ‘’ ‚…•……  ‡€…’)
+         RW1 PUT, RNEX’  BR,  (  ‡€—…… ‡ RW1)
+M: 2PUSHRW1  RSTACK  RTWO  SR,  (  ‹†’  „‚‰… € ‘’…)
+M: PUSH2RW1  RS’A‘  RTWO  SR,  (  ‡€…’  ‚…•…… € „‚‰…)
+M: 2PUTRW1   RW1  TEMP  ST,     ( ‡€…’ „‚‰… ‚…•……)
+    FIRST  (, 4 ), TEMP  MVC,  RNEXT  BR,
+M: 2POPPUT1  RS’A‘  RTWO  AR,  RS’A‘  RTWO AR,  2PUTRM1 ‚,
+
+                      ªΰ ­ ­®¬¥ΰ 4
+( 09.09.86 ‚‘ƒ€’…‹›… „ƒ€›: ‚‡‚€’ ‚ …ƒ.14)
+M: LHRW12   RW1 SECOND LH,   RW2 PULL,  14 BR,
+M: LRW1     TEMP (, 4 ), FIRST MVC,  RW1 TEMP L,   14 BR,
+M: LRW12    TEMP (, 8 ), FIRST MVC,  RW1 TEMP 4 +(, L,
+           RW2 TEMP L,   14 BR,
+M: GOTO     14 0 (, 0 14 LH,   NEXT1  ‚,
+M: IPU3H    RI PUSH,  RW2 RW2  SR,   RW2 0 (, RI RFORTH IC,
+  RI 2 (, RI RU2 LA,  14 BR
+CODE EXIT
+M: EXIT#  RI RPOP,   RI RMASK NR,  RNEXT BR,   END-CODE
+M: ERCOND8  14  GOTO BAL,  ] ABORT8 [
+
+                      ªΰ ­ ­®¬¥ΰ 5
+( 09.09.86  BRANCH  ?BRANCH  (LOOP/  (+LOOP/ )
+CODE  BRANCH  M: ‚RAN‘#
+ RI 0 (, RI RFORTH LH,    RI RMASK  NR,      RNEXT BR,
+‘DE ?BRANCH  RW1 POP,   RW1 RW1  LTR,   ‚RAN‘# BZ,
+   RI RTWO AR,  RNEXT BR,
+CODE  (LOOP)  RW1 1 LA,   1 =F B,
+CODE (+LOOP)  RW1 POP,
+1 =H  0 RFIRST LH,   0 RSECOND SH,   0 RMASK NR,
+      0 RW1 AR,      RW1 RFIRST AH,  RW1 RFIRST STH,
+      0 RMASK  CLR,   BRANCH# BNH,   RRET 6 (, 0 RRET LA,
+      RI RTWO AR,  RNEXT BR,   END-CODE
+
+                    ªΰ ­ ­®¬¥ΰ 6
+( 09.09.86 KEY CR EMIT TYPE (EXPECT/ RBLK MBLK )
+i  α«¥¤γξι¨¥ ®―ΰ¥¤¥«¥­¨ο ¤ ξβ β®«μª® ¨¬¥­  ―ΰ®ζ¥¤γΰ)
+CODE KEY  ( ->‘  ‚‚…‘’ ‹’…“  ‘  ’…€‹€ )     END-CODE
+CODE  CR  (  ->   ‚›‚…‘’ ……‚„ ‘’  ) END-CODE
+CODE  EMIT ( ‘-> ‚›‚…‘’ ‹’…“ ‘ „ ‘ € ’…€‹) END-CODE
+CODE TYPE  ( A,N-> ‚›‚…‘’ H€ TEP€‹ N ‹’…  €„…‘“ A) END-CODE
+CODE (EXPECT) ( A,N1->A,N2  ‚‚…‘’ ‘ ’…€‹€ … ‹……
+  N1 ‹’… /„ ……‚„€ ‘’/ ‚ “”…  €„…‘“ €;
+  N2 - ”€’—…‘…   —‘‹ ‚‚…„…›•  ‹’…)  END-CODE
+CODE  RBLK  ( A,N-> —’€’ € N ‚ “”…  A) END-CODE
+CODE  WBLK  ( A,N->  ‡€‘€’ € N ‡ “”…€ € ) END-CODE
+
+                      ªΰ ­ ­®¬¥ΰ 7
+( 09.09.86 ‘’€’›  ‘‘’…›… ………›…      )
+44    CONSTANT BL    ( „ …‹€)
+1024  CONSTANT B/BUF ( „‹€ “”…€ „‹ €€)
+&LENG CONSTANT WIDTH   ( €‘€‹€ „‹€ ‘‹‚€ )
+0     CONSTANT 0       ( —‘‹ ‹)
+VARIABLE USE   ( ‘‹…„“™‰ “”… ‚ “‹…)
+VARIABLE PREV  ( ’…“™‰ “”… ‚ “‹…)
+VARIABLE  S0                   ( €„…‘ „€ ‘’…€ „€›•)
+VARIABLE  R0                ( €„…‘ „€ ‘’…€ ‚‡‚€’‚)
+VARIABLE  FENCE            ( ƒ€–€ ‡€™’› ’ "FORGET")
+VARIABLE  CONTEXT      ( ’…“™‰ ‘‘ - €—€‹ ‘€)
+VARIABLE  CURRENT     ( ’…“™‰ ‘‘ - “„€ „€‚‹…)
+
+                      ªΰ ­ ­®¬¥ΰ 8
+( 09.09.86   ‘‘’…›… ………›… -   —€…)
+VARIABLE   OFFSET (   „€‚€     …“   €€)
+VARIABLE   BASE  ( ‘‚€…    ‘‘’…›   ‘—‘‹…)
+VARIABLE   STATE   (  ‘‘’… ’…‘’‚ƒ ’……’€’€)
+VARIABLE   DPL      (  ‡– „…‘’—‰ ’— ‚ —‘‹…)
+VARIABLE   CSP   (  „‹ ’‹ƒ •€…  “€‡€’…‹)
+VARIABLE   HLD  ( “€‡€’…‹  ‚…› “”…€  "PAD")
+VARIABLE   BLK  (  … ‚•„ƒ €€ ‹ ‹)
+VARIABLE   >IN  (  ‡– —……„‰ ‹’…›  € ‚•„…)
+VARIABLE  SPAN  ( —‘‹ ‹’…, ‚‚…„…›•   "EXPECT")
+VARIABLE  #TIB  ( —‘‹ ‹’…, ‚‚…„…›• ‚ “”…  "TIB")
+VARIABLE   SCR  ( …  €€,  €‘…—€’€ƒ  ‚ "LIST")
+
+                      ªΰ ­ ­®¬¥ΰ 9
+( 31.03.86   DUP ?DUP DROP SWAP OVER >R R> R@ RDROP ROT )
+CODE DUP   ( W->W,W) RW1 PULL, PUSHRW1 B,   END-CODE
+: ?DUP     ( W->W,W|  0->0 )   DUP IF DUP THEN ;
+CODE DROP   ( W-> )  RSTACK RTWO AR,  RNEXT BR,  END-CODE
+CODE SWA   ( W1,W2->W2,W1) 14 LHRW12 BAL,  RW2 SECOND STH,
+  PUTRW1 B, END-CODE
+CODE OVER ( W1,W2->W1,W2,W1) RW1 SECOND LH, PUSHRW1 B, END-CODE
+CODE >R ( W-> )  RW1 POP,   RW1 RPUSH,   RNEXT BR, END-CODE
+CODE R> ( ->W)    RW1 RPOP,  PUSHRW1 B,  END-CODE
+CODE R@    ( ->W)  RW1 RPULL, PUSHRW1 B, END-CODE
+CODE RDROP ( -> )  RRET RTWO AR,   RNEXT BR, END-CODE
+: ROT   ( N1,N2,N3->N2,N3,N1 )    >R SWAP R> SWAP ;
+
+                     ªΰ ­ ­®¬¥ΰ 10
+( 31.03.86       HERE ALLOT ALIGN ALIGNH DP! )
+CODE HERE  ( ->A )  RW1 RD LR,   PUSHRW1 B, END-CODE
+CODE ALLOT  ( N-> ) RD FIRST AH,   POP B,   END-CODE
+CODE ALIGN  ( N-> )  RW1 0 (, RD RFORTH LA,
+  0 (, RW1 0 MVI,   1 (, 7 RW1 ), 0 (, RW1 MVC,
+  RW1 PULL, RW2 RW1 LCR,   RD RW1 AR, RD 0 BCTR,
+  RD RW2 NR, POP B, END-CODE
+: ALIGNH ( -> )  2 ALIGN ;
+CODE DP!  ( A->)  RD PULL, RD RMASK NR, POP 8, END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 11
+( 31.03.86      !  0!  @  ‘!  ‘@  , ‘, EXECUTE )
+CODE !  ( W,A->) ‡€‘‹€’ W  €„…‘“ A) 14 LHRM12 BAL,
+RW2 RMASK NR,   RW1 0 (, RW2  RFORTH STH,  2POP B,  END-CODE
+: 0!  ( A-> )   0 SWAP ! ;
+CODE @ ( €->W  €‡›…‚€’ A)   RW2 PULL,  RW2 RMASK NR,
+ RW1 0 (, RW2 RFORTH LH,  PUTRW1  B,   END-CODE
+CODE C@  ( A->C)  RW2 PULL,  RW2 RAS NR,   RW1 RW1 SR,
+ RW1 0 (, RW2 RFORTH IC, PUTRW1 B,   END-CODE
+CODE C!  ( C,A-> )      14 LHRW12 BAL, RW2 RMASK NR,
+ RW1 0 (, RW2 RFORTH STC,    2POP  B,   END-CODE
+: ,  ( W-> )  HERE 2 ALLOT ! ;
+: C, ( C-> )  HERE 1 ALLOT C! ;
+CODE EXECUTE  ( ‘FA->)   14 POP,   NEXT1 B,   END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 12
+( 31.03.86    ROLL  PICK  2DUP 2DROP  2SWAP  20VER  2ROT )
+CODE ROLL  ( WN,WN-1,...,W0,+N->WN-1,...,W0,WN)
+ RW2 PULL,   RW2 RW2 AR,   ERCOND8  BM,  RW1 SECOND (, RW2 LH,
+BEGIN,  0 FIRST (, RW2 LH,   0 SECOND (,  RW2 STH,
+   RW2 RTWO SR,    ?NP UNTIL, POPPUT1 B,  END-CODE
+CODE PICK ( WN,,..,W0,+N->WN,...,W0,WN)
+    RW2 PULL,   RW2 RW2 AR, ERCONDB BM,
+    RW1 2 (, RW2 RSTACK LH,   PUTRW1 B,   END-CODE
+: 2DUP ( WD->WD,WD)  OVER OVER ;
+: 2DROP ( WD->)   DROP DROP ;
+: 2SWAP ( WD1,WD2->WD2,WD1)  3 ROLL 3 ROLL ;
+: 20VER ( WD1,WD2->WD1,WD2,WD1)  3 PICK 3 PICK ;
+: 2ROT  ( WD1,WD2,WD3->WD2,WD3,WD1) 5 ROLL 5 ROLL ;
+
+                     ªΰ ­ ­®¬¥ΰ 13
+( 31.03.86      AND  OR XOR  NOT  0=  0<      )
+CODE AND    ( W1,W2->W3)
+ 14 LHRW12 BAL,   RW1 RW2 NR, POPPUT1 B,   END-CODE
+CODE OR     ( W1,W2->W3)
+ 14 LHRW12 BAL,   RW1 RW2 OR, POPPUT1 B,   END-CODE
+CODE XOR    ( W1,M2->W3)
+ 14 LHRW12 BAL,   RW1 RW2 XR, POPPUT1 B,   END-CODE
+: NOT   ( W1->W2 )  -1 XOR ;
+: CODE O= ( W->F) RW1 RW1 SR,   RW2 PULL,  RW2 RW2 LTR,
+  PUTRW1 BNZ,   RW1 0 BCTR,    PUTRW1 B,   END-CODE
+CODE 0<  ( N->F)  RW1 RW1 SR,   RW2 PULL,  RW2 RW2 LTR,
+  PUTRW1 BNM,  RW1 0  BCTR,   PUTRW1 B,   END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 14
+(    31.03.86    S>D     DABS  DNEGATE D+ D- DU< )
+CODE S>D  ( N->D ) RW1 PULL,   PUSH2RW1 B,  END-CODE
+CODE DABS ( D1->D2) 14  LRW1 BAL, RW1 RW1 LPR, 2PUTRW1 B,  END-CODE
+CODE DNEGATE  ( WD1->WD2)  14 LRW1 BAL,   RW1 RW1 LCR,
+            2PUTRW1 B,   END-CODE
+CODE D+ ( WD1,WD2->WD3)
+  14 LRW12 BAL,   RW1 RW2 AR,  2POPPUT1 B,   END-CODE
+CODE D- ( WD1,WD2->WD3)
+  14 LRW12 BAL,   RW1 RW2 SR,  2POPPUT1 B,   EKO-CODE
+CODE DU< ( UD1,UD2->F) 14 LRW12 BAL,   0 0 SR,   RW1 RW2 CLR,
+  ?L IF, 0 0 BCTR, THEN,  RSTACK 6 (, 0 RSTACK LA, 0 PUT,
+  RNEXT BR, END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 15
+(  31.03.86        D/MOD  D/   DMOD D0Δ  D=  D0<  D<  D2/ )
+CODE D/MOD  (  D1,D2->D3,D4) 14 LRW12  BAL,  1 RW1  LR,  0 RW2 LR,
+RW1  32  SRDA,   RW1 0 DR,  1 0 XR,  1 1 LTR,  ?M IF, RW1  0  AR,
+RW2 0 BCTR, THEN, RW1 TEMP  ST,  FIRST 4 +(, 4  ),  TEMP MVC,
+RW1 RW2 LR,  2PUTRW1 B,   END-CODE
+: D/ ( D1,D2->D3)  D/MOD 2SWAP 2DROP ;
+: DMOD ( D1,D2->D3)   D/MOD 2DROP ;
+: D0=   ( WD->F)   OR O= ;
+: D=  ( WD1,WD2->F)  D- DO= ;
+: D0< ( D->F) SWAP DROP 0< ;
+: D<  ( D1,D2->F)  D- D0< ;
+CODE D2/ ( D1->D2)  14  LRW1 BAL, RW1 1 SRA, PUTRW1 B, END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 16
+( 09.09.86    UM/MOD  U< M/MOD DMAX  DMIN )
+CODE UM*  ( U1,U2->UD)  14 LHRW12 BAL, RW1 RMASK NR,
+ RW2  RMASK NR, RW1 RW1 MR,  RW1 RW2 LR, 2PUTRW1 B, END-CODE
+CODE UM/MOD ( UD,U1->U2,U3) 1 POP,  1 RMASK NR, 14 LRW1 BAL,
+ RSTACK RTWO SR, RW2 RW1 LR,  RW1 RW1  SR, RW1 1 DR,
+RW1 FIRST 4 +(, STH,  RW1 RW2  LR,  POPPUT1 B,  END-CODE
+CODE U<  (  U1,U2->F) RW1 RW2  SR,  RW2  PULL,  RW2 RMASK NR,
+0 SECOND LH, 0 RMASK NR, 0 RW2 CR, POPPUT1 BNL, RW1 0 BCTR,
+( …‡“‹’€’  "‘’€")  POPPUT1  B, END-CODE
+: M/MOD ( UD1,U2->U3,UD4) >R 0 R@ UM/MOD R> SWAP >R UM/MOD R> ;
+: DMAX  ( D1,D2->D3)  20VER 20VER D< IF 2SWAP THEN  2DROP ;
+: DMIN  ( D1,D2->D3)  20VER 20VER D< NOT IF 2SWAP THEN 2DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 17
+( 31.03,64   NEGATE ABS + - 1+ 1- 2+ 2- +!  1+!  )
+CODE  NEGATE ( W1->M2)  RH1  PULL,  RW1 RW1 LCR, PUTRW1 B, END-CODE
+: ABS ( N1->+N2) S>D DABS DROP ;
+CODE +  14 LHRW12 BAL, RW1 RW2 AR,   POPPUT1 ‚,   END-CODE
+: -   ( W1,W2->W3)   NEGATE + ;
+: 1+ ( W1->W2) 1 + ;
+: 1- ( W1->W2) -1 + ;
+: 2+ ( W1->W2)  2 + ;
+: 2- ( W1->W2)  2 - ;
+CODE +!   ( W,A->)   14 LHRW12 BAL,  RW2 RAS NR,   RW1 0 (,
+  RW2 RFORTH A, RW1 0 (, RW2 RFORTH S’, 2 B, END-CODE
+: 1+! ( A->) 1 SWAP +! ;
+
+                     ªΰ ­ ­®¬¥ΰ 18
+( 03.10.84     * M/ * /MOD / MOD */HOD */)
+CODE M* ( N1,N2->D) RH1 SECOND LH, RW1 FIRST MH, 2PUTRW1 B,
+CODE M/ ( D,N1->N2,N3) 1 POP, 14 LRW1 SAL, RSTACK RTWO SR,
+ RW1 32 SRDA, 0,RW1 LR,  RW1 1 DR, 0 1 XR, 0 0 LTR, ?M IF,
+ RW1 1 AR, RW2 0 BCTR, THEN, RW1 FIRST 4 +(, STH,
+ RW1 RM2 LR,  ( —€‘’…) POPPUT1 B,   END-CODE
+: * ( N1,N2->N3)   M* DROP ;
+: /MOD ( N1,N2->N3,N4) >R S>D R> M/ ;
+: / ( N1,N2->N3)   /MOD SWAP DROP ;
+: MOD ( N1,N2->N3) /MOD DROP ;
+: */MOD ( N1,N2,N3->N4,N5)  >R M* R> M/ ;
+: */   ( N1,N2,N3->N4) */MOD SWAP  DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 19
+( 31,03.86   CP€BHEH  €‡…… ‚ ’ „…)
+: 0<> ( N->F)   0= NOT ;
+: =  ( W1,W2->F)    - 0* ;
+: <> ( W1,M2->F)    - 0<> ;
+: <  ( N1,N2->F)    - 0< ;
+: >MARK ( ->A) HERE 0 , ;
+: >RESOLVE ( A->) HERE SWAP ! ;
+: <MARK (->A) HERE ;
+: <RESOLVE ( A->) , ;
+
+                     ªΰ ­ ­®¬¥ΰ 20
+( 31.03.86    SP@ SP! RP@ RP! 2/ 2* 2@ 2! DEPTH )
+CODE SP@ ( ->A) RW1 RSTACK LR, RW1 RFORTH SR, PUSHRW1 B,
+CODE SP! ( A->) RSTACK PULL, RSTACK RMASK NR,   RSTACK RFORTH AR,
+ RNEXT BR, END-CODE
+CODE RP@ ( ->A) RW1 RRET LR, RW1 RFORTH SR, PUSHRW1 B, END-CODE
+CODE RP! ( A->) RRET POP, RRET RMASK NR,
+  RRET RFORTH AR,   RNEXT BR, END-CODE
+CODE 2/ ( W1->W2 ) RW1 PULL, RW1 1 SRA, PUTRM1 B, END-CODE
+: 2* ( W1->W2 ) DUP + ;
+: 2@ ( A->ζD) DUP 2+ @ SWAP @ ;
+: 2! ( WD,A->) DUP >R ! R> 2+ ! ;
+: DEPTH ( ->+N)  SP@ S0 1 SWAP - 2/ ;
+
+                     ªΰ ­ ­®¬¥ΰ 21
+( 31.03.86       CMOVE   CMOVE> )
+CODE CMOVE ( A1,A2,U ->) 14 LHRW12 BAL, RW2 RMASK NR, 2 =F BZ,
+ RW1 RMASK NR, RW1 RFORTH AR, 1 FIRST 4 +(, LH, 1 RMASK NR,
+ 1 RFORTH AR, 0 256 LA, 1 =F ‚,  BEGIN,   0 (, 256 RW1 ), 0 (, 1
+ MVC, RW1 0 AR, 1 0 AR,
+1 = RW2 0 SR, ?M UNTIL, RW2 0 BCTR,
+ RW2 0 AR, ?NM IF, RW2 3 =F EX, THEN,
+2 =H RSTACK 6 (, 0 RSTACK LA, RNEXT BR,
+3 =H 0 (, 1 RW1 ), 0 (, 1 MVC,  END-CODE
+CODE CMOVE> ( A1,A2,U->) 14 LHRW12 BAL, RW2 RMASK NR, 1 =F  BZ,
+ RW1 AS NR, RW1 RFORTH AR, RW1 0 BCTR,
+ 1 FIRST 4 +(,  LH,  1 RMASK NR, 1 RFORTH AR,  1 0 BCTR,
+ DO, 0 0 (, 1 RM2 1C, 0 0 (, RW1 RW2 STC, RW2  LOOPBCT,
+1 =H  RSTACK 6 (, 0 RSTACK LA,  RNEXT BR, END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 22
+( 31.03.86   FILL ERASE BLANK COMPILE [ ] MIN MAX HEX DECIMAL)
+: FILL   ( A,U,C->) SWAP ?DUP IF >R OVER C!
+     DUP 1+ R> 1- CMOVE EXIT THEN 2DROP ;
+: ERASE  ( A,U-> ) 0 FILL ;
+: BLANK  ( A,U-> ) BL FILL ;
+: COMPILE ( -> ) R> DUP 2+ >R @ , ;
+: [  ( -> ) STATE 0! ;  IMMEDIATE
+: ]  ( -> ) -1 STATE ! ;
+CODE MIN   ( N1,N2->N3 )  14 LHRW12 BAL, RW1 RW2 CR,
+   POP BNH,   RW1 RW2 LR,  POPPUT1 B,  END-CODE
+CODE MAX   ( N1,N2->N3 )   14 LHRM12 BAL, RW1 RW2 CR,
+   POP BNL,   RW1 RW2 LR,  POPPUT1 B,  END-CODE
+: HEX ( ->)  16 BASE ! ;
+: DECIMAL ( ->) 10 BASE ! ;
+
+                     ªΰ ­ ­®¬¥ΰ 23
+( 31.03.84    LIT 2LIT LITERAL 2LITERAL SPACE SPACES )
+CODE LIT   ( ->W )      RW1 0 (, RI RFORTH LH,
+ RI RTWO AR,  PUSHRW1 B,  END-CODE
+CODE 2LIT ( ->WD )   RW1 4 LA,  RSTACK RW1 SR,
+  RW2 0 (, RI RFORTH LA,   FIRST (, 4 ), 0 (, RW2 MVC,
+  RI RW1 AR,  RNEXT BR,   END-CODE
+: LITERAL   ( W->) STATE @ IF COMPILE LIT , THEN ; IMMEDIATE
+: 2LITERAL ( WD->) STATE @ IF COMPILE 2LIT , , THEN ; IMMEDIATE
+: SPACE ( ->)   BL EMIT ;
+: SPACES ( +N->) 0 OVER < IF 0 DO SPACE LOOP EXIT THEN DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 24
+( 09.09.86 –‹› ‘ ‘—…’—: (DO/ I I' J   LEAVE)
+CODE (D0) ( U1,U2->) 14 LHRW12 BAL,
+1 =H  1 0 (, RI RFORTH LH, 1 RPUSH, RI RTWO AR,
+      RW1 RPUSH, RW2 RPUSH, 2POP B, END-CODE
+CODE I  ( ->U ’…“™…… 3H€—…HE ‘—…’—€ –‹€)
+      RW1 RPULL, PUSHRW1 B, END-CODE
+CODE I' ( ->U ‚…• ƒPA–€ –‹€)
+      RW1 RSECOND LH, PUSHRW1  B,   END-CODE
+CODE J  ( ->U ’…“™…… ‡€—…… ‘—…’—€ 2-ƒ –‹€)
+      RW1 RFIRST 6 +(, LH, PUSHRW1 ‚, END-CODE
+CODE LEAVE  ( -> ) RI RFIRST 4 +(, LH, RI RMASK NR,
+     RRET 6 (, 0 RRET LA,  RNEXT BR,   END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 25
+( 31.03.86    +BUF  BUFFER  BLOCK  EMPTY-BUFFERS  UPDATE   )
+: +BUF ( A1->A2,F) ……‰’  ‘‹…„“™…“ “”…“ ‚ “‹…)
+B/BUF 4 + + DUP LIMIT = IF DROP FIRST THEN DUP PREV @ - ;
+: BUFFER ( +N->A)  OFFSET @ + USE @ DUP >R  ( ™… ‘‚„›‰ “”…)
+ BEGIN +BUF UNTIL USE !
+  R@ @  0< IF ( “‘’€‚‹… ‡€ "UPDATE")
+  R@ 2+ R@ @ 32767 AND WBLK THEN  R@ ! R@ PREV ! R> 2+ ;
+: BLOCK ( +N->A) OFFSET @ + >R PREV @ DUP @ R@ - DUP + IF
+   BEGIN +BUF 0= IF DROP R@ OFFSET @ - BUFFER DUP R@ RBLK
+       2- THEN  DUP @ R@ - DUP +  0=  UNTIL DUP PREV ! THEN  RDROP 2+ ;
+: EMPTY-BUFFERS ( -> ) FIRST LIMIT OVER - ERASE ;
+: UPDATE ( -> )   PREV @ @ 32768 OR PREV @ ! ;
+
+                     ªΰ ­ ­®¬¥ΰ 26
+( 31.03.66     SAVE-BUFFERS  FLUSH  )
+: SAVE-BUFFERS  ( ->)
+ LIMIT FIRST DO I @ 32768 AND
+       IF    I @ 32767 AND DUP I !
+             I 2+ SWAP WBLK         THEN
+  B/BUF 4 + +LOOP  ;
+: FLUSH  ( ->)  SAVE-BUFFERS EMPTY-BUFFERS ;
+
+                     ªΰ ­ ­®¬¥ΰ 27
+( 31.03.66    ENCLOSE  WORD )
+CODE ENCLOSE ( A,C->A,N1,N2,N3) 14  LHRW12 BAL, RW1 RMASK NR,
+  RW1 RFORTH AR,  14 14 SR,   0 0 SR,
+ BEGIN,   0 0 (, 14  RW1 IC,   0 0 LTR,   2 =F  BZ,
+     14 1 (, 0 14 LA, 0 RW2 CR, ?NE UNTIL,  14 0 BCTR,
+2 = 14 PUT,
+BEGIN,   1 14 LR,  0 0 (, 1 RW1 IC, 0 0 LTR,
+  2 =F BZ,  14 1 (, 0 14 LA, 0 RW2 CR,   ?E UNTIL,
+2 =  1 PUSH, RW1 14 LR,   PUSHRW1 ‚, END-CODE
+: WORD  ( C->T )   BLK @ IF BLK @ BLOCK ELSE TIB THEN
+  >IN @ + SWAP ENCLOSE >IN +!
+  HERE >R OVER - >R + ALIGNH HERE 1+ R@ CMOVE
+  HERE R> 1+ ALLOT ALIGNH HERE OVER - 2- OVER C! R> DP! ;
+
+                     ªΰ ­ ­®¬¥ΰ 28
+( 31.03.86 LIT" COUNT ," " ". (."/ ." C" ( ,( QUIT ABORT )
+CODE LIT" ( ->T )  14 IPUSH BAL,   RNEXT BR,  END-CODE
+: COUNT ( T->A,N)  DUP 1+ SWAP C@ 2DUP + ‘@ IF 1+ THEN ;
+: ," ( -> ) C" " WORD ‘@ 2+ ALLOT ALIGNH ;
+: "  ( ->T) ?COMP COMPILE LIT"  ," ; IMMEDIATE
+: ".  ( T-> )   COUNT TYPE ;
+CODE (.")  ( ->) 14 IPUSH BAL,  14 GOTO BAL, ] ". [
+: ."  ( -> )  ?COMP  COMPILE (.") ," ;  IMMEDIATE
+: C" ( ->C)  BL WORD 1+ ‘@ [COMPILE!] LITERAL ; IMMEDIATE
+: (  ( ->)  C" )  WORD DROP ; IMMEDIATE
+: .( ( ->)  C" ) WORD COUNT TYPE ; IMMEDIATE
+: QUIT  ( ->) [COMPILE] [  S0 @ SP! R0 @ RP!  ”’-‘‘’…€ ;
+
+                     ªΰ ­ ­®¬¥ΰ 29
+( 31.03.86 ‚…  ‘ƒ€‹‡€–  €• )
+: ?ABORT ( F,T->)  SWAP IF COUNT CR  TYPE ABORT THEN DROP ;
+CODE  (A") ( F->) 14 IPUSH  BAL,  14 GOTO BAL, ] ?ABORT [ END-CODE
+: ABORT"  ( F->)  COMPILE (A") ," ; IMMEDIATE
+: ABORT8  ( ->)  -1 ABORT" …€‚‹… ‡€—…… ‚ ‘’……" ;
+: !CSP  ( ->)   SP@ CSP ! ;
+: ?CSP  ( ->)  SP@ CSP @ - ABORT" ‘‹‘ “€‡€’…‹ ‘’…€" ;
+: ?PAIRS ( N1,N2-> )  - ABORT" …€›… ‘" ;
+CODE ?+ ( N->N ) FIRST 128 TM, RNEXT BZR, ERCOND8 B, END-CODE
+: ?COMP ( -> STATE @ NOT ABORT" ’…“…’‘ …† ‹–" ;
+: BADWORD ( T->) CR  ",  ."   ?" ABORT ;
+
+                     ªΰ ­ ­®¬¥ΰ 30
+( 31.03.86  >BODY BODY> >LINK LINK> L>NAME N>LINK >NAME NAME> )
+: >BODY  ( CFA->PFA) 2+ ;
+: BODY>  ( PFA->CFA> 2- ;
+: >LINK  ( CFA->LFA) 2- ;
+: LINK>  ( LFA->CFA) 2+ ;
+CODE L>NAME ( LFA->NFA) RW2 PULL,  RW2 RMASK NR,  RW1 RW2 LR,
+ 14 &LEN@ LA, 1 1 SR,  DO, RW1 RTWO SR,  1 0 (, RWq RFORTH IC,
+ 1 LENG1MSK N,   0 2 (, 1 RW1 LA, 0 RW2 CR,  PUTRW1 BE,
+ 14 LOOPBCT,  PUTRW1 B, END-CODE
+: N>LINK  ( NFA->LFA)  DUP ‘@ 31 AND + 2+ ;
+: >NAME ( CFA-NFA) >LINK L>NAME ;
+: NAME> ( NFA->CFA) N>LINK LINK> ;
+
+                     ªΰ ­ ­®¬¥ΰ 31
+( 31.03.86    LATEST DEFINITIONS SMUDGE UNSMUDGE IMMEDIATE ID.)
+: LATEST   ( ->NFA)   CURRENT @ @ ;  ( (;CODE/ RECURSE)
+: DEFINITIONS ( ->) CONTEXT @ CURRENT ! ;
+: SMUDGE  ( ->)    LATEST ‘@ [ &SFLAG ] LITERAL OR LATEST C! ;
+: UNSMUDGE ( ->)   LATEST ‘@ [ 255 &SFLAG - ] LITERAL AND LATEST ‘! ;
+: IMMEDIATE ( ->)  LATEST ‘@ [ &IFLAG ] LITERAL OR LATEST C! ;
+: ID.  ( NFA-> )  DUP 1+ SWAP ‘@ [ &LENG ] LITERAL AND
+          2DUP + C@ IF 1+  THEN TYPE SPACE ;
+: (;CODE)  (  ->)   R>  LATEST  NAME> ! ;
+: RECURSE  ( ->)    LATEST NAME>  , ; IMMEDIATE
+
+                     ªΰ ­ ­®¬¥ΰ 32
+( 31.03.66   CONSTANT  VARIABLE 2CONSTANT  2VARIABLE  : ; )
+: ?LOADING ( ->) BLK @ 0= ABORT" …’ €’ €€" |
+: ?GAP ( N->) HERE + SP@ SWAP U< ABORT" ‘—…€… €’" ;
+: ?STACK ( ->) S0 @ SP@ U< ABORT" ‘—…€… ‘’…€" 10 ?GAP ;
+: CONSTANT ( W->) CREATE , ;CODE
+       RW1 0 (, 14 RFORTH LH,  PUSHRW1 B, END-CODE
+: VARIABLE  ( -> ) CREATE 0 , ;
+: 2VARIABLE ( -> ) CREATE 0 , 0 , ;
+: 2CONSTANT ( WD-> ) CREATE , , DOES> 2@ ;
+: : ( -> ) !CSP CREATE ] SMUDGE ;CODE
+  RI RPUSH, RI 14 LR, RNEXT  BR,   END-CODE
+: ; ( -> ) ?CSP COMPILE  EXIT  UNSMUDGE [COMPILE] [ ; IMMEDIATE
+
+                     ªΰ ­ ­®¬¥ΰ 33
+( 09.09.86    FORTH FORTH# FL# VOC-LINK VOCABULARY VOCABULARY#)
+VOC FORTH   &DWORD  H,                         ( FORTH-83)
+A: FORTH#  LASTWORD  ( ‚•„ ‚ ‘‘ ‘‹‚€›• ‘’€’…‰)
+A: FL# 0 ,  ( ‹… ‘‚‡ „‹ ‘‘‚ ‘’€’…‰)
+CREATE VOC-LINK FL# ( ‚•„ ‚ ‘‘ ‘‘‚ ‘’€’…‰)
+: VOCABULARY ( -> )  CREATE [ &DWORD ] LITERAL ,
+   LIT [ FORTH# ]  CONTEXT @ - IF CONTEXT @ 2-  ELSE 0 THEN ,
+  HERE VOC- LINK @ , VOC-LINK ! DOES>
+    [ THERE  4 - :A:  VOCABULARY#  ] 2+ CONTEXT ! ;
+: FORTH-83  ( ->)  FORTH DEFINITIONS DECIMAL ;
+
+                     ªΰ ­ ­®¬¥ΰ 34
+( 31.03.86   (FIND/  )
+CODE (FIND) ( -1,AN,..,,A1,’->‘FA,‘,TF/FF )  RW2 POP, RW2 RMASK NR,
+ RW2 RFORTH AR,  ( €‡…–)  0 0 SR,
+ 0 0 (, 0 RW2 IC,  0 LENG1MSK N, ( „‹€) 1 1 SR, 1 0 BCTR,
+ BEGIN, RW1 PULL,  ( ‚•„ ‚ —……„‰ ‘‘ ‘‹‚) 2 =F ‚,
+  BEGIN, RW1 RFORTH AR,    14 0 (, 0 RW1 IC,  14 LEHGMASK N,
+   14 0 CR, ?E IF, 14 4 =F EX, 3 =F BE,  THEN,
+   14 LENG1MSK N,  RW1 2 (, 14 RW1 LH,
+2 =H   RW1 RMASK NR,  ?Z UNTIL,
+ RSTACK RTWO AR,  1 FIRST CH, ?E UNTIL,  PUTRW1 B,
+BEGIN, RSTACK RTWO AR, 3 =H  1 FIRST CH,  ?E UNTIL,
+0 0 (, 0 RW1 IC,   RW1 RFORTH SR, RW1 4 (, 14 RW1 LA,
+RW1 PUT,   0 PUSH,   RW1 1 LR,   PUSHRW1 B,
+4 =H  1 (, 1 RW1 ), 1 (, RW2 CLC,  END-CODE
+
+                     ªΰ ­ ­®¬¥ΰ 35
+( 31.03.86   FIND  -FIND )
+: FIND  ( T->A,N)
+    DUP >R -1 . LIT [  FORTH# ] @
+    CURRENT @ @ 2DUP = IF DROP  THEN
+    CONTEXT @ @ 2DUP = IF DROP  THEN
+    R> (FIND)  DUP IF
+      DROP ROT DROP [ &IFLAG ] LITERAL AND IF 1 ELSE -1 THEN
+               THEN ;
+: -FIND ( ->A,N)   BL WORD FIND ;
+
+                     ªΰ ­ ­®¬¥ΰ 36
+( 09.09.86  CREATE   DOES> )
+: CREATE ( ->)   100  ?GAP
+ ALIGNH -FIND SWAP DROP  IF
+   HERE ID. ."  “†… …‘’ "        THEN
+  HERE DUP ‘@ WIDTH AND 2+ ALLOT ALIGNH
+  HERE OVER - 2- OVER C! LATEST , CURRENT @ !
+  LIT [ CREATE# ] , ;
+: DOES>  ( ->)  COMPILE (;CODE) 2LIT
+  [ DOES#  B, ] , , ; IMMEDIATE
+
+                     ªΰ ­ ­®¬¥ΰ 37
+( 31.03.86  PAD  HOLD  ALPHA  <# #> # #S SIGN )
+: PAD ( ->A)   HERE 100 + ;
+: HOLD ( C-> )  -1 HLD +!  HLD @ ‘! ;
+CODE ALPHA ( N->C)  RW2 FIRST LH,
+  RW1 RW1 SR,   RW1 1 =F (, RW2 IC,  PUTRW1 B,
+  1 =H  C, ' 01234S478<?ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+END-CODE
+: <# ( -> )  PAD HLD ! ;
+: #>  ( D->A,+N)  2DROP HLD @ PAD OVER - ;
+: # ( D1->D2) BASE @ M/MOD ROT ALPHA HOLD ;
+: #S  ( D->0,0)  BEGIN # 2DUP OR 0= UNTIL ;
+: SIGN ( N->) 0< IF C" - HOLD THEN ;
+
+                     ªΰ ­ ­®¬¥ΰ 38
+( 31.03.86    D.R  D.  .R . H.  U.  U.R  ?  )
+: D.R  (D,+N-> )  ?+  >R  DUP >R  DABS
+  <# #S R>  SIGN #> R> OVER  - SPACES TYPE ;
+: D. ( D-> ) 0 D.R SPACE ;
+: .R ( N1,+N2->) >R S>D R> D.R ;
+: . ( N-> )  S>D  D. ;
+: H. ( N->) BASE @ SWAP 0 HEX <# # # # # #> TYPE SPACE
+  BASE ! ;
+: U. ( U->)  0  D. ;
+: U.R ( U,+N->)  >R 0 R> D.R ;
+: ? ( A->) @ . ;
+
+                     ªΰ ­ ­®¬¥ΰ 39
+( 31.03.86      DIGIT CONVERT  NUMBER )
+: DIGIT ( C,N1->N2,TF/FF) 0 ROT ROT 0
+ DO I ALPHA OVER Δ IF 2DROP I -1 0 LEAVE THEN LOOP DROP ;
+: CONVERT ( WD1,AI->WD2,A2)
+ BEGIN 1+ DUP >R C@ BASE @ DIGIT WHILE
+    SWAP BASE @ UM* DROP ROT BASE @ UM* D+
+    DPL @ 1+ IF DPL 1+! THEN R> REPEAT R> ;
+: NUMBER  ( T->WD )
+  0 0 ROT DUP >R COUNT OVER + OVER ‘@ ‘" - =
+  DUP >R SWAP >R IF ELSE 1- THEN -1
+  BEGIN DPL !  CONVERT DUP R@ <  WHILE DUP ‘@
+  ‘" . <> IF RDROP RDROP R> BADWORD THEN 0
+  REPEAT DROP RDROP R> IF DNEGATE THEN RDROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 40
+( 31.03.84      EXPECT  OUERY INTERPRET  ”’-‘‘’…€  X )
+: EXPECT  ( A,+N->)  DUP >R (EXPECT) DUP SPAN !
+   TYPE R> SPAN @ - IF SPACE THEN ;
+: QUERY ( ->) TIB 80 EXPECT >IN 0! BLK 0! SPAN @ #TIB ! ;
+: INTERPRET ( ->) BEGIN -FIND ?DUP IF
+   1+ IF EXECUTE ELSE STATE @ IF , ELSE EXECUTE THEN  THEN
+   ELSE NUMBER DPL @ 1+ IF [COMPILE] 2LITERAL
+    ELSE DROP [COMPILE] LITERAL THEN THEN ?STACK ABAIN ;
+: ”’-‘‘’…€  ( ->) BEGIN QUERY INTERPRET  ABAIN ;
+CODE  X  ( ->) ‡€’-• (  “‹…‚‰ „  ‚…‘’ “‚› "X")
+ EXIT# B, END-CODE    IMMEDIATE
+
+                    ªΰ ­ ­®¬¥ΰ 41
+( 31.03.86  -TRAILING  ' ['] [COMPILE] LOAD THRU ;S  --> )
+CODE -TRAILIN6 ( A,N1- >A,N2)  14 LHRW12 BAL, RW1 RMASK NR,
+RW1 RFORTH AR,  0 RW1 LR,  RW1 RW2 AR, BEGIN,  RW1 0 CR,
+1 =F BNH,  RW1 0 BCTR, 0 (, RW1 64 CLI, ?NE UNTIL, 0 0 BCTR,
+1 =H RW1 0 SR, PUTRW1 ‚,  END-CODE
+: ' ( ->CFA)  -FIND  0= IF  BADWORD THEN ;
+: ['] ( -> ) ?COMP ' [COMPILE] LITERAL ; IMMEDIATE
+: [COMPILE] ( ->) -FIND IF , EXIT THEN BADWORD ; IMMEDIATE
+: LOAD ( N->  ’……’‚€’ ‹ ‘ … N)
+     >IN @ >R BLK @ >R BLK ! >IN 0! INTERPRET R> BLK ! R> >IN ! ;
+: THRU ( N1,N2->)  ’……’‚€’ ‹ ’ N1 „ N2)
+  1+ SWAP DO I LOAD LOOP ;
+: ;S ( ->) ?LOADING RDROP ; IMMEDIATE
+: --> ( ->) ?LOADING >IN 0! BLK 1+! ; IMMEDIATE
+
+                     ªΰ ­ ­®¬¥ΰ 42
+( 09.09.86  DUMP SNAPSTK  S. R. )
+: DUMP ( A,U-> €‘…—€’€’  U €’‚)      DUP  IF
+  BASE @ >R  HEX OVER + SWAP DO CR  I <# C" * HOLD
+  0 15 DO  DUP I +  C@  HOLD  -1 +LOOP  ‘" * HOLD
+  0 15 DO  BL HOLD DUP I + C@ 0 # # 2DROP -1 +LOOP BL  HOLD
+  BL HOLD 0 # # # # # #> TYPE 16 +LOOP R> BASE ! ELSE 2DROP THEN ;
+: SNAPSTK RDROP CR  ". ." , ‚‘…ƒ ‡€—…‰ "
+   2DUP SWAP - 2/ DUP . 0 SWAP < IF ." (‚…€ ‘€‚€)" CR
+   2- DO I @ . -2 +LOOP ELSE 2DROP THEN ;
+: S. ( ->)  SP@ S0 @ " ‘’… „€›•" SNAPSTK ;
+: R. ( ->)  RP@ 2+ R0 @ " ‘’… ‚‡‚€’‚" SNAPSTK ;
+
+                     ªΰ ­ ­®¬¥ΰ 43
+( 31.03.86    .VOC  (VOC/  VOCS   )
+: .VOC ( PFA+2-> ) 2- BODY> >NAME ID. ;
+: (VOC) ( PFA1+2->PFA2,N) @ 0
+  BEGIN OVER DUP IF @ [ &DWORD ] LITERAL <> THEN
+  WHILE 1+ ( ‘—…’— ‘‹‚) SWAP N>LINK @ SWAP REPEAT ;
+: VOCS  ( -> )   -1 ['] FORTH >BODY 2+
+ CURRENT @ ." ‘‘ CURRENT: " DUP .VOC OVER @ OVER @ =
+ IF DROP THEN  CONTEXT @ ."  ‘‘ CONTEXT: " DUP .VOC
+   OVER @ OVER @ = IF DROP THEN
+ CR ." ‘’€„€’›‰ „ ‘€: "
+ BEGIN 2- BEGIN 2+ DUP .VOC (VOC) DROP DUP 0= UNTIL
+     DROP DUP -1 = UNTIL  DROP
+ CR ." €‹—›… ‘‘ ‘‹‚: "  VOC-LINK @ BEGIN DUP 2- .VOC @ DUP
+ = UNTIL DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 44
+( 31.03.86 WORDS  )
+: WORDS ( -> )
+ ." ‘‘ " CONTEXT @ DUP .VOC DUP (VOC)
+ ." ‚‘…ƒ ‘‹‚ - " . ."  ‘‹…„“™‰ ‘‘ - "
+ ?DUP IF 2+ .VOC THEN
+ CR @ BEGIN DUP DUP IF @ [ &DWORD ] LITERAL <> THEN
+    WHILE DUP ‘@ [ &SFLAG ] LITERAL AND 0=
+   IF DUP ID. SPACE THEN
+   N>LINK @ REPEAT DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 45
+( 31.03.66   (FORGET/  FORGET REMEMBER FORGET0 )
+: (FORGET) ( A-> ‘‹—’ ‚‘… ‘‹‚€ ‚›… €„…‘€ €)
+  DUP FENCE @ U< ABORT" ‡€™’€  FENCE"
+  >R VOC-LINK @
+   BEGIN R@ OVER U< WHILE FORTH DEFINITIONS
+   @ DUP VOC-LINK !
+   REPEAT   ( „‹ „ ‘‘€, ƒ„… …‘’ ’ ‘‹‚)
+   BEGIN DUP 4 -
+     BEGIN N>LINK @ DUP R@ U< UNTIL
+     OVER 2- ! @ ?DUP 0=  UNTIL R> DP! ;
+: FORGET ( ->) ' >NAME (FORGET) ;
+: REMEMBER ( ->) CREATE DOES> (FORGET) ;
+
+                     ªΰ ­ ­®¬¥ΰ 46
+( 31.09.86   (#SCR/  LIST  SCR? INDEX  )
+: (#SCR) ( N->A,T ……‚…‘’ … N €€ ‚ ’…‘’‚… )
+  BASE @ >R DECIMAL  0 <# #S #> R> BASE ! ;
+: LIST ( N->  €‘…—€’€’ € N, ‡€’ …ƒ ‚ "SCR")
+  DUP SCR ! CR ." € " DUP (#SCR) TYPE
+  BLOCK 16 0 DO DUP I 64 * +
+     CR I 3 .R SPACE 64 TYPE LOOP DROP ;
+
+                     ªΰ ­ ­®¬¥ΰ 47
+( 31.03.86   ‘’€„€’›… ‘’“’“› “€‚‹… )
+: BEGIN   ?COMP <MARK 1 ; IMMEDIATE
+: UNTIL   1 ?PAIRS COMPILE ?BRANCH <RESOLVE ; IMMEDIATE
+: AGAIN   1 ?PAIRS COMPILE  BRANCH <RESOLVE ; IMMEDIATE
+: IF      ?COMP  COMPILE ?BRANCH  >MARK  2 ;  IMMEDIATE
+: THEN    2 ?PAIRS  >RESOLVE ;                IMMEDIATE
+: ELSE    2 ?PAIRS  COMPILE BRANCH  >MARK
+         SWAP  >RESOLVE  2 ;                  IMMEDIATE
+: WHILE   1 ?PAIRS 1 [COMPILE] IF ;           IMMEDIATE
+: REPEAT  >R >R [COMPILE] AGAIN
+          R> R> [COMPILE] THEN ;              IMMEDIATE
+: DO      ?COMP  COMPILE (DO) >MARK <MARK 3 ; IMMEDIATE
+: LOOP    3 ?PAIRS COMPILE (LOOP) <RESOLVE >RESOLVE ; IMMEDIATE
+: +LOOP   3 7PAIRS COMPILE (+LOOP) <RESOLVE >RESOLVE ; IMMEDIATE

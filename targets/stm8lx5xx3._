@@ -1,0 +1,17 @@
+ifndef stm8lx5xx3
+define stm8lx5xx3
+
+define regstart 0x0
+define regend 0x00ff
+define ramstart 0x100
+define ramend 0x03ff
+define eepromstart 0x1000
+define eepromend 0x10ff
+define flashstart 0x8000
+define flashend 0x9fff
+
+define farptr   0
+
+include stm8l._
+
+endif

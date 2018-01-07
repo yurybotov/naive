@@ -1,0 +1,245 @@
+include stm8s003._
+
+//
+// 'forth' interpreter
+//
+
+// interrupt vectors
+interrupt reset@0x8000: (f32) {0x82000000+start}
+interrupt trap:         (f32) {0x82000000+dumb}
+interrupt tli:          (f32) {0x82000000+dumb}
+interrupt awu:          (f32) {0x82000000+dumb}
+interrupt clk:          (f32) {0x82000000+dumb}
+interrupt exti0:        (f32) {0x82000000+dumb}
+interrupt exti1:        (f32) {0x82000000+dumb}
+interrupt exti2:        (f32) {0x82000000+dumb}
+interrupt exti3:        (f32) {0x82000000+dumb}
+interrupt exti4:        (f32) {0x82000000+dumb}
+interrupt canrx:        (f32) {0x82000000+dumb}
+interrupt cantx:        (f32) {0x82000000+dumb}
+interrupt spi:          (f32) {0x82000000+dumb}
+interrupt tim1u:        (f32) {0x82000000+dumb}
+interrupt tim1c:        (f32) {0x82000000+dumb}
+interrupt tim2u:        (f32) {0x82000000+dumb}
+interrupt tim2c:        (f32) {0x82000000+dumb}
+interrupt tim3u:        (f32) {0x82000000+dumb}
+interrupt tim3c:        (f32) {0x82000000+dumb}
+interrupt uart1tx:      (f32) {0x82000000+dumb}
+interrupt uart1rx:      (f32) {0x82000000+uart1rx}
+interrupt i2c:          (f32) {0x82000000+dumb}
+interrupt uart3tx:      (f32) {0x82000000+dumb}
+interrupt uart3rx:      (f32) {0x82000000+dumb}
+interrupt adc1:         (f32) {0x82000000+dumb}
+interrupt tim4u:        (f32) {0x82000000+dumb}
+interrupt flash:        (f32) {0x82000000+dumb}
+dumb: iret
+
+// include ring buffer for uart input
+include ringbuf._
+
+	// uart1 rx handler
+uart1rx: a = uart1dr
+	call near atoringbuf
+	iret
+
+init:   // set system clock
+	clk eckr#0 = #1	; clk swcr#1 = #1 ; wait1: if clk eckr#1==0 wait1 ; clk ckdivr = #0
+	clk swr = #0xb4	; wait2: if clk swcr#3==0 wait2 ; clk pckenr1#5 = #1
+	// rx/tx for uart
+	gpioc ddr#2 = #0 ; gpioc ddr#3 = #1        
+	// uart
+	uart1 brr2 = 0x03 ; uart1 brr1 = 0x68 ;	uart1 cr2#2 = #1 ; uart1 cr2#3 = #1 ; uart1 cr2#5 = #1
+	// ringbuf
+	rstart = #0 ; rend = #0 ; rlen = #0 ; rsize = #buflen 
+	ret
+
+define putchar uart1dr=a
+
+define getchar callringbuftoa
+
+// main block
+start:	x = #ramend; sp = x                       	// initialise stack pointer (it is assembler!!!)
+	call near init					// system clock set
+	call near svminit				// vm initialisation
+	state = #0; base = #10; 
+	x=#herelabel; here=x; x=#linknop; latest=x
+	i=#0						// interrupts switch on
+loop:   call ringbufready                               // wait for interrupts
+	if z==1 loop
+//	getchar
+//	putchar	
+	go near loop					// forever cycle
+
+// forth core
+
+// include stack virtual mashine library
+include svm._
+
+state:	(r8)    // compile or execution
+base:	(r8)	// radix (10/16...)
+here:	(r16)   // next free byte in flash
+latest:	(r16)   // latest word in dictionary
+
+tib:	(r8)[81]
+
+temp:	(r16)
+
+define	flagimmediate	0x80
+
+dictionarystart:
+linkbl:(f16) 0;			(f8) 4;	(f8) [4] "bl"
+codebl: x=#32; callpushdsp;ret
+linkconstant:(f16) linkbl;	(f8) 8; (f8) [8] "constant"	//
+codeconstant: ret
+linkrtib:(f16) linkconstant;	(f8) 4; (f8)[4] "#tib"
+codertib: x=#80; call pushdsp; ret
+linktib:(f16) linkrtib;		(f8) 3; (f8)[3] "tib"
+codetib: x=#tib; call pushdsp; ret
+links0:(f16) linktib;		(f8) 2; (f8)[2] "s0"
+codes0: x=dsp; call pushdsp; ret
+linkbase:(f16) links0;		(f8) 4; (f8)[4] "base"
+codebase: x=#base; call pushdsp; ret
+linklatest:(f16) linkbase;	(f8) 6; (f8)[6] "latest"
+codelatest: x=#latest; call pushdsp; ret
+linkhere:(f16) linklatest;	(f8) 4; (f8)[4] "here"
+codehere: x=#here; call pushdsp; ret
+linkstate:(f16) linkhere;	(f8) 5; (f8)[5] "state"
+codestate: x=#state; call pushdsp; ret
+linkvariable:(f16) linkstate;	(f8) 8; (f8) [8] "variable"
+codevariable: call codecreate; x=#0; call pushdsp; call codecomma; ret
+linkallot:(f16) linkvariable;	(f8) 5; (f8) [5] "allot"            
+codeallot: call popdsp; x+=here; here=x; ret
+linklit:(f16) linkallot;	(f8) 3;	(f8)[3] "lit"
+codelit: call coderget; call codeget; call codefromr; call code2incr; call codetor; ret
+linkcfa:(f16) linklit;		(f8) 4;	(f8)[4] ">cfa"
+codecfa: call peekdsp0; x++;x++; a=[x]; temp=x; a&=#0x0f; x=#0; xl=a; x+=temp; call pokedsp0; ret 
+linkfind:(f16) linkcfa;		(f8) 4;	(f8) [4] "find"                    //
+codefind:ret
+linkkey:(f16) linkfind;		(f8) 3; (f8) [3] "key"                     
+codekey: getchar; x=#0; xl=a; call pushdsp; ret
+linkexpect:(f16) linkkey;	(f8) 6; (f8) [6] "expect"                  //
+codeexpect: ret
+linkemit:(f16) linkexpect;		(f8) 4;	(f8) [4] "emit"                    
+codeemit: call popdsp; a=xl; putchar; ret
+linkcr:(f16) linkemit;		(f8) 2;	(f8) [2] "cr"                    
+codecr: a='\n'; putchar; ret
+linktype:(f16) linkcr;		(f8) 4;	(f8) [4] "type"                    
+codetype: call popdsp; if z==1 tl3; y=x; call popdsp;     
+        tl4: a=[x]; putchar; x++; y--; if z==0 tl4; ret
+	tl3: call popdsp; ret
+linkword:(f16) linktype;	(f8) 4; (f8) [4] "word"                     //
+codeword:ret
+linknumber:(f16) linkword;	(f8) 6; (f8) [6] "number"                   //
+codenumber:ret
+linkbranch:(f16) linknumber;	(f8) 6; (f8) [6] "branch"
+codebranch: call codefromr; call codeget; call codetor; ret
+link0branch:(f16) linkbranch;	(f8) 7; (f8) [7] "0branch"                  //
+code0branch:ret
+linkqbranch:(f16) link0branch;	(f8) 7; (f8) [7] "?branch"
+codeqbranch: call codefromr; call codeswap; call codeif; call code2incr; call codeelse; 
+	call codeget; call codethen; call codetor; ret
+linksemicolon:(f16) linkqbranch;(f8) {1+flagimmediate}; (f8) [1] 0x3b       
+codesemicolon: //call codecompile; call codeexit; call codebcompile; call codelbrac; ret
+linkcolon:(f16) linksemicolon;	(f8) 1;	(f8) [1] ":"	   		    //       
+codecolon: ret
+linkcomma:(f16) linkcolon;	(f8) 1;	(f8) [1] ","                        
+codecomma: call popdsp; [here]=x; here++; here++; ret
+linkshtrih:(f16) linkcomma;	(f8) 1;	(f8) [1] "`"                        
+codeshtrih:  //call codebl; call codeword; call codefind; call codeif; call codeexit; call codethen;  
+	//call codecount;  call codetype;  x=#0xff; call pushdsp; call codeabortz; call codeqz; ret
+linkbshtrih:(f16) linkshtrih;	(f8) 1;	(f8) [1] "[`]"                        
+codebshtrih: call codeshtrih; call codecompile; call codelit; call codecomma; ret
+linkimmediate:(f16) linkbshtrih;(f8) 1;	(f8) [1] "immediate"
+codeimmediate: x=latest; a=x[2]; a+=#flagimmediate; x[2]=a;  ret
+linkcreate:(f16) linkimmediate;	(f8) 6; (f8) [6] "create"                   //
+codecreate:ret
+linkbegin:(f16) linkcreate;	(f8) 5; (f8) [5] "begin"                    //
+codebegin:ret
+linkagain:(f16) linkbegin;	(f8) 5; (f8) [5] "again"                    //
+codeagain:ret
+linkif:(f16) linkagain;		(f8) {2+flagimmediate}; (f8) [2] "if"
+codeif: call codecompile; call codeqbranch; call codehere; x=#2; call pushdsp; call codeallot; ret
+linkthen:(f16) linkif;		(f8) {4+flagimmediate}; (f8) [4] "then"
+codethen: call codehere; call codeswap; call codeput; ret
+linkelse:(f16) linkthen;	(f8) {4+flagimmediate}; (f8) [4] "else"
+codeelse: call codecompile; call codebranch; call codehere; x=#2; call pushdsp; 
+	call codeallot; call codehere; call coderot; call codeput; ret
+linkexecute:(f16) linkelse;	(f8) 7; (f8) [7] "execute"                   
+codeexecute: call popdsp; call [x]; ret
+linkbcompile:(f16) linkexecute;	(f8) {9+flagimmediate}; (f8) [9] "[compile]"                 
+codebcompile:  call codeshtrih;  call codecomma; ret
+linkcompile:(f16) linkbcompile;	(f8) 7; (f8) [7] "compile"
+codecompile: call coderget; call codeget; call codecomma; call codefromr; call code2incr; call codetor; ret
+linkget:(f16) linkcompile;	(f8) 1;	(f8) [1] "@"
+codeget: call peekdsp0; x=[x]; call pokedsp0; ret
+linkput:(f16) linkget;		(f8) 1;	(f8) [1] "!"   
+codeput: call popdsp; y=x; call popdsp; [y]=x; ret
+linkincput:(f16) linkput;	(f8) 2;	(f8) [2] "+!"   
+codeincput: call popdsp; y=x; call popdsp; temp=x; x=y; x=[x]; x+=temp; [y]=x; ret
+linkdpl:(f16) linkincput;	(f8) 3;	(f8) [3] "dpl"                       //
+codedpl: ret
+linkliteral:(f16) linkdpl;	(f8) {7+flagimmediate};	(f8) [7] "literal"
+codeliteral: call codestate; call codeget; call codeif; call codecompile; call codelit; 
+	call codecomma; call codethen; ret
+linktwoliteral:(f16) linkliteral;(f8) 8; (f8) [8] "2literal"
+codetwoliteral: ret
+linklbrac:(f16) linktwoliteral;	(f8) {1+flagimmediate};	(f8) [1] '['
+codelbrac: state=#0; ret
+linkrbrac:(f16) linklbrac;	(f8) 1;	(f8) [1] ']'
+coderbrac: state=#0xff; ret
+linkdecimal:(f16) linklbrac;	(f8) 7;	(f8) [7] "decimal"
+codedecimal: base=#10; ret
+linkhex:(f16) linkdecimal;	(f8) 3;	(f8) [3] "hex"
+codehex: base=#16; ret
+linktick:(f16) linkhex;	(f8) 1;	(f8) [1] '\''
+codetick: ret 
+linkinterpret:(f16) linktick;(f8) 9;(f8) [9] "interpret"
+codeinterpret: call codebegin; call codebl; call codeword; call codefind; call codeincr;
+	call codeif; call codeexecute; call codeelse; call codestate; call codeget; call codeif;
+	call codecomma; call codeelse; call codeexecute; call codethen; call codethen; call codeelse;
+	call codenumber; call codedpl; call codeget; call codeincr; call codeif; call codebcompile;
+	call codetwoliteral; call codeelse; call codedrop; call codebcompile; call codeliteral;
+	call codethen; call codethen; call codeagain; ret
+linktor:(f16) linkinterpret;	(f8) 2;	(f8) [2] ">R"
+codetor: call popdsp; call pushrsp; ret
+linkfromr:(f16) linktor;	(f8) 2;	(f8) [2] "R>"
+codefromr: call poprsp; call pushdsp; ret
+linkrget:(f16) linkfromr;	(f8) 2;	(f8) [2] "R@"
+coderget: call peekrsp0; call pushdsp; ret
+linkdrop:(f16) linkrget;	(f8) 4;	(f8) [4] "drop"
+codedrop: call incdsp; ret
+linkswap:(f16) linkdrop;	(f8) 4;	(f8) [4] "swap"
+codeswap: call peekdsp0; tmp=x; call peekdsp1; call pokedsp0; x=tmp; call pokedsp1; ret
+linkdup:(f16) linkswap;		(f8) 3;	(f8) [3] "dup"
+codedup: call peekdsp0; call pushdsp; ret
+linkover:(f16) linkswap;	(f8) 4;	(f8) [4] "drop"
+codeover: call peekdsp1; call pushdsp; ret
+linkrot:(f16) linkover;		(f8) 3;	(f8) [3] "rot"
+coderot: call peekdsp0; tmp=x; call peekdsp1; call pokedsp0; call peekdsp2; call pokedsp1; x=tmp; call pokedsp2; ret
+linknrot:(f16) linkrot;		(f8) 4;	(f8) [4] "-rot"
+codenrot: call peekdsp2; tmp=x; call peekdsp1; call pokedsp2; call peekdsp0; call pokedsp1; x=tmp; call pokedsp0; ret
+link2drop:(f16) linknrot;	(f8) 5;	(f8) [5] "2drop"
+code2drop: call incdsp; call incdsp; ret
+link2swap:(f16) link2drop;	(f8) 5;	(f8) [5] "2swap"
+code2swap: call peekdsp0; tmp=x; call peekdsp2; call pokedsp0; x=tmp; call pokedsp2
+	call peekdsp1; tmp=x; call peekdsp3; call pokedsp1; x=tmp; call pokedsp3; ret
+linkqdup:(f16) link2swap;	(f8) 4;	(f8) [4] "?dup"
+codeqdup: call peekdsp0; if z==0 ftl0; call pushdsp; ftl0: ret
+linkincr:(f16) linkqdup;	(f8) 2;	(f8) [2] "1+"
+codeincr: x=#2; dsp[x]++; ret
+linkdecr:(f16) linkincr;	(f8) 2;	(f8) [2] "1-"
+codedecr: x=#2; dsp[x]++; ret
+link2incr:(f16) linkdecr;	(f8) 2;	(f8) [2] "2+"
+code2incr: x=#2; dsp[x]++; dsp[x]++; ret
+link2decr:(f16) link2incr;	(f8) 2;	(f8) [2] "2-"
+code2decr: x=#2; dsp[x]--; dsp[x]--; ret
+linkadd:(f16) link2decr;	(f8) 1;	(f8) [1] "+"
+codeadd: call peekdsp1; temp=x; call peekdsp0; x+=temp; call pokedsp1; call incdsp; ret
+linksub:(f16) linkadd;		(f8) 1;	(f8) [1] "-"
+codesub: call peekdsp1; temp=x; call peekdsp0; x-=temp; call pokedsp1; call incdsp; ret
+
+
+linknop:(f16) linksub;		(f8) 3;	(f8) [3] "nop"
+codenop: ret 
+herelabel:
+

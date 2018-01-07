@@ -1,0 +1,53 @@
+
+Segment List
+------------
+
+d:\naive\projects\stm8s\template\out\template.asm[1]    4-   49      5000 -     502C          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[2]   50-   56      505A -     505F          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[3]   57-   58      5062 -     5062          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[4]   59-   60      5064 -     5064          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[5]   61-   63      50A0 -     50A1          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[6]   64-   65      50B3 -     50B3          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[7]   66-   68      50C0 -     50C1          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[8]   69-   80      50C3 -     50CD          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[9]   81-   83      50D1 -     50D2          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[10]   84-   87      50E0 -     50E2          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[11]   88-   92      50F0 -     50F3          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[12]   93-  101      5200 -     5207          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[13]  102-  107      5210 -     5214          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[14]  108-  116      5216 -     521D          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[15]  117-  128      5230 -     523A          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[16]  129-  137      5240 -     5247          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[17]  138-  139      5249 -     5249          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[18]  140-  172      5250 -     526F          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[19]  173-  194      5300 -     5314          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[20]  195-  212      5320 -     5330          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[21]  213-  220      5340 -     5346          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[22]  221-  229      5400 -     5407          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[23]  230-  254      5420 -     5437          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[24]  255-  265      48CD -     48D8          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[25]  266-  281      4800 -     480E          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[26]  282-  284      487E -     487F          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[27]  285-  296      7F00 -     7F0A          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[28]  297-  298      7F60 -     7F60          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[29]  299-  307      7F70 -     7F77          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[30]  308-  309      7F80 -     7F80          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[31]  310-  321      7F90 -     7F9A          ports  'ports'  [void]
+d:\naive\projects\stm8s\template\out\template.asm[32]  322-  358      8000 -     8074          flash  'rom'  [textdata]
+
+
+Class List
+----------
+
+0 '       ports'   byte from     5000 to     7F9A (lim FFFFFFFF) =  0% D
+0 '         rom'   byte from     8000 to     8074 (lim     9FFF) =  1% CS
+
+
+
+External Label list
+-------------------
+
+Symbol Name                       Value     Scope  Def(line)
+
+
+0 labels

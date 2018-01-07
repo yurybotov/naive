@@ -1,0 +1,17 @@
+ifndef stm8l101x1
+define stm8l101x1
+
+define regstart 0x0
+define regend 0x00ff
+define ramstart 0x100
+define ramend 0x05ff
+define eepromstart 0xffff
+define eepromend 0xffff
+define flashstart 0x8000
+define flashend 0x87ff
+
+define farptr   0
+
+include stm8l._
+
+endif

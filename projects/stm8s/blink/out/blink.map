@@ -1,0 +1,54 @@
+
+Segment List
+------------
+
+d:\naive\projects\stm8s\blink\out\blink.asm[1]    4-   49      5000 -     502C          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[2]   50-   56      505A -     505F          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[3]   57-   58      5062 -     5062          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[4]   59-   60      5064 -     5064          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[5]   61-   63      50A0 -     50A1          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[6]   64-   65      50B3 -     50B3          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[7]   66-   68      50C0 -     50C1          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[8]   69-   80      50C3 -     50CD          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[9]   81-   83      50D1 -     50D2          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[10]   84-   87      50E0 -     50E2          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[11]   88-   92      50F0 -     50F3          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[12]   93-  101      5200 -     5207          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[13]  102-  107      5210 -     5214          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[14]  108-  116      5216 -     521D          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[15]  117-  128      5230 -     523A          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[16]  129-  141      5240 -     524B          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[17]  142-  150      5240 -     5247          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[18]  151-  152      5249 -     5249          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[19]  153-  185      5250 -     526F          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[20]  186-  207      5300 -     5314          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[21]  208-  225      5320 -     5330          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[22]  226-  233      5340 -     5346          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[23]  234-  242      5400 -     5407          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[24]  243-  267      5420 -     5437          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[25]  268-  278      48CD -     48D8          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[26]  279-  294      4800 -     480E          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[27]  295-  297      487E -     487F          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[28]  298-  309      7F00 -     7F0A          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[29]  310-  311      7F60 -     7F60          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[30]  312-  320      7F70 -     7F77          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[31]  321-  322      7F80 -     7F80          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[32]  323-  334      7F90 -     7F9A          ports  'ports'  [void]
+d:\naive\projects\stm8s\blink\out\blink.asm[33]  335-  352      8000 -     801E          flash  'rom'  [textdata]
+
+
+Class List
+----------
+
+0 '       ports'   byte from     5000 to     7F9A (lim FFFFFFFF) =  0% D
+0 '         rom'   byte from     8000 to     801E (lim     9FFF) =  0% CS
+
+
+
+External Label list
+-------------------
+
+Symbol Name                       Value     Scope  Def(line)
+
+
+0 labels

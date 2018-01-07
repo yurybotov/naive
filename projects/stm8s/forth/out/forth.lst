@@ -1,0 +1,2038 @@
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 1  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+   1                         stm8      
+   2                         
+   3                         
+   4                         ports     segment  byte at 5000 'ports'
+   5  005000                       gpioaodr  ds.b     
+   6  005001                       gpioaidr  ds.b     
+   7  005002                       gpioaddr  ds.b     
+   8  005003                       gpioacr1  ds.b     
+   9  005004                       gpioacr2  ds.b     
+  10  005005                       gpiobodr  ds.b     
+  11  005006                       gpiobidr  ds.b     
+  12  005007                       gpiobddr  ds.b     
+  13  005008                       gpiobcr1  ds.b     
+  14  005009                       gpiobcr2  ds.b     
+  15  00500A                       gpiocodr  ds.b     
+  16  00500B                       gpiocidr  ds.b     
+  17  00500C                       gpiocddr  ds.b     
+  18  00500D                       gpioccr1  ds.b     
+  19  00500E                       gpioccr2  ds.b     
+  20  00500F                       gpiododr  ds.b     
+  21  005010                       gpiodidr  ds.b     
+  22  005011                       gpiodddr  ds.b     
+  23  005012                       gpiodcr1  ds.b     
+  24  005013                       gpiodcr2  ds.b     
+  25  005014                       gpioeodr  ds.b     
+  26  005015                       gpioeidr  ds.b     
+  27  005016                       gpioeddr  ds.b     
+  28  005017                       gpioecr1  ds.b     
+  29  005018                       gpioecr2  ds.b     
+  30  005019                       gpiofodr  ds.b     
+  31  00501A                       gpiofidr  ds.b     
+  32  00501B                       gpiofddr  ds.b     
+  33  00501C                       gpiofcr1  ds.b     
+  34  00501D                       gpiofcr2  ds.b     
+  35  00501E                       gpiogodr  ds.b     
+  36  00501F                       gpiogidr  ds.b     
+  37  005020                       gpiogddr  ds.b     
+  38  005021                       gpiogcr1  ds.b     
+  39  005022                       gpiogcr2  ds.b     
+  40  005023                       gpiohodr  ds.b     
+  41  005024                       gpiohidr  ds.b     
+  42  005025                       gpiohddr  ds.b     
+  43  005026                       gpiohcr1  ds.b     
+  44  005027                       gpiohcr2  ds.b     
+  45  005028                       gpioiodr  ds.b     
+  46  005029                       gpioiidr  ds.b     
+  47  00502A                       gpioiddr  ds.b     
+  48  00502B                       gpioicr1  ds.b     
+  49  00502C                       gpioicr2  ds.b     
+  50                         ports     segment  byte at 505A 'ports'
+  51  00505A                       flashcr1  ds.b     
+  52  00505B                       flashcr2  ds.b     
+  53  00505C                       flashncr2  ds.b     
+  54  00505D                       flashfpr  ds.b     
+  55  00505E                       flashnfpr  ds.b     
+  56  00505F                       flashiapsr  ds.b     
+  57                         ports     segment  byte at 5062 'ports'
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 2  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+  58  005062                       flashpukr  ds.b     
+  59                         ports     segment  byte at 5064 'ports'
+  60  005064                       flashdukr  ds.b     
+  61                         ports     segment  byte at 50A0 'ports'
+  62  0050A0                       itcexticr1  ds.b     
+  63  0050A1                       itcexticr2  ds.b     
+  64                         ports     segment  byte at 50B3 'ports'
+  65  0050B3                       rstsr     ds.b     
+  66                         ports     segment  byte at 50C0 'ports'
+  67  0050C0                       clkickr   ds.b     
+  68  0050C1                       clkeckr   ds.b     
+  69                         ports     segment  byte at 50C3 'ports'
+  70  0050C3                       clkcmsr   ds.b     
+  71  0050C4                       clkswr    ds.b     
+  72  0050C5                       clkswcr   ds.b     
+  73  0050C6                       clkckdivr  ds.b     
+  74  0050C7                       clkpckenr1  ds.b     
+  75  0050C8                       clkcssr   ds.b     
+  76  0050C9                       clkccor   ds.b     
+  77  0050CA                       clkpckenr2  ds.b     
+  78  0050CB                       clkcanccr  ds.b     
+  79  0050CC                       clkhsitrimr  ds.b     
+  80  0050CD                       clkswimccr  ds.b     
+  81                         ports     segment  byte at 50D1 'ports'
+  82  0050D1                       wwdgcr    ds.b     
+  83  0050D2                       wwdgwr    ds.b     
+  84                         ports     segment  byte at 50E0 'ports'
+  85  0050E0                       iwdgkr    ds.b     
+  86  0050E1                       iwdgpr    ds.b     
+  87  0050E2                       iwdgrlr   ds.b     
+  88                         ports     segment  byte at 50F0 'ports'
+  89  0050F0                       awucsr1   ds.b     
+  90  0050F1                       awuapr    ds.b     
+  91  0050F2                       awutbr    ds.b     
+  92  0050F3                       beepcsr   ds.b     
+  93                         ports     segment  byte at 5200 'ports'
+  94  005200                       spicr1    ds.b     
+  95  005201                       spicr2    ds.b     
+  96  005202                       spiicr    ds.b     
+  97  005203                       spisr     ds.b     
+  98  005204                       spidr     ds.b     
+  99  005205                       spicrcpr  ds.b     
+ 100  005206                       spirxcrcr  ds.b     
+ 101  005207                       spitxcrcr  ds.b     
+ 102                         ports     segment  byte at 5210 'ports'
+ 103  005210                       i2ccr1    ds.b     
+ 104  005211                       i2ccr2    ds.b     
+ 105  005212                       i2cfreqr  ds.b     
+ 106  005213                       i2coarl   ds.b     
+ 107  005214                       i2coarh   ds.b     
+ 108                         ports     segment  byte at 5216 'ports'
+ 109  005216                       i2cdr     ds.b     
+ 110  005217                       i2csr1    ds.b     
+ 111  005218                       i2csr2    ds.b     
+ 112  005219                       i2csr3    ds.b     
+ 113  00521A                       i2citr    ds.b     
+ 114  00521B                       i2cccrl   ds.b     
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 3  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 115  00521C                       i2cccrh   ds.b     
+ 116  00521D                       i2ctriser  ds.b     
+ 117                         ports     segment  byte at 5230 'ports'
+ 118  005230                       uart1sr   ds.b     
+ 119  005231                       uart1dr   ds.b     
+ 120  005232                       uart1brr1  ds.b     
+ 121  005233                       uart1brr2  ds.b     
+ 122  005234                       uart1cr1  ds.b     
+ 123  005235                       uart1cr2  ds.b     
+ 124  005236                       uart1cr3  ds.b     
+ 125  005237                       uart1cr4  ds.b     
+ 126  005238                       uart1cr5  ds.b     
+ 127  005239                       uart1gtr  ds.b     
+ 128  00523A                       uart1pstr  ds.b     
+ 129                         ports     segment  byte at 5240 'ports'
+ 130  005240                       uart3sr   ds.b     
+ 131  005241                       uart3dr   ds.b     
+ 132  005242                       uart3brr1  ds.b     
+ 133  005243                       uart3brr2  ds.b     
+ 134  005244                       uart3cr1  ds.b     
+ 135  005245                       uart3cr2  ds.b     
+ 136  005246                       uart3cr3  ds.b     
+ 137  005247                       uart3cr4  ds.b     
+ 138                         ports     segment  byte at 5249 'ports'
+ 139  005249                       uart3cr6  ds.b     
+ 140                         ports     segment  byte at 5250 'ports'
+ 141  005250                       tim1cr1   ds.b     
+ 142  005251                       tim1cr2   ds.b     
+ 143  005252                       tim1smcr  ds.b     
+ 144  005253                       tim1etr   ds.b     
+ 145  005254                       tim1ier   ds.b     
+ 146  005255                       tim1sr1   ds.b     
+ 147  005256                       tim1sr2   ds.b     
+ 148  005257                       tim1egr   ds.b     
+ 149  005258                       tim1ccmr1  ds.b     
+ 150  005259                       tim1ccmr2  ds.b     
+ 151  00525A                       tim1ccmr3  ds.b     
+ 152  00525B                       tim1ccmr4  ds.b     
+ 153  00525C                       tim1ccer1  ds.b     
+ 154  00525D                       tim1ccer2  ds.b     
+ 155  00525E                       tim1cntrh  ds.b     
+ 156  00525F                       tim1cntrl  ds.b     
+ 157  005260                       tim1pscrh  ds.b     
+ 158  005261                       tim1pscrl  ds.b     
+ 159  005262                       tim1arrh  ds.b     
+ 160  005263                       tim1arrl  ds.b     
+ 161  005264                       tim1rcr   ds.b     
+ 162  005265                       tim1ccr1h  ds.b     
+ 163  005266                       tim1ccr1l  ds.b     
+ 164  005267                       tim1ccr2h  ds.b     
+ 165  005268                       tim1ccr2l  ds.b     
+ 166  005269                       tim1ccr3h  ds.b     
+ 167  00526A                       tim1ccr3l  ds.b     
+ 168  00526B                       tim1ccr4h  ds.b     
+ 169  00526C                       tim1ccr4l  ds.b     
+ 170  00526D                       tim1bkr   ds.b     
+ 171  00526E                       tim1dtr   ds.b     
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 4  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 172  00526F                       tim1oisr  ds.b     
+ 173                         ports     segment  byte at 5300 'ports'
+ 174  005300                       tim2cr1   ds.b     
+ 175  005301                       tim2ier   ds.b     
+ 176  005302                       tim2sr1   ds.b     
+ 177  005303                       tim2sr2   ds.b     
+ 178  005304                       tim2egr   ds.b     
+ 179  005305                       tim2ccmr1  ds.b     
+ 180  005306                       tim2ccmr2  ds.b     
+ 181  005307                       tim2ccmr3  ds.b     
+ 182  005308                       tim2ccer1  ds.b     
+ 183  005309                       tim2ccer2  ds.b     
+ 184  00530A                       tim2cntrh  ds.b     
+ 185  00530B                       tim2cntrl  ds.b     
+ 186  00530C                       tim2pscr  ds.b     
+ 187  00530D                       tim2arrh  ds.b     
+ 188  00530E                       tim2arrl  ds.b     
+ 189  00530F                       tim2ccr1h  ds.b     
+ 190  005310                       tim2ccr1l  ds.b     
+ 191  005311                       tim2ccr2h  ds.b     
+ 192  005312                       tim2ccr2l  ds.b     
+ 193  005313                       tim2ccr3h  ds.b     
+ 194  005314                       tim2ccr3l  ds.b     
+ 195                         ports     segment  byte at 5320 'ports'
+ 196  005320                       tim3cr1   ds.b     
+ 197  005321                       tim3ier   ds.b     
+ 198  005322                       tim3sr1   ds.b     
+ 199  005323                       tim3sr2   ds.b     
+ 200  005324                       tim3egr   ds.b     
+ 201  005325                       tim3ccmr1  ds.b     
+ 202  005326                       tim3ccmr2  ds.b     
+ 203  005327                       tim3ccer1  ds.b     
+ 204  005328                       tim3cntrh  ds.b     
+ 205  005329                       tim3cntrl  ds.b     
+ 206  00532A                       tim3pscr  ds.b     
+ 207  00532B                       tim3arrh  ds.b     
+ 208  00532C                       tim3arrl  ds.b     
+ 209  00532D                       tim3ccr1h  ds.b     
+ 210  00532E                       tim3ccr1l  ds.b     
+ 211  00532F                       tim3ccr2h  ds.b     
+ 212  005330                       tim3ccr2l  ds.b     
+ 213                         ports     segment  byte at 5340 'ports'
+ 214  005340                       tim4cr1   ds.b     
+ 215  005341                       tim4ier   ds.b     
+ 216  005342                       tim4sr    ds.b     
+ 217  005343                       tim4egr   ds.b     
+ 218  005344                       tim4cntr  ds.b     
+ 219  005345                       tim4pscr  ds.b     
+ 220  005346                       tim4arr   ds.b     
+ 221                         ports     segment  byte at 5400 'ports'
+ 222  005400                       adc2csr   ds.b     
+ 223  005401                       adc2cr1   ds.b     
+ 224  005402                       adc2cr2   ds.b     
+ 225  005403                       adc2cr3   ds.b     
+ 226  005404                       adc2drh   ds.b     
+ 227  005405                       adc2drl   ds.b     
+ 228  005406                       adc2tdrh  ds.b     
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 5  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 229  005407                       adc2tdrl  ds.b     
+ 230                         ports     segment  byte at 5420 'ports'
+ 231  005420                       canmcr    ds.b     
+ 232  005421                       canmsr    ds.b     
+ 233  005422                       cantsr    ds.b     
+ 234  005423                       cantpr    ds.b     
+ 235  005424                       canrfr    ds.b     
+ 236  005425                       canier    ds.b     
+ 237  005426                       candgr    ds.b     
+ 238  005427                       canfpsr   ds.b     
+ 239  005428                       canp0     ds.b     
+ 240  005429                       canp1     ds.b     
+ 241  00542A                       canp2     ds.b     
+ 242  00542B                       canp3     ds.b     
+ 243  00542C                       canp4     ds.b     
+ 244  00542D                       canp5     ds.b     
+ 245  00542E                       canp6     ds.b     
+ 246  00542F                       canp7     ds.b     
+ 247  005430                       canp8     ds.b     
+ 248  005431                       canp9     ds.b     
+ 249  005432                       canpa     ds.b     
+ 250  005433                       canpb     ds.b     
+ 251  005434                       canpc     ds.b     
+ 252  005435                       canpd     ds.b     
+ 253  005436                       canpe     ds.b     
+ 254  005437                       canpf     ds.b     
+ 255                         ports     segment  byte at 48CD 'ports'
+ 256  0048CD                       unicidx   ds.w     
+ 257  0048CF                       unicidy   ds.w     
+ 258  0048D1                       unicidwafer  ds.b     
+ 259  0048D2                       unicidlot0  ds.b     
+ 260  0048D3                       unicidlot1  ds.b     
+ 261  0048D4                       unicidlot2  ds.b     
+ 262  0048D5                       unicidlot3  ds.b     
+ 263  0048D6                       unicidlot4  ds.b     
+ 264  0048D7                       unicidlot5  ds.b     
+ 265  0048D8                       unicidlot6  ds.b     
+ 266                         ports     segment  byte at 4800 'ports'
+ 267  004800                       optionopt0  ds.b     
+ 268  004801                       optionopt1  ds.b     
+ 269  004802                       optionnopt1  ds.b     
+ 270  004803                       optionopt2  ds.b     
+ 271  004804                       optionnopt2  ds.b     
+ 272  004805                       optionopt3  ds.b     
+ 273  004806                       optionnopt3  ds.b     
+ 274  004807                       optionopt4  ds.b     
+ 275  004808                       optionnopt4  ds.b     
+ 276  004809                       optionopt5  ds.b     
+ 277  00480A                       optionnopt5  ds.b     
+ 278  00480B                       optionopt6  ds.b     
+ 279  00480C                       optionnopt6  ds.b     
+ 280  00480D                       optionopt7  ds.b     
+ 281  00480E                       optionnopt7  ds.b     
+ 282                         ports     segment  byte at 487E 'ports'
+ 283  00487E                       bootloaderoptbl  ds.b     
+ 284  00487F                       bootloadernoptbl  ds.b     
+ 285                         ports     segment  byte at 7F00 'ports'
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 6  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 286  007F00                       cpua      ds.b     
+ 287  007F01                       cpupce    ds.b     
+ 288  007F02                       cpupch    ds.b     
+ 289  007F03                       cpupcl    ds.b     
+ 290  007F04                       cpuxh     ds.b     
+ 291  007F05                       cpuxl     ds.b     
+ 292  007F06                       cpuyh     ds.b     
+ 293  007F07                       cpuyl     ds.b     
+ 294  007F08                       cpusph    ds.b     
+ 295  007F09                       cpuspl    ds.b     
+ 296  007F0A                       cpuccr    ds.b     
+ 297                         ports     segment  byte at 7F60 'ports'
+ 298  007F60                       cpugcr    ds.b     
+ 299                         ports     segment  byte at 7F70 'ports'
+ 300  007F70                       itcspr1   ds.b     
+ 301  007F71                       itcspr2   ds.b     
+ 302  007F72                       itcspr3   ds.b     
+ 303  007F73                       itcspr4   ds.b     
+ 304  007F74                       itcspr5   ds.b     
+ 305  007F75                       itcspr6   ds.b     
+ 306  007F76                       itcspr7   ds.b     
+ 307  007F77                       itcspr8   ds.b     
+ 308                         ports     segment  byte at 7F80 'ports'
+ 309  007F80                       swimcsr   ds.b     
+ 310                         ports     segment  byte at 7F90 'ports'
+ 311  007F90                       dmbk1re   ds.b     
+ 312  007F91                       dmbk1rh   ds.b     
+ 313  007F92                       dmbk1rl   ds.b     
+ 314  007F93                       dmbk2re   ds.b     
+ 315  007F94                       dmbk2rh   ds.b     
+ 316  007F95                       dmbk2rl   ds.b     
+ 317  007F96                       dmcr1     ds.b     
+ 318  007F97                       dmcr2     ds.b     
+ 319  007F98                       dmcsr1    ds.b     
+ 320  007F99                       dmcsr2    ds.b     
+ 321  007F9A                       dmenfctr  ds.b     
+ 322                         flash     segment  byte at 8000-9FFF 'rom'
+ 323  008000   820080F5            interruptreset  dc.l     {$82000000+start}
+ 324  008004   8200806C            interrupttrap  dc.l     {$82000000+dumb}
+ 325  008008   8200806C            interrupttli  dc.l     {$82000000+dumb}
+ 326  00800C   8200806C            interruptawu  dc.l     {$82000000+dumb}
+ 327  008010   8200806C            interruptclk  dc.l     {$82000000+dumb}
+ 328  008014   8200806C            interruptexti0  dc.l     {$82000000+dumb}
+ 329  008018   8200806C            interruptexti1  dc.l     {$82000000+dumb}
+ 330  00801C   8200806C            interruptexti2  dc.l     {$82000000+dumb}
+ 331  008020   8200806C            interruptexti3  dc.l     {$82000000+dumb}
+ 332  008024   8200806C            interruptexti4  dc.l     {$82000000+dumb}
+ 333  008028   8200806C            interruptcanrx  dc.l     {$82000000+dumb}
+ 334  00802C   8200806C            interruptcantx  dc.l     {$82000000+dumb}
+ 335  008030   8200806C            interruptspi  dc.l     {$82000000+dumb}
+ 336  008034   8200806C            interrupttim1u  dc.l     {$82000000+dumb}
+ 337  008038   8200806C            interrupttim1c  dc.l     {$82000000+dumb}
+ 338  00803C   8200806C            interrupttim2u  dc.l     {$82000000+dumb}
+ 339  008040   8200806C            interrupttim2c  dc.l     {$82000000+dumb}
+ 340  008044   8200806C            interrupttim3u  dc.l     {$82000000+dumb}
+ 341  008048   8200806C            interrupttim3c  dc.l     {$82000000+dumb}
+ 342  00804C   8200806C            interruptuart1tx  dc.l     {$82000000+dumb}
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 7  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 343  008050   820080A8            interruptuart1rx  dc.l     {$82000000+uart1rx}
+ 344  008054   8200806C            interrupti2c  dc.l     {$82000000+dumb}
+ 345  008058   8200806C            interruptuart3tx  dc.l     {$82000000+dumb}
+ 346  00805C   8200806C            interruptuart3rx  dc.l     {$82000000+dumb}
+ 347  008060   8200806C            interruptadc1  dc.l     {$82000000+dumb}
+ 348  008064   8200806C            interrupttim4u  dc.l     {$82000000+dumb}
+ 349  008068   8200806C            interruptflash  dc.l     {$82000000+dumb}
+ 350                         dumb      
+ 351  00806C   80                            iret                   ; iret in forth.stm8s._ : 35
+ 352                         regs      segment  byte at 0-FF 'ram0'
+ 353  000000                       rstart    ds.b     
+ 354  000001                       rend      ds.b     
+ 355  000002                       rsize     ds.b     
+ 356  000003                       rlen      ds.b     
+ 357  000004                       rbuf      ds.b     64
+ 358                         flash     segment  byte 'rom'
+ 359                         atoringbuf  
+ 360  00806D   89                            pushw    x             ; pushx in ringbuf._ : 14
+ 361  00806E   88                            push     a             ; pusha in ringbuf._ : 14
+ 362  00806F   5F                            clrw     x             ; x=#0 in ringbuf._ : 15
+ 363  008070   B600                          ld       a,rstart      ; a=rstart in ringbuf._ : 15
+ 364  008072   97                            ld       xl,a          ; xl=a in ringbuf._ : 15
+ 365  008073   4C                            inc      a             ; a++ in ringbuf._ : 15
+ 366  008074   B102                          cp       a,rsize       ; a?rsize in ringbuf._ : 16
+ 367  008076   2607                          jrne     atoringbuf_notzero  ; ifz==0atoringbuf_notzero in 
+                                                                ;ringbuf._ : 17
+ 368  008078   84                            pop      a             ; popa in ringbuf._ : 18
+ 369  008079   E704                          ld       (rbuf,x),a    ; rbuf[x]=a in ringbuf._ : 18
+ 370  00807B   3F00                          clr      rstart        ; rstart=#0 in ringbuf._ : 18
+ 371  00807D   2005                          jra      atoringbuf_end  ; gonearatoringbuf_end in 
+                                                                ;ringbuf._ : 18
+ 372                         atoringbuf_notzero  
+ 373  00807F   84                            pop      a             ; popa in ringbuf._ : 20
+ 374  008080   E704                          ld       (rbuf,x),a    ; rbuf[x]=a in ringbuf._ : 20
+ 375  008082   3C00                          inc      rstart        ; rstart++ in ringbuf._ : 20
+ 376                         atoringbuf_end  
+ 377  008084   3C03                          inc      rlen          ; rlen++ in ringbuf._ : 22
+ 378  008086   85                            popw     x             ; popx in ringbuf._ : 22
+ 379  008087   81                            ret                    ; ret in ringbuf._ : 23
+ 380                         ringbuftoa  
+ 381  008088   89                            pushw    x             ; pushx in ringbuf._ : 26
+ 382  008089   5F                            clrw     x             ; x=#0 in ringbuf._ : 27
+ 383  00808A   B601                          ld       a,rend        ; a=rend in ringbuf._ : 27
+ 384  00808C   97                            ld       xl,a          ; xl=a in ringbuf._ : 27
+ 385  00808D   4C                            inc      a             ; a++ in ringbuf._ : 27
+ 386  00808E   B102                          cp       a,rsize       ; a?rsize in ringbuf._ : 28
+ 387  008090   2606                          jrne     ringbuftoa_notzero  ; ifz==0ringbuftoa_notzero in 
+                                                                ;ringbuf._ : 29
+ 388  008092   E604                          ld       a,(rbuf,x)    ; a=rbuf[x] in ringbuf._ : 30
+ 389  008094   3F01                          clr      rend          ; rend=#0 in ringbuf._ : 30
+ 390  008096   2004                          jra      ringbuftoa_end  ; gonearringbuftoa_end in 
+                                                                ;ringbuf._ : 30
+ 391                         ringbuftoa_notzero  
+ 392  008098   E604                          ld       a,(rbuf,x)    ; a=rbuf[x] in ringbuf._ : 32
+ 393  00809A   3C01                          inc      rend          ; rend++ in ringbuf._ : 32
+ 394                         ringbuftoa_end  
+ 395  00809C   3A03                          dec      rlen          ; rlen-- in ringbuf._ : 34
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 8  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 396  00809E   85                            popw     x             ; popx in ringbuf._ : 34
+ 397  00809F   81                            ret                    ; ret in ringbuf._ : 35
+ 398                         ringbufready  
+ 399  0080A0   3D03                          tnz      rlen          ; ?rlen in ringbuf._ : 38
+ 400  0080A2   2603                          jrne     ringbufready_ifzero  ; ifz==0ringbufready_ifzero in 
+                                                                ;ringbuf._ : 39
+ 401  0080A4   A601                          ld       a,#1          ; a=#1 in ringbuf._ : 40
+ 402  0080A6   81                            ret                    ; ret in ringbuf._ : 41
+ 403                         ringbufready_ifzero  
+ 404  0080A7   4F                            clr      a             ; a=#0 in ringbuf._ : 43
+ 405                         uart1rx   
+ 406  0080A8   C65231                        ld       a,uart1dr     ; a=uart1dr in forth.stm8s._ : 
+                                                                ;41
+ 407  0080AB   ADC0                          callr    atoringbuf    ; callnearatoringbuf in 
+                                                                ;forth.stm8s._ : 42
+ 408  0080AD   80                            iret                   ; iret in forth.stm8s._ : 43
+ 409                         init      
+ 410  0080AE   721050C1                      bset     clkeckr,#0    ; clkeckr#0=#1 in forth.stm8s._ 
+                                                                ;: 46
+ 411  0080B2   721250C5                      bset     clkswcr,#1    ; clkswcr#1=#1 in forth.stm8s._ 
+                                                                ;: 46
+ 412                         wait1     
+ 413  0080B6   720350C1FB                    btjf     clkeckr,#1,wait1  ; ifclkeckr#1==0wait1 in 
+                                                                ;forth.stm8s._ : 46
+ 414  0080BB   725F50C6                      clr      clkckdivr     ; clkckdivr=#0 in forth.stm8s._ 
+                                                                ;: 46
+ 415  0080BF   35B450C4                      mov      clkswr,#$b4   ; clkswr=#0xb4 in forth.stm8s._ 
+                                                                ;: 47
+ 416                         wait2     
+ 417  0080C3   720750C5FB                    btjf     clkswcr,#3,wait2  ; ifclkswcr#3==0wait2 in 
+                                                                ;forth.stm8s._ : 47
+ 418  0080C8   721A50C7                      bset     clkpckenr1,#5  ; clkpckenr1#5=#1 in 
+                                                                ;forth.stm8s._ : 47
+ 419  0080CC   7215500C                      bres     gpiocddr,#2   ; gpiocddr#2=#0 in forth.stm8s._
+                                                                ; : 49
+ 420  0080D0   7216500C                      bset     gpiocddr,#3   ; gpiocddr#3=#1 in forth.stm8s._
+                                                                ; : 49
+ 421  0080D4   5500035233                    mov      uart1brr2,$03  ; uart1brr2=0x03 in 
+                                                                ;forth.stm8s._ : 51
+ 422  0080D9   5500685232                    mov      uart1brr1,$68  ; uart1brr1=0x68 in 
+                                                                ;forth.stm8s._ : 51
+ 423  0080DE   72145235                      bset     uart1cr2,#2   ; uart1cr2#2=#1 in forth.stm8s._
+                                                                ; : 51
+ 424  0080E2   72165235                      bset     uart1cr2,#3   ; uart1cr2#3=#1 in forth.stm8s._
+                                                                ; : 51
+ 425  0080E6   721A5235                      bset     uart1cr2,#5   ; uart1cr2#5=#1 in forth.stm8s._
+                                                                ; : 51
+ 426  0080EA   3F00                          clr      rstart        ; rstart=#0 in forth.stm8s._ : 
+                                                                ;53
+ 427  0080EC   3F01                          clr      rend          ; rend=#0 in forth.stm8s._ : 53
+ 428  0080EE   3F03                          clr      rlen          ; rlen=#0 in forth.stm8s._ : 53
+ 429  0080F0   35400002                      mov      rsize,#64     ; rsize=#64 in forth.stm8s._ : 
+                                                                ;53
+ 430  0080F4   81                            ret                    ; ret in forth.stm8s._ : 54
+ 431                         start     
+ 432  0080F5   AE03FF                        ldw      x,#$03ff      ; x=#0x03ff in forth.stm8s._ : 
+                                                                ;61
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 9  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 433  0080F8   94                            ldw      sp,x          ; sp=x in forth.stm8s._ : 61
+ 434  0080F9   ADB3                          callr    init          ; callnearinit in forth.stm8s._ 
+                                                                ;: 62
+ 435  0080FB   AD24                          callr    svminit       ; callnearsvminit in 
+                                                                ;forth.stm8s._ : 63
+ 436  0080FD   725F004C                      clr      state         ; state=#0 in forth.stm8s._ : 
+                                                                ;64
+ 437  008101   350A004D                      mov      base,#10      ; base=#10 in forth.stm8s._ : 
+                                                                ;64
+ 438  008105   AE86A8                        ldw      x,#herelabel  ; x=#herelabel in forth.stm8s._ 
+                                                                ;: 65
+ 439  008108   CF004E                        ldw      here,x        ; here=x in forth.stm8s._ : 65
+ 440  00810B   AE86A1                        ldw      x,#linknop    ; x=#linknop in forth.stm8s._ : 
+                                                                ;65
+ 441  00810E   CF0050                        ldw      latest,x      ; latest=x in forth.stm8s._ : 
+                                                                ;65
+ 442  008111   9B                            sim                    ; i=#1 in forth.stm8s._ : 66
+ 443                         loop      
+ 444  008112   CD80A0                        call     ringbufready  ; callringbufready in 
+                                                                ;forth.stm8s._ : 67
+ 445  008115   27FB                          jreq     loop          ; ifz==1loop in forth.stm8s._ : 
+                                                                ;68
+ 446  008117   20F9                          jra      loop          ; gonearloop in forth.stm8s._ : 
+                                                                ;71
+ 447                         regs      segment  byte 'ram0'
+ 448  000044                       dsp       ds.w     
+ 449  000046                       rsp       ds.w     
+ 450  000048                       nxt       ds.w     
+ 451  00004A                       tmp       ds.w     
+ 452                         flash     segment  byte 'rom'
+ 453  008119   0100                dss       dc.w     $100
+ 454  00811B   01FF                dsm       dc.w     $1ff
+ 455  00811D   0200                rss       dc.w     $200
+ 456  00811F   02FF                rsm       dc.w     $2ff
+ 457                         svminit   
+ 458  008121   CE811B                        ldw      x,dsm         ; x=dsm in svm._ : 17
+ 459  008124   CF0044                        ldw      dsp,x         ; dsp=x in svm._ : 17
+ 460  008127   CE811F                        ldw      x,rsm         ; x=rsm in svm._ : 17
+ 461  00812A   CF0046                        ldw      rsp,x         ; rsp=x in svm._ : 17
+ 462  00812D   725F0048                      clr      nxt           ; nxt=#0 in svm._ : 17
+ 463  008131   81                            ret                    ; ret in svm._ : 17
+ 464                         incdsp    
+ 465  008132   725C0044                      inc      dsp           ; dsp++ in svm._ : 19
+ 466  008136   725C0044                      inc      dsp           ; dsp++ in svm._ : 19
+ 467  00813A   CE0044                        ldw      x,dsp         ; x=dsp in svm._ : 19
+ 468  00813D   C3811B                        cpw      x,dsm         ; x?dsm in svm._ : 19
+ 469  008140   2503                          jrult    tl0           ; if<utl0 in svm._ : 19
+ 470  008142   CC81DA                        jp       error         ; goerror in svm._ : 19
+ 471                         tl0       
+ 472  008145   81                            ret                    ; ret in svm._ : 19
+ 473                         decdsp    
+ 474  008146   725A0044                      dec      dsp           ; dsp-- in svm._ : 20
+ 475  00814A   725A0044                      dec      dsp           ; dsp-- in svm._ : 20
+ 476  00814E   CE0044                        ldw      x,dsp         ; x=dsp in svm._ : 20
+ 477  008151   C38119                        cpw      x,dss         ; x?dss in svm._ : 20
+ 478  008154   22EF                          jrugt    tl0           ; if>utl0 in svm._ : 20
+ 479  008156   CC81DA                        jp       error         ; goerror in svm._ : 20
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 10  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 480                         incrsp    
+ 481  008159   725C0046                      inc      rsp           ; rsp++ in svm._ : 21
+ 482  00815D   725C0046                      inc      rsp           ; rsp++ in svm._ : 21
+ 483  008161   CE0046                        ldw      x,rsp         ; x=rsp in svm._ : 21
+ 484  008164   C3811F                        cpw      x,rsm         ; x?rsm in svm._ : 21
+ 485  008167   25DC                          jrult    tl0           ; if<utl0 in svm._ : 21
+ 486  008169   CC81DA                        jp       error         ; goerror in svm._ : 21
+ 487                         decrsp    
+ 488  00816C   725A0046                      dec      rsp           ; rsp-- in svm._ : 22
+ 489  008170   725A0046                      dec      rsp           ; rsp-- in svm._ : 22
+ 490  008174   CE0046                        ldw      x,rsp         ; x=rsp in svm._ : 22
+ 491  008177   C3811D                        cpw      x,rss         ; x?rss in svm._ : 22
+ 492  00817A   22C9                          jrugt    tl0           ; if>utl0 in svm._ : 22
+ 493  00817C   CC81DA                        jp       error         ; goerror in svm._ : 22
+ 494                         peekdsp0  
+ 495  00817F   AE0002                        ldw      x,#2          ; x=#2 in svm._ : 25
+ 496  008182   2003                          jra      tl1           ; goneartl1 in svm._ : 25
+ 497                         peekdsp1  
+ 498  008184   AE0004                        ldw      x,#4          ; x=#4 in svm._ : 26
+ 499                         tl1       
+ 500  008187   DE0044                        ldw      x,(dsp,x)     ; x=dsp[x] in svm._ : 26
+ 501  00818A   81                            ret                    ; ret in svm._ : 26
+ 502                         peekdsp2  
+ 503  00818B   AE0006                        ldw      x,#6          ; x=#6 in svm._ : 27
+ 504  00818E   20F7                          jra      tl1           ; goneartl1 in svm._ : 27
+ 505                         peekdsp3  
+ 506  008190   AE0008                        ldw      x,#8          ; x=#8 in svm._ : 28
+ 507  008193   20F2                          jra      tl1           ; goneartl1 in svm._ : 28
+ 508                         pokedsp0  
+ 509  008195   90AE0002                      ldw      y,#2          ; y=#2 in svm._ : 29
+ 510  008199   2004                          jra      tl2           ; goneartl2 in svm._ : 29
+ 511                         pokedsp1  
+ 512  00819B   90AE0004                      ldw      y,#4          ; y=#4 in svm._ : 30
+ 513                         tl2       
+ 514  00819F   90DF0044                      ldw      (dsp,y),x     ; dsp[y]=x in svm._ : 30
+ 515  0081A3   81                            ret                    ; ret in svm._ : 30
+ 516                         pokedsp2  
+ 517  0081A4   90AE0006                      ldw      y,#6          ; y=#6 in svm._ : 31
+ 518  0081A8   20F5                          jra      tl2           ; goneartl2 in svm._ : 31
+ 519                         pokedsp3  
+ 520  0081AA   90AE0008                      ldw      y,#8          ; y=#8 in svm._ : 32
+ 521  0081AE   20EF                          jra      tl2           ; goneartl2 in svm._ : 32
+ 522                         peekrsp0  
+ 523  0081B0   72CE0046                      ldw      x,[rsp.w]     ; x=[rsp] in svm._ : 33
+ 524  0081B4   81                            ret                    ; ret in svm._ : 33
+ 525                         pokersp0  
+ 526  0081B5   72CF0046                      ldw      [rsp.w],x     ; [rsp]=x in svm._ : 34
+ 527  0081B9   81                            ret                    ; ret in svm._ : 34
+ 528                         pushdsp   
+ 529  0081BA   72CF0044                      ldw      [dsp.w],x     ; [dsp]=x in svm._ : 35
+ 530  0081BE   CD8146                        call     decdsp        ; calldecdsp in svm._ : 35
+ 531  0081C1   81                            ret                    ; ret in svm._ : 35
+ 532                         popdsp    
+ 533  0081C2   CD8132                        call     incdsp        ; callincdsp in svm._ : 36
+ 534  0081C5   72CE0044                      ldw      x,[dsp.w]     ; x=[dsp] in svm._ : 36
+ 535  0081C9   81                            ret                    ; ret in svm._ : 36
+ 536                         pushrsp   
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 11  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 537  0081CA   72CF0046                      ldw      [rsp.w],x     ; [rsp]=x in svm._ : 37
+ 538  0081CE   CD816C                        call     decrsp        ; calldecrsp in svm._ : 37
+ 539  0081D1   81                            ret                    ; ret in svm._ : 37
+ 540                         poprsp    
+ 541  0081D2   CD8159                        call     incrsp        ; callincrsp in svm._ : 38
+ 542  0081D5   72CE0046                      ldw      x,[rsp.w]     ; x=[rsp] in svm._ : 38
+ 543  0081D9   81                            ret                    ; ret in svm._ : 38
+ 544                         error     
+ 545  0081DA   81                            ret                    ; ret in svm._ : 42
+ 546                         regs      segment  byte 'ram0'
+ 547  00004C                       state     ds.b     
+ 548  00004D                       base      ds.b     
+ 549  00004E                       here      ds.w     
+ 550  000050                       latest    ds.w     
+ 551  000052                       tib       ds.b     81
+ 552  0000A3                       temp      ds.w     
+ 553                         flash     segment  byte 'rom'
+ 554                         dictionarystart  
+ 555  0081DB   0000                linkbl    dc.w     0
+ 556  0081DD   04                            dc.b     4
+ 557  0081DE   626C                          dc.b     "bl"
+ 558                         codebl    
+ 559  0081E0   AE0020                        ldw      x,#32         ; x=#32 in forth.stm8s._ : 91
+ 560  0081E3   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 91
+ 561  0081E6   81                            ret                    ; ret in forth.stm8s._ : 91
+ 562  0081E7   81DB                linkconstant  dc.w     linkbl
+ 563  0081E9   08                            dc.b     8
+ 564  0081EA   636F6E7374616E74              dc.b     "constant"
+ 565                         codeconstant  
+ 566  0081F2   81                            ret                    ; ret in forth.stm8s._ : 93
+ 567  0081F3   81E7                linkrtib  dc.w     linkconstant
+ 568  0081F5   04                            dc.b     4
+ 569  0081F6   23746962                      dc.b     "#tib"
+ 570                         codertib  
+ 571  0081FA   AE0050                        ldw      x,#80         ; x=#80 in forth.stm8s._ : 95
+ 572  0081FD   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 95
+ 573  008200   81                            ret                    ; ret in forth.stm8s._ : 95
+ 574  008201   81F3                linktib   dc.w     linkrtib
+ 575  008203   03                            dc.b     3
+ 576  008204   746962                        dc.b     "tib"
+ 577                         codetib   
+ 578  008207   AE0052                        ldw      x,#tib        ; x=#tib in forth.stm8s._ : 97
+ 579  00820A   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 97
+ 580  00820D   81                            ret                    ; ret in forth.stm8s._ : 97
+ 581  00820E   8201                links0    dc.w     linktib
+ 582  008210   02                            dc.b     2
+ 583  008211   7330                          dc.b     "s0"
+ 584                         codes0    
+ 585  008213   CE0044                        ldw      x,dsp         ; x=dsp in forth.stm8s._ : 99
+ 586  008216   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 99
+ 587  008219   81                            ret                    ; ret in forth.stm8s._ : 99
+ 588  00821A   820E                linkbase  dc.w     links0
+ 589  00821C   04                            dc.b     4
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 12  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 590  00821D   62617365                      dc.b     "base"
+ 591                         codebase  
+ 592  008221   AE004D                        ldw      x,#base       ; x=#base in forth.stm8s._ : 
+                                                                ;101
+ 593  008224   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 101
+ 594  008227   81                            ret                    ; ret in forth.stm8s._ : 101
+ 595  008228   821A                linklatest  dc.w     linkbase
+ 596  00822A   06                            dc.b     6
+ 597  00822B   6C6174657374                  dc.b     "latest"
+ 598                         codelatest  
+ 599  008231   AE0050                        ldw      x,#latest     ; x=#latest in forth.stm8s._ : 
+                                                                ;103
+ 600  008234   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 103
+ 601  008237   81                            ret                    ; ret in forth.stm8s._ : 103
+ 602  008238   8228                linkhere  dc.w     linklatest
+ 603  00823A   04                            dc.b     4
+ 604  00823B   68657265                      dc.b     "here"
+ 605                         codehere  
+ 606  00823F   AE004E                        ldw      x,#here       ; x=#here in forth.stm8s._ : 
+                                                                ;105
+ 607  008242   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 105
+ 608  008245   81                            ret                    ; ret in forth.stm8s._ : 105
+ 609  008246   8238                linkstate  dc.w     linkhere
+ 610  008248   05                            dc.b     5
+ 611  008249   7374617465                    dc.b     "state"
+ 612                         codestate  
+ 613  00824E   AE004C                        ldw      x,#state      ; x=#state in forth.stm8s._ : 
+                                                                ;107
+ 614  008251   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 107
+ 615  008254   81                            ret                    ; ret in forth.stm8s._ : 107
+ 616  008255   8246                linkvariable  dc.w     linkstate
+ 617  008257   08                            dc.b     8
+ 618  008258   7661726961626C65              dc.b     "variable"
+ 619                         codevariable  
+ 620  008260   CD83A6                        call     codecreate    ; callcodecreate in 
+                                                                ;forth.stm8s._ : 109
+ 621  008263   5F                            clrw     x             ; x=#0 in forth.stm8s._ : 109
+ 622  008264   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 109
+ 623  008267   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 109
+ 624  00826A   81                            ret                    ; ret in forth.stm8s._ : 109
+ 625  00826B   8255                linkallot  dc.w     linkvariable
+ 626  00826D   05                            dc.b     5
+ 627  00826E   616C6C6F74                    dc.b     "allot"
+ 628                         codeallot  
+ 629  008273   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;111
+ 630  008276   72BB004E                      addw     x,here        ; x+=here in forth.stm8s._ : 
+                                                                ;111
+ 631  00827A   CF004E                        ldw      here,x        ; here=x in forth.stm8s._ : 111
+ 632  00827D   81                            ret                    ; ret in forth.stm8s._ : 111
+ 633  00827E   826B                linklit   dc.w     linkallot
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 13  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 634  008280   03                            dc.b     3
+ 635  008281   6C6974                        dc.b     "lit"
+ 636                         codelit   
+ 637  008284   CD8563                        call     coderget      ; callcoderget in forth.stm8s._ 
+                                                                ;: 113
+ 638  008287   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 113
+ 639  00828A   CD8557                        call     codefromr     ; callcodefromr in forth.stm8s._
+                                                                ; : 113
+ 640  00828D   CD8654                        call     code2incr     ; callcode2incr in forth.stm8s._
+                                                                ; : 113
+ 641  008290   CD854B                        call     codetor       ; callcodetor in forth.stm8s._ :
+                                                                ; 113
+ 642  008293   81                            ret                    ; ret in forth.stm8s._ : 113
+ 643  008294   827E                linkcfa   dc.w     linklit
+ 644  008296   04                            dc.b     4
+ 645  008297   3E636661                      dc.b     ">cfa"
+ 646                         codecfa   
+ 647  00829B   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 115
+ 648  00829E   5C                            incw     x             ; x++ in forth.stm8s._ : 115
+ 649  00829F   5C                            incw     x             ; x++ in forth.stm8s._ : 115
+ 650  0082A0   F6                            ld       a,(x)         ; a=[x] in forth.stm8s._ : 115
+ 651  0082A1   CF00A3                        ldw      temp,x        ; temp=x in forth.stm8s._ : 115
+ 652  0082A4   A40F                          and      a,#$0f        ; a&=#0x0f in forth.stm8s._ : 
+                                                                ;115
+ 653  0082A6   5F                            clrw     x             ; x=#0 in forth.stm8s._ : 115
+ 654  0082A7   97                            ld       xl,a          ; xl=a in forth.stm8s._ : 115
+ 655  0082A8   72BB00A3                      addw     x,temp        ; x+=temp in forth.stm8s._ : 
+                                                                ;115
+ 656  0082AC   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 115
+ 657  0082AF   81                            ret                    ; ret in forth.stm8s._ : 115
+ 658  0082B0   8294                linkfind  dc.w     linkcfa
+ 659  0082B2   04                            dc.b     4
+ 660  0082B3   66696E64                      dc.b     "find"
+ 661                         codefind  
+ 662  0082B7   81                            ret                    ; ret in forth.stm8s._ : 117
+ 663  0082B8   82B0                linkkey   dc.w     linkfind
+ 664  0082BA   03                            dc.b     3
+ 665  0082BB   6B6579                        dc.b     "key"
+ 666                         codekey   
+ 667  0082BE   CD8088                        call     ringbuftoa    ; callringbuftoa in 
+                                                                ;forth.stm8s._ : 119
+ 668  0082C1   5F                            clrw     x             ; x=#0 in forth.stm8s._ : 119
+ 669  0082C2   97                            ld       xl,a          ; xl=a in forth.stm8s._ : 119
+ 670  0082C3   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 119
+ 671  0082C6   81                            ret                    ; ret in forth.stm8s._ : 119
+ 672  0082C7   82B8                linkemit  dc.w     linkkey
+ 673  0082C9   04                            dc.b     4
+ 674  0082CA   656D6974                      dc.b     "emit"
+ 675                         codeemit  
+ 676  0082CE   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;121
+ 677  0082D1   9F                            ld       a,xl          ; a=xl in forth.stm8s._ : 121
+ 678  0082D2   C75231                        ld       uart1dr,a     ; uart1dr=a in forth.stm8s._ : 
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 14  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+                                                                ;121
+ 679  0082D5   81                            ret                    ; ret in forth.stm8s._ : 121
+ 680  0082D6   82C7                linkcr    dc.w     linkemit
+ 681  0082D8   02                            dc.b     2
+ 682  0082D9   6372                          dc.b     "cr"
+ 683                         codecr    
+ 684  0082DB   B60A                          ld       a,'\n'        ; a='\n' in forth.stm8s._ : 123
+ 685  0082DD   C75231                        ld       uart1dr,a     ; uart1dr=a in forth.stm8s._ : 
+                                                                ;123
+ 686  0082E0   81                            ret                    ; ret in forth.stm8s._ : 123
+ 687  0082E1   82D6                linktype  dc.w     linkcr
+ 688  0082E3   04                            dc.b     4
+ 689  0082E4   74797065                      dc.b     "type"
+ 690                         codetype  
+ 691  0082E8   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;125
+ 692  0082EB   270F                          jreq     tl3           ; ifz==1tl3 in forth.stm8s._ : 
+                                                                ;125
+ 693  0082ED   9093                          ldw      y,x           ; y=x in forth.stm8s._ : 125
+ 694  0082EF   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;125
+ 695                         tl4       
+ 696  0082F2   F6                            ld       a,(x)         ; a=[x] in forth.stm8s._ : 126
+ 697  0082F3   C75231                        ld       uart1dr,a     ; uart1dr=a in forth.stm8s._ : 
+                                                                ;126
+ 698  0082F6   5C                            incw     x             ; x++ in forth.stm8s._ : 126
+ 699  0082F7   905A                          decw     y             ; y-- in forth.stm8s._ : 126
+ 700  0082F9   26F7                          jrne     tl4           ; ifz==0tl4 in forth.stm8s._ : 
+                                                                ;126
+ 701  0082FB   81                            ret                    ; ret in forth.stm8s._ : 126
+ 702                         tl3       
+ 703  0082FC   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;127
+ 704  0082FF   81                            ret                    ; ret in forth.stm8s._ : 127
+ 705  008300   82D6                linkword  dc.w     linkcr
+ 706  008302   04                            dc.b     4
+ 707  008303   776F7264                      dc.b     "word"
+ 708                         codeword  
+ 709  008307   81                            ret                    ; ret in forth.stm8s._ : 130
+ 710  008308   8300                linknumber  dc.w     linkword
+ 711  00830A   06                            dc.b     6
+ 712  00830B   6E756D626572                  dc.b     "number"
+ 713                         codenumber  
+ 714  008311   81                            ret                    ; ret in forth.stm8s._ : 132
+ 715  008312   8308                linkbranch  dc.w     linknumber
+ 716  008314   06                            dc.b     6
+ 717  008315   6272616E6368                  dc.b     "branch"
+ 718                         codebranch  
+ 719  00831B   CD8557                        call     codefromr     ; callcodefromr in forth.stm8s._
+                                                                ; : 134
+ 720  00831E   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 134
+ 721  008321   CD854B                        call     codetor       ; callcodetor in forth.stm8s._ :
+                                                                ; 134
+ 722  008324   81                            ret                    ; ret in forth.stm8s._ : 134
+ 723  008325   8312                link0branch  dc.w     linkbranch
+ 724  008327   07                            dc.b     7
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 15  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 725  008328   306272616E6368                dc.b     "0branch"
+ 726                         code0branch  
+ 727  00832F   81                            ret                    ; ret in forth.stm8s._ : 136
+ 728  008330   8325                linkqbranch  dc.w     link0branch
+ 729  008332   07                            dc.b     7
+ 730  008333   3F6272616E6368                dc.b     "?branch"
+ 731                         codeqbranch  
+ 732  00833A   CD8557                        call     codefromr     ; callcodefromr in forth.stm8s._
+                                                                ; : 138
+ 733  00833D   CD857C                        call     codeswap      ; callcodeswap in forth.stm8s._ 
+                                                                ;: 138
+ 734  008340   CD83BE                        call     codeif        ; callcodeif in forth.stm8s._ : 
+                                                                ;138
+ 735  008343   CD8654                        call     code2incr     ; callcode2incr in forth.stm8s._
+                                                                ; : 138
+ 736  008346   CD83E9                        call     codeelse      ; callcodeelse in forth.stm8s._ 
+                                                                ;: 138
+ 737  008349   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 139
+ 738  00834C   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 139
+ 739  00834F   CD854B                        call     codetor       ; callcodetor in forth.stm8s._ :
+                                                                ; 139
+ 740  008352   81                            ret                    ; ret in forth.stm8s._ : 139
+ 741  008353   8330                linksemicolon  dc.w     linkqbranch
+ 742  008355   81                            dc.b     {1+$80}
+ 743  008356   3B                            dc.b     $3b
+ 744                         codesemicolon  
+ 745  008357   8353                linkcolon  dc.w     linksemicolon
+ 746  008359   01                            dc.b     1
+ 747  00835A   3A                            dc.b     ":"
+ 748                         codecolon  
+ 749  00835B   81                            ret                    ; ret in forth.stm8s._ : 143
+ 750  00835C   8357                linkcomma  dc.w     linkcolon
+ 751  00835E   01                            dc.b     1
+ 752  00835F   2C                            dc.b     ","
+ 753                         codecomma  
+ 754  008360   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;145
+ 755  008363   72CF004E                      ldw      [here.w],x    ; [here]=x in forth.stm8s._ : 
+                                                                ;145
+ 756  008367   725C004E                      inc      here          ; here++ in forth.stm8s._ : 145
+ 757  00836B   725C004E                      inc      here          ; here++ in forth.stm8s._ : 145
+ 758  00836F   81                            ret                    ; ret in forth.stm8s._ : 145
+ 759  008370   835C                linkshtrih  dc.w     linkcomma
+ 760  008372   01                            dc.b     1
+ 761  008373   60                            dc.b     "`"
+ 762                         codeshtrih  
+ 763  008374   8370                linkbshtrih  dc.w     linkshtrih
+ 764  008376   01                            dc.b     1
+ 765  008377   5B605D                        dc.b     "[`]"
+ 766                         codebshtrih  
+ 767  00837A   CD8374                        call     codeshtrih    ; callcodeshtrih in 
+                                                                ;forth.stm8s._ : 150
+ 768  00837D   CD8431                        call     codecompile   ; callcodecompile in 
+                                                                ;forth.stm8s._ : 150
+ 769  008380   CD8284                        call     codelit       ; callcodelit in forth.stm8s._ :
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 16  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+                                                                ; 150
+ 770  008383   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 150
+ 771  008386   81                            ret                    ; ret in forth.stm8s._ : 150
+ 772  008387   8374                linkimmediate  dc.w     linkbshtrih
+ 773  008389   01                            dc.b     1
+ 774  00838A   696D6D6564696174    
+ 774  008392   65                            dc.b     "immediate"
+ 775                         codeimmediate  
+ 776  008393   CE0050                        ldw      x,latest      ; x=latest in forth.stm8s._ : 
+                                                                ;152
+ 777  008396   E602                          ld       a,(2,x)       ; a=x[2] in forth.stm8s._ : 152
+ 778  008398   AB80                          add      a,#$80        ; a+=#0x80 in forth.stm8s._ : 
+                                                                ;152
+ 779  00839A   E702                          ld       (2,x),a       ; x[2]=a in forth.stm8s._ : 152
+ 780  00839C   81                            ret                    ; ret in forth.stm8s._ : 152
+ 781  00839D   8387                linkcreate  dc.w     linkimmediate
+ 782  00839F   06                            dc.b     6
+ 783  0083A0   637265617465                  dc.b     "create"
+ 784                         codecreate  
+ 785  0083A6   81                            ret                    ; ret in forth.stm8s._ : 154
+ 786  0083A7   839D                linkbegin  dc.w     linkcreate
+ 787  0083A9   05                            dc.b     5
+ 788  0083AA   626567696E                    dc.b     "begin"
+ 789                         codebegin  
+ 790  0083AF   81                            ret                    ; ret in forth.stm8s._ : 156
+ 791  0083B0   83A7                linkagain  dc.w     linkbegin
+ 792  0083B2   05                            dc.b     5
+ 793  0083B3   616761696E                    dc.b     "again"
+ 794                         codeagain  
+ 795  0083B8   81                            ret                    ; ret in forth.stm8s._ : 158
+ 796  0083B9   83B0                linkif    dc.w     linkagain
+ 797  0083BB   82                            dc.b     {2+$80}
+ 798  0083BC   6966                          dc.b     "if"
+ 799                         codeif    
+ 800  0083BE   CD8431                        call     codecompile   ; callcodecompile in 
+                                                                ;forth.stm8s._ : 160
+ 801  0083C1   CD833A                        call     codeqbranch   ; callcodeqbranch in 
+                                                                ;forth.stm8s._ : 160
+ 802  0083C4   CD823F                        call     codehere      ; callcodehere in forth.stm8s._ 
+                                                                ;: 160
+ 803  0083C7   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 160
+ 804  0083CA   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 160
+ 805  0083CD   CD8273                        call     codeallot     ; callcodeallot in forth.stm8s._
+                                                                ; : 160
+ 806  0083D0   81                            ret                    ; ret in forth.stm8s._ : 160
+ 807  0083D1   83B9                linkthen  dc.w     linkif
+ 808  0083D3   84                            dc.b     {4+$80}
+ 809  0083D4   7468656E                      dc.b     "then"
+ 810                         codethen  
+ 811  0083D8   CD823F                        call     codehere      ; callcodehere in forth.stm8s._ 
+                                                                ;: 162
+ 812  0083DB   CD857C                        call     codeswap      ; callcodeswap in forth.stm8s._ 
+                                                                ;: 162
+ 813  0083DE   CD8454                        call     codeput       ; callcodeput in forth.stm8s._ :
+                                                                ; 162
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 17  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 814  0083E1   81                            ret                    ; ret in forth.stm8s._ : 162
+ 815  0083E2   83D1                linkelse  dc.w     linkthen
+ 816  0083E4   84                            dc.b     {4+$80}
+ 817  0083E5   656C7365                      dc.b     "else"
+ 818                         codeelse  
+ 819  0083E9   CD8431                        call     codecompile   ; callcodecompile in 
+                                                                ;forth.stm8s._ : 164
+ 820  0083EC   CD831B                        call     codebranch    ; callcodebranch in 
+                                                                ;forth.stm8s._ : 164
+ 821  0083EF   CD823F                        call     codehere      ; callcodehere in forth.stm8s._ 
+                                                                ;: 164
+ 822  0083F2   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 164
+ 823  0083F5   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 164
+ 824  0083F8   CD8273                        call     codeallot     ; callcodeallot in forth.stm8s._
+                                                                ; : 165
+ 825  0083FB   CD823F                        call     codehere      ; callcodehere in forth.stm8s._ 
+                                                                ;: 165
+ 826  0083FE   CD85B0                        call     coderot       ; callcoderot in forth.stm8s._ :
+                                                                ; 165
+ 827  008401   CD8454                        call     codeput       ; callcodeput in forth.stm8s._ :
+                                                                ; 165
+ 828  008404   81                            ret                    ; ret in forth.stm8s._ : 165
+ 829  008405   83E2                linkexecute  dc.w     linkelse
+ 830  008407   07                            dc.b     7
+ 831  008408   65786563757465                dc.b     "execute"
+ 832                         codeexecute  
+ 833  00840F   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;167
+ 834  008412   FD                            call     (x)           ; call[x] in forth.stm8s._ : 
+                                                                ;167
+ 835  008413   81                            ret                    ; ret in forth.stm8s._ : 167
+ 836  008414   8405                linkbcompile  dc.w     linkexecute
+ 837  008416   89                            dc.b     {9+$80}
+ 838  008417   5B636F6D70696C65    
+ 838  00841F   5D                            dc.b     "[compile]"
+ 839                         codebcompile  
+ 840  008420   CD8374                        call     codeshtrih    ; callcodeshtrih in 
+                                                                ;forth.stm8s._ : 169
+ 841  008423   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 169
+ 842  008426   81                            ret                    ; ret in forth.stm8s._ : 169
+ 843  008427   8414                linkcompile  dc.w     linkbcompile
+ 844  008429   07                            dc.b     7
+ 845  00842A   636F6D70696C65                dc.b     "compile"
+ 846                         codecompile  
+ 847  008431   CD8563                        call     coderget      ; callcoderget in forth.stm8s._ 
+                                                                ;: 171
+ 848  008434   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 171
+ 849  008437   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 171
+ 850  00843A   CD8557                        call     codefromr     ; callcodefromr in forth.stm8s._
+                                                                ; : 171
+ 851  00843D   CD8654                        call     code2incr     ; callcode2incr in forth.stm8s._
+                                                                ; : 171
+ 852  008440   CD854B                        call     codetor       ; callcodetor in forth.stm8s._ :
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 18  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+                                                                ; 171
+ 853  008443   81                            ret                    ; ret in forth.stm8s._ : 171
+ 854  008444   8427                linkget   dc.w     linkcompile
+ 855  008446   01                            dc.b     1
+ 856  008447   40                            dc.b     "@"
+ 857                         codeget   
+ 858  008448   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 173
+ 859  00844B   FE                            ldw      x,(x)         ; x=[x] in forth.stm8s._ : 173
+ 860  00844C   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 173
+ 861  00844F   81                            ret                    ; ret in forth.stm8s._ : 173
+ 862  008450   8444                linkput   dc.w     linkget
+ 863  008452   01                            dc.b     1
+ 864  008453   21                            dc.b     "!"
+ 865                         codeput   
+ 866  008454   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;175
+ 867  008457   9093                          ldw      y,x           ; y=x in forth.stm8s._ : 175
+ 868  008459   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;175
+ 869  00845C   90FF                          ldw      (y),x         ; [y]=x in forth.stm8s._ : 175
+ 870  00845E   81                            ret                    ; ret in forth.stm8s._ : 175
+ 871  00845F   8450                linkincput  dc.w     linkput
+ 872  008461   02                            dc.b     2
+ 873  008462   2B21                          dc.b     "+!"
+ 874                         codeincput  
+ 875  008464   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;177
+ 876  008467   9093                          ldw      y,x           ; y=x in forth.stm8s._ : 177
+ 877  008469   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;177
+ 878  00846C   CF00A3                        ldw      temp,x        ; temp=x in forth.stm8s._ : 177
+ 879  00846F   93                            ldw      x,y           ; x=y in forth.stm8s._ : 177
+ 880  008470   FE                            ldw      x,(x)         ; x=[x] in forth.stm8s._ : 177
+ 881  008471   72BB00A3                      addw     x,temp        ; x+=temp in forth.stm8s._ : 
+                                                                ;177
+ 882  008475   90FF                          ldw      (y),x         ; [y]=x in forth.stm8s._ : 177
+ 883  008477   81                            ret                    ; ret in forth.stm8s._ : 177
+ 884  008478   845F                linkdpl   dc.w     linkincput
+ 885  00847A   03                            dc.b     3
+ 886  00847B   64706C                        dc.b     "dpl"
+ 887                         codedpl   
+ 888  00847E   81                            ret                    ; ret in forth.stm8s._ : 179
+ 889  00847F   8478                linkliteral  dc.w     linkdpl
+ 890  008481   87                            dc.b     {7+$80}
+ 891  008482   6C69746572616C                dc.b     "literal"
+ 892                         codeliteral  
+ 893  008489   CD824E                        call     codestate     ; callcodestate in forth.stm8s._
+                                                                ; : 181
+ 894  00848C   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 181
+ 895  00848F   CD83BE                        call     codeif        ; callcodeif in forth.stm8s._ : 
+                                                                ;181
+ 896  008492   CD8431                        call     codecompile   ; callcodecompile in 
+                                                                ;forth.stm8s._ : 181
+ 897  008495   CD8284                        call     codelit       ; callcodelit in forth.stm8s._ :
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 19  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+                                                                ; 181
+ 898  008498   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 182
+ 899  00849B   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 182
+ 900  00849E   81                            ret                    ; ret in forth.stm8s._ : 182
+ 901  00849F   847F                linktwoliteral  dc.w     linkliteral
+ 902  0084A1   08                            dc.b     8
+ 903  0084A2   326C69746572616C              dc.b     "2literal"
+ 904                         codetwoliteral  
+ 905  0084AA   81                            ret                    ; ret in forth.stm8s._ : 184
+ 906  0084AB   849F                linklbrac  dc.w     linktwoliteral
+ 907  0084AD   81                            dc.b     {1+$80}
+ 908  0084AE   5B                            dc.b     '['
+ 909                         codelbrac  
+ 910  0084AF   725F004C                      clr      state         ; state=#0 in forth.stm8s._ : 
+                                                                ;186
+ 911  0084B3   81                            ret                    ; ret in forth.stm8s._ : 186
+ 912  0084B4   84AB                linkrbrac  dc.w     linklbrac
+ 913  0084B6   01                            dc.b     1
+ 914  0084B7   5D                            dc.b     ']'
+ 915                         coderbrac  
+ 916  0084B8   35FF004C                      mov      state,#$ff    ; state=#0xff in forth.stm8s._ :
+                                                                ; 188
+ 917  0084BC   81                            ret                    ; ret in forth.stm8s._ : 188
+ 918  0084BD   84AB                linkdecimal  dc.w     linklbrac
+ 919  0084BF   07                            dc.b     7
+ 920  0084C0   646563696D616C                dc.b     "decimal"
+ 921                         codedecimal  
+ 922  0084C7   350A004D                      mov      base,#10      ; base=#10 in forth.stm8s._ : 
+                                                                ;190
+ 923  0084CB   81                            ret                    ; ret in forth.stm8s._ : 190
+ 924  0084CC   84BD                linkhex   dc.w     linkdecimal
+ 925  0084CE   03                            dc.b     3
+ 926  0084CF   686578                        dc.b     "hex"
+ 927                         codehex   
+ 928  0084D2   3510004D                      mov      base,#16      ; base=#16 in forth.stm8s._ : 
+                                                                ;192
+ 929  0084D6   81                            ret                    ; ret in forth.stm8s._ : 192
+ 930  0084D7   84CC                linktick  dc.w     linkhex
+ 931  0084D9   01                            dc.b     1
+ 932  0084DA   27                            dc.b     '\''
+ 933                         codetick  
+ 934  0084DB   81                            ret                    ; ret in forth.stm8s._ : 194
+ 935  0084DC   84D7                linkinterpret  dc.w     linktick
+ 936  0084DE   09                            dc.b     9
+ 937  0084DF   696E746572707265    
+ 937  0084E7   74                            dc.b     "interpret"
+ 938                         codeinterpret  
+ 939  0084E8   CD83AF                        call     codebegin     ; callcodebegin in forth.stm8s._
+                                                                ; : 196
+ 940  0084EB   CD81E0                        call     codebl        ; callcodebl in forth.stm8s._ : 
+                                                                ;196
+ 941  0084EE   CD8307                        call     codeword      ; callcodeword in forth.stm8s._ 
+                                                                ;: 196
+ 942  0084F1   CD82B7                        call     codefind      ; callcodefind in forth.stm8s._ 
+                                                                ;: 196
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 20  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 943  0084F4   CD863A                        call     codeincr      ; callcodeincr in forth.stm8s._ 
+                                                                ;: 196
+ 944  0084F7   CD83BE                        call     codeif        ; callcodeif in forth.stm8s._ : 
+                                                                ;197
+ 945  0084FA   CD840F                        call     codeexecute   ; callcodeexecute in 
+                                                                ;forth.stm8s._ : 197
+ 946  0084FD   CD83E9                        call     codeelse      ; callcodeelse in forth.stm8s._ 
+                                                                ;: 197
+ 947  008500   CD824E                        call     codestate     ; callcodestate in forth.stm8s._
+                                                                ; : 197
+ 948  008503   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 197
+ 949  008506   CD83BE                        call     codeif        ; callcodeif in forth.stm8s._ : 
+                                                                ;197
+ 950  008509   CD8360                        call     codecomma     ; callcodecomma in forth.stm8s._
+                                                                ; : 198
+ 951  00850C   CD83E9                        call     codeelse      ; callcodeelse in forth.stm8s._ 
+                                                                ;: 198
+ 952  00850F   CD840F                        call     codeexecute   ; callcodeexecute in 
+                                                                ;forth.stm8s._ : 198
+ 953  008512   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 198
+ 954  008515   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 198
+ 955  008518   CD83E9                        call     codeelse      ; callcodeelse in forth.stm8s._ 
+                                                                ;: 198
+ 956  00851B   CD8311                        call     codenumber    ; callcodenumber in 
+                                                                ;forth.stm8s._ : 199
+ 957  00851E   CD847E                        call     codedpl       ; callcodedpl in forth.stm8s._ :
+                                                                ; 199
+ 958  008521   CD8448                        call     codeget       ; callcodeget in forth.stm8s._ :
+                                                                ; 199
+ 959  008524   CD863A                        call     codeincr      ; callcodeincr in forth.stm8s._ 
+                                                                ;: 199
+ 960  008527   CD83BE                        call     codeif        ; callcodeif in forth.stm8s._ : 
+                                                                ;199
+ 961  00852A   CD8420                        call     codebcompile  ; callcodebcompile in 
+                                                                ;forth.stm8s._ : 199
+ 962  00852D   CD84AA                        call     codetwoliteral  ; callcodetwoliteral in 
+                                                                ;forth.stm8s._ : 200
+ 963  008530   CD83E9                        call     codeelse      ; callcodeelse in forth.stm8s._ 
+                                                                ;: 200
+ 964  008533   CD8571                        call     codedrop      ; callcodedrop in forth.stm8s._ 
+                                                                ;: 200
+ 965  008536   CD8420                        call     codebcompile  ; callcodebcompile in 
+                                                                ;forth.stm8s._ : 200
+ 966  008539   CD8489                        call     codeliteral   ; callcodeliteral in 
+                                                                ;forth.stm8s._ : 200
+ 967  00853C   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 201
+ 968  00853F   CD83D8                        call     codethen      ; callcodethen in forth.stm8s._ 
+                                                                ;: 201
+ 969  008542   CD83B8                        call     codeagain     ; callcodeagain in forth.stm8s._
+                                                                ; : 201
+ 970  008545   81                            ret                    ; ret in forth.stm8s._ : 201
+ 971  008546   84DC                linktor   dc.w     linkinterpret
+ 972  008548   02                            dc.b     2
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 21  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+ 973  008549   3E52                          dc.b     ">R"
+ 974                         codetor   
+ 975  00854B   CD81C2                        call     popdsp        ; callpopdsp in forth.stm8s._ : 
+                                                                ;203
+ 976  00854E   CD81CA                        call     pushrsp       ; callpushrsp in forth.stm8s._ :
+                                                                ; 203
+ 977  008551   81                            ret                    ; ret in forth.stm8s._ : 203
+ 978  008552   8546                linkfromr  dc.w     linktor
+ 979  008554   02                            dc.b     2
+ 980  008555   523E                          dc.b     "R>"
+ 981                         codefromr  
+ 982  008557   CD81D2                        call     poprsp        ; callpoprsp in forth.stm8s._ : 
+                                                                ;205
+ 983  00855A   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 205
+ 984  00855D   81                            ret                    ; ret in forth.stm8s._ : 205
+ 985  00855E   8552                linkrget  dc.w     linkfromr
+ 986  008560   02                            dc.b     2
+ 987  008561   5240                          dc.b     "R@"
+ 988                         coderget  
+ 989  008563   CD81B0                        call     peekrsp0      ; callpeekrsp0 in forth.stm8s._ 
+                                                                ;: 207
+ 990  008566   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 207
+ 991  008569   81                            ret                    ; ret in forth.stm8s._ : 207
+ 992  00856A   855E                linkdrop  dc.w     linkrget
+ 993  00856C   04                            dc.b     4
+ 994  00856D   64726F70                      dc.b     "drop"
+ 995                         codedrop  
+ 996  008571   CD8132                        call     incdsp        ; callincdsp in forth.stm8s._ : 
+                                                                ;209
+ 997  008574   81                            ret                    ; ret in forth.stm8s._ : 209
+ 998  008575   856A                linkswap  dc.w     linkdrop
+ 999  008577   04                            dc.b     4
+1000  008578   73776170                      dc.b     "swap"
+1001                         codeswap  
+1002  00857C   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 211
+1003  00857F   CF004A                        ldw      tmp,x         ; tmp=x in forth.stm8s._ : 211
+1004  008582   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 211
+1005  008585   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 211
+1006  008588   CE004A                        ldw      x,tmp         ; x=tmp in forth.stm8s._ : 211
+1007  00858B   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 211
+1008  00858E   81                            ret                    ; ret in forth.stm8s._ : 211
+1009  00858F   8575                linkdup   dc.w     linkswap
+1010  008591   03                            dc.b     3
+1011  008592   647570                        dc.b     "dup"
+1012                         codedup   
+1013  008595   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 213
+1014  008598   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 213
+1015  00859B   81                            ret                    ; ret in forth.stm8s._ : 213
+1016  00859C   8575                linkover  dc.w     linkswap
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 22  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+1017  00859E   04                            dc.b     4
+1018  00859F   64726F70                      dc.b     "drop"
+1019                         codeover  
+1020  0085A3   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 215
+1021  0085A6   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 215
+1022  0085A9   81                            ret                    ; ret in forth.stm8s._ : 215
+1023  0085AA   859C                linkrot   dc.w     linkover
+1024  0085AC   03                            dc.b     3
+1025  0085AD   726F74                        dc.b     "rot"
+1026                         coderot   
+1027  0085B0   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 217
+1028  0085B3   CF004A                        ldw      tmp,x         ; tmp=x in forth.stm8s._ : 217
+1029  0085B6   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 217
+1030  0085B9   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 217
+1031  0085BC   CD818B                        call     peekdsp2      ; callpeekdsp2 in forth.stm8s._ 
+                                                                ;: 217
+1032  0085BF   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 217
+1033  0085C2   CE004A                        ldw      x,tmp         ; x=tmp in forth.stm8s._ : 217
+1034  0085C5   CD81A4                        call     pokedsp2      ; callpokedsp2 in forth.stm8s._ 
+                                                                ;: 217
+1035  0085C8   81                            ret                    ; ret in forth.stm8s._ : 217
+1036  0085C9   85AA                linknrot  dc.w     linkrot
+1037  0085CB   04                            dc.b     4
+1038  0085CC   2D726F74                      dc.b     "-rot"
+1039                         codenrot  
+1040  0085D0   CD818B                        call     peekdsp2      ; callpeekdsp2 in forth.stm8s._ 
+                                                                ;: 219
+1041  0085D3   CF004A                        ldw      tmp,x         ; tmp=x in forth.stm8s._ : 219
+1042  0085D6   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 219
+1043  0085D9   CD81A4                        call     pokedsp2      ; callpokedsp2 in forth.stm8s._ 
+                                                                ;: 219
+1044  0085DC   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 219
+1045  0085DF   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 219
+1046  0085E2   CE004A                        ldw      x,tmp         ; x=tmp in forth.stm8s._ : 219
+1047  0085E5   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 219
+1048  0085E8   81                            ret                    ; ret in forth.stm8s._ : 219
+1049  0085E9   85C9                link2drop  dc.w     linknrot
+1050  0085EB   05                            dc.b     5
+1051  0085EC   3264726F70                    dc.b     "2drop"
+1052                         code2drop  
+1053  0085F1   CD8132                        call     incdsp        ; callincdsp in forth.stm8s._ : 
+                                                                ;221
+1054  0085F4   CD8132                        call     incdsp        ; callincdsp in forth.stm8s._ : 
+                                                                ;221
+1055  0085F7   81                            ret                    ; ret in forth.stm8s._ : 221
+1056  0085F8   85E9                link2swap  dc.w     link2drop
+1057  0085FA   05                            dc.b     5
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 23  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+1058  0085FB   3273776170                    dc.b     "2swap"
+1059                         code2swap  
+1060  008600   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 223
+1061  008603   CF004A                        ldw      tmp,x         ; tmp=x in forth.stm8s._ : 223
+1062  008606   CD818B                        call     peekdsp2      ; callpeekdsp2 in forth.stm8s._ 
+                                                                ;: 223
+1063  008609   CD8195                        call     pokedsp0      ; callpokedsp0 in forth.stm8s._ 
+                                                                ;: 223
+1064  00860C   CE004A                        ldw      x,tmp         ; x=tmp in forth.stm8s._ : 223
+1065  00860F   CD81A4                        call     pokedsp2      ; callpokedsp2 in forth.stm8s._ 
+                                                                ;: 223
+1066  008612   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 224
+1067  008615   CF004A                        ldw      tmp,x         ; tmp=x in forth.stm8s._ : 224
+1068  008618   CD8190                        call     peekdsp3      ; callpeekdsp3 in forth.stm8s._ 
+                                                                ;: 224
+1069  00861B   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 224
+1070  00861E   CE004A                        ldw      x,tmp         ; x=tmp in forth.stm8s._ : 224
+1071  008621   CD81AA                        call     pokedsp3      ; callpokedsp3 in forth.stm8s._ 
+                                                                ;: 224
+1072  008624   81                            ret                    ; ret in forth.stm8s._ : 224
+1073  008625   85F8                linkqdup  dc.w     link2swap
+1074  008627   04                            dc.b     4
+1075  008628   3F647570                      dc.b     "?dup"
+1076                         codeqdup  
+1077  00862C   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 226
+1078  00862F   2603                          jrne     ftl0          ; ifz==0ftl0 in forth.stm8s._ : 
+                                                                ;226
+1079  008631   CD81BA                        call     pushdsp       ; callpushdsp in forth.stm8s._ :
+                                                                ; 226
+1080                         ftl0      
+1081  008634   81                            ret                    ; ret in forth.stm8s._ : 226
+1082  008635   8625                linkincr  dc.w     linkqdup
+1083  008637   02                            dc.b     2
+1084  008638   312B                          dc.b     "1+"
+1085                         codeincr  
+1086  00863A   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 228
+1087  00863D   724C0044                      inc      (dsp,x)       ; dsp[x]++ in forth.stm8s._ : 
+                                                                ;228
+1088  008641   81                            ret                    ; ret in forth.stm8s._ : 228
+1089  008642   8635                linkdecr  dc.w     linkincr
+1090  008644   02                            dc.b     2
+1091  008645   312D                          dc.b     "1-"
+1092                         codedecr  
+1093  008647   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 230
+1094  00864A   724C0044                      inc      (dsp,x)       ; dsp[x]++ in forth.stm8s._ : 
+                                                                ;230
+1095  00864E   81                            ret                    ; ret in forth.stm8s._ : 230
+1096  00864F   8642                link2incr  dc.w     linkdecr
+1097  008651   02                            dc.b     2
+1098  008652   322B                          dc.b     "2+"
+1099                         code2incr  
+1100  008654   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 232
+1101  008657   724C0044                      inc      (dsp,x)       ; dsp[x]++ in forth.stm8s._ : 
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 24  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+                                                                ;232
+1102  00865B   724C0044                      inc      (dsp,x)       ; dsp[x]++ in forth.stm8s._ : 
+                                                                ;232
+1103  00865F   81                            ret                    ; ret in forth.stm8s._ : 232
+1104  008660   864F                link2decr  dc.w     link2incr
+1105  008662   02                            dc.b     2
+1106  008663   322D                          dc.b     "2-"
+1107                         code2decr  
+1108  008665   AE0002                        ldw      x,#2          ; x=#2 in forth.stm8s._ : 234
+1109  008668   724A0044                      dec      (dsp,x)       ; dsp[x]-- in forth.stm8s._ : 
+                                                                ;234
+1110  00866C   724A0044                      dec      (dsp,x)       ; dsp[x]-- in forth.stm8s._ : 
+                                                                ;234
+1111  008670   81                            ret                    ; ret in forth.stm8s._ : 234
+1112  008671   8660                linkadd   dc.w     link2decr
+1113  008673   01                            dc.b     1
+1114  008674   2B                            dc.b     "+"
+1115                         codeadd   
+1116  008675   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 236
+1117  008678   CF00A3                        ldw      temp,x        ; temp=x in forth.stm8s._ : 236
+1118  00867B   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 236
+1119  00867E   72BB00A3                      addw     x,temp        ; x+=temp in forth.stm8s._ : 
+                                                                ;236
+1120  008682   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 236
+1121  008685   CD8132                        call     incdsp        ; callincdsp in forth.stm8s._ : 
+                                                                ;236
+1122  008688   81                            ret                    ; ret in forth.stm8s._ : 236
+1123  008689   8671                linksub   dc.w     linkadd
+1124  00868B   01                            dc.b     1
+1125  00868C   2D                            dc.b     "-"
+1126                         codesub   
+1127  00868D   CD8184                        call     peekdsp1      ; callpeekdsp1 in forth.stm8s._ 
+                                                                ;: 238
+1128  008690   CF00A3                        ldw      temp,x        ; temp=x in forth.stm8s._ : 238
+1129  008693   CD817F                        call     peekdsp0      ; callpeekdsp0 in forth.stm8s._ 
+                                                                ;: 238
+1130  008696   72B000A3                      subw     x,temp        ; x-=temp in forth.stm8s._ : 
+                                                                ;238
+1131  00869A   CD819B                        call     pokedsp1      ; callpokedsp1 in forth.stm8s._ 
+                                                                ;: 238
+1132  00869D   CD8132                        call     incdsp        ; callincdsp in forth.stm8s._ : 
+                                                                ;238
+1133  0086A0   81                            ret                    ; ret in forth.stm8s._ : 238
+1134  0086A1   8689                linknop   dc.w     linksub
+1135  0086A3   03                            dc.b     3
+1136  0086A4   6E6F70                        dc.b     "nop"
+1137                         codenop   
+1138  0086A7   81                            ret                    ; ret in forth.stm8s._ : 242
+1139                         herelabel  
+1140                         
+1141  0086A8                                 end      
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 25  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
+
+awucsr1                               50F0         no  WORD  Internal   ABS     89  private  bss          1     1  -
+awuapr                                50F1         no  WORD  Internal   ABS     90  private  bss          1     1  -
+awutbr                                50F2         no  WORD  Internal   ABS     91  private  bss          1     1  -
+adc2csr                               5400         no  WORD  Internal   ABS    222  private  bss          1     1  -
+adc2cr1                               5401         no  WORD  Internal   ABS    223  private  bss          1     1  -
+adc2cr2                               5402         no  WORD  Internal   ABS    224  private  bss          1     1  -
+adc2cr3                               5403         no  WORD  Internal   ABS    225  private  bss          1     1  -
+adc2drh                               5404         no  WORD  Internal   ABS    226  private  bss          1     1  -
+adc2drl                               5405         no  WORD  Internal   ABS    227  private  bss          1     1  -
+adc2tdrh                              5406         no  WORD  Internal   ABS    228  private  bss          1     1  -
+adc2tdrl                              5407         no  WORD  Internal   ABS    229  private  bss          1     1  -
+atoringbuf                            806D         no  WORD  Internal   ABS    359  private  text        18     0  -
+atoringbuf_notzero                    807F         no  WORD  Internal   ABS    372  private  text         5     0  -
+atoringbuf_end                        8084         no  WORD  Internal   ABS    376  private  text         4     0  -
+
+beepcsr                               50F3         no  WORD  Internal   ABS     92  private  bss          1     1  -
+bootloaderoptbl                       487E         no  WORD  Internal   ABS    283  private  bss          1     1  -
+bootloadernoptbl                      487F         no  WORD  Internal   ABS    284  private  bss          1     1  -
+base                                  004D         no  WORD  Internal   ABS    548  private  bss          1     1  -
+
+clkickr                               50C0         no  WORD  Internal   ABS     67  private  bss          1     1  -
+clkeckr                               50C1         no  WORD  Internal   ABS     68  private  bss          1     1  -
+clkcmsr                               50C3         no  WORD  Internal   ABS     70  private  bss          1     1  -
+clkswr                                50C4         no  WORD  Internal   ABS     71  private  bss          1     1  -
+clkswcr                               50C5         no  WORD  Internal   ABS     72  private  bss          1     1  -
+clkckdivr                             50C6         no  WORD  Internal   ABS     73  private  bss          1     1  -
+clkpckenr1                            50C7         no  WORD  Internal   ABS     74  private  bss          1     1  -
+clkcssr                               50C8         no  WORD  Internal   ABS     75  private  bss          1     1  -
+clkccor                               50C9         no  WORD  Internal   ABS     76  private  bss          1     1  -
+clkpckenr2                            50CA         no  WORD  Internal   ABS     77  private  bss          1     1  -
+clkcanccr                             50CB         no  WORD  Internal   ABS     78  private  bss          1     1  -
+clkhsitrimr                           50CC         no  WORD  Internal   ABS     79  private  bss          1     1  -
+clkswimccr                            50CD         no  WORD  Internal   ABS     80  private  bss          1     1  -
+canmcr                                5420         no  WORD  Internal   ABS    231  private  bss          1     1  -
+canmsr                                5421         no  WORD  Internal   ABS    232  private  bss          1     1  -
+cantsr                                5422         no  WORD  Internal   ABS    233  private  bss          1     1  -
+cantpr                                5423         no  WORD  Internal   ABS    234  private  bss          1     1  -
+canrfr                                5424         no  WORD  Internal   ABS    235  private  bss          1     1  -
+canier                                5425         no  WORD  Internal   ABS    236  private  bss          1     1  -
+candgr                                5426         no  WORD  Internal   ABS    237  private  bss          1     1  -
+canfpsr                               5427         no  WORD  Internal   ABS    238  private  bss          1     1  -
+canp0                                 5428         no  WORD  Internal   ABS    239  private  bss          1     1  -
+canp1                                 5429         no  WORD  Internal   ABS    240  private  bss          1     1  -
+canp2                                 542A         no  WORD  Internal   ABS    241  private  bss          1     1  -
+canp3                                 542B         no  WORD  Internal   ABS    242  private  bss          1     1  -
+canp4                                 542C         no  WORD  Internal   ABS    243  private  bss          1     1  -
+canp5                                 542D         no  WORD  Internal   ABS    244  private  bss          1     1  -
+canp6                                 542E         no  WORD  Internal   ABS    245  private  bss          1     1  -
+canp7                                 542F         no  WORD  Internal   ABS    246  private  bss          1     1  -
+canp8                                 5430         no  WORD  Internal   ABS    247  private  bss          1     1  -
+canp9                                 5431         no  WORD  Internal   ABS    248  private  bss          1     1  -
+canpa                                 5432         no  WORD  Internal   ABS    249  private  bss          1     1  -
+canpb                                 5433         no  WORD  Internal   ABS    250  private  bss          1     1  -
+canpc                                 5434         no  WORD  Internal   ABS    251  private  bss          1     1  -
+canpd                                 5435         no  WORD  Internal   ABS    252  private  bss          1     1  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 26  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+canpe                                 5436         no  WORD  Internal   ABS    253  private  bss          1     1  -
+canpf                                 5437         no  WORD  Internal   ABS    254  private  bss          1     1  -
+cpua                                  7F00         no  WORD  Internal   ABS    286  private  bss          1     1  -
+cpupce                                7F01         no  WORD  Internal   ABS    287  private  bss          1     1  -
+cpupch                                7F02         no  WORD  Internal   ABS    288  private  bss          1     1  -
+cpupcl                                7F03         no  WORD  Internal   ABS    289  private  bss          1     1  -
+cpuxh                                 7F04         no  WORD  Internal   ABS    290  private  bss          1     1  -
+cpuxl                                 7F05         no  WORD  Internal   ABS    291  private  bss          1     1  -
+cpuyh                                 7F06         no  WORD  Internal   ABS    292  private  bss          1     1  -
+cpuyl                                 7F07         no  WORD  Internal   ABS    293  private  bss          1     1  -
+cpusph                                7F08         no  WORD  Internal   ABS    294  private  bss          1     1  -
+cpuspl                                7F09         no  WORD  Internal   ABS    295  private  bss          1     1  -
+cpuccr                                7F0A         no  WORD  Internal   ABS    296  private  bss          1     1  -
+cpugcr                                7F60         no  WORD  Internal   ABS    298  private  bss          1     1  -
+codebl                                81E0         no  WORD  Internal   ABS    558  private  textdata     7     0  -
+codeconstant                          81F2         no  WORD  Internal   ABS    565  private  textdata     1     0  -
+codertib                              81FA         no  WORD  Internal   ABS    570  private  textdata     7     0  -
+codetib                               8207         no  WORD  Internal   ABS    577  private  textdata     7     0  -
+codes0                                8213         no  WORD  Internal   ABS    584  private  textdata     7     0  -
+codebase                              8221         no  WORD  Internal   ABS    591  private  textdata     7     0  -
+codelatest                            8231         no  WORD  Internal   ABS    598  private  textdata     7     0  -
+codehere                              823F         no  WORD  Internal   ABS    605  private  textdata     7     0  -
+codestate                             824E         no  WORD  Internal   ABS    612  private  textdata     7     0  -
+codevariable                          8260         no  WORD  Internal   ABS    619  private  textdata    11     0  -
+codeallot                             8273         no  WORD  Internal   ABS    628  private  textdata    11     0  -
+codelit                               8284         no  WORD  Internal   ABS    636  private  textdata    16     0  -
+codecfa                               829B         no  WORD  Internal   ABS    646  private  textdata    21     0  -
+codefind                              82B7         no  WORD  Internal   ABS    661  private  textdata     1     0  -
+codekey                               82BE         no  WORD  Internal   ABS    666  private  textdata     9     0  -
+codeemit                              82CE         no  WORD  Internal   ABS    675  private  textdata     8     0  -
+codecr                                82DB         no  WORD  Internal   ABS    683  private  textdata     6     0  -
+codetype                              82E8         no  WORD  Internal   ABS    690  private  textdata    10     0  -
+codeword                              8307         no  WORD  Internal   ABS    708  private  textdata     1     0  -
+codenumber                            8311         no  WORD  Internal   ABS    713  private  textdata     1     0  -
+codebranch                            831B         no  WORD  Internal   ABS    718  private  textdata    10     0  -
+code0branch                           832F         no  WORD  Internal   ABS    726  private  textdata     1     0  -
+codeqbranch                           833A         no  WORD  Internal   ABS    731  private  textdata    25     0  -
+codesemicolon                         8357         no  WORD  Internal   ABS    744  private  textdata     4     2  -
+codecolon                             835B         no  WORD  Internal   ABS    748  private  textdata     1     0  -
+codecomma                             8360         no  WORD  Internal   ABS    753  private  textdata    16     0  -
+codeshtrih                            8374         no  WORD  Internal   ABS    762  private  textdata     6     2  -
+codebshtrih                           837A         no  WORD  Internal   ABS    766  private  textdata    13     0  -
+codeimmediate                         8393         no  WORD  Internal   ABS    775  private  textdata    10     0  -
+codecreate                            83A6         no  WORD  Internal   ABS    784  private  textdata     1     0  -
+codebegin                             83AF         no  WORD  Internal   ABS    789  private  textdata     1     0  -
+codeagain                             83B8         no  WORD  Internal   ABS    794  private  textdata     1     0  -
+codeif                                83BE         no  WORD  Internal   ABS    799  private  textdata    19     0  -
+codethen                              83D8         no  WORD  Internal   ABS    810  private  textdata    10     0  -
+codeelse                              83E9         no  WORD  Internal   ABS    818  private  textdata    28     0  -
+codeexecute                           840F         no  WORD  Internal   ABS    832  private  textdata     5     0  -
+codebcompile                          8420         no  WORD  Internal   ABS    839  private  textdata     7     0  -
+codecompile                           8431         no  WORD  Internal   ABS    846  private  textdata    19     0  -
+codeget                               8448         no  WORD  Internal   ABS    857  private  textdata     8     0  -
+codeput                               8454         no  WORD  Internal   ABS    865  private  textdata    11     0  -
+codeincput                            8464         no  WORD  Internal   ABS    874  private  textdata    20     0  -
+codedpl                               847E         no  WORD  Internal   ABS    887  private  textdata     1     0  -
+codeliteral                           8489         no  WORD  Internal   ABS    892  private  textdata    22     0  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 27  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+codetwoliteral                        84AA         no  WORD  Internal   ABS    904  private  textdata     1     0  -
+codelbrac                             84AF         no  WORD  Internal   ABS    909  private  textdata     5     0  -
+coderbrac                             84B8         no  WORD  Internal   ABS    915  private  textdata     5     0  -
+codedecimal                           84C7         no  WORD  Internal   ABS    921  private  textdata     5     0  -
+codehex                               84D2         no  WORD  Internal   ABS    927  private  textdata     5     0  -
+codetick                              84DB         no  WORD  Internal   ABS    933  private  textdata     1     0  -
+codeinterpret                         84E8         no  WORD  Internal   ABS    938  private  textdata    94     0  -
+codetor                               854B         no  WORD  Internal   ABS    974  private  textdata     7     0  -
+codefromr                             8557         no  WORD  Internal   ABS    981  private  textdata     7     0  -
+coderget                              8563         no  WORD  Internal   ABS    988  private  textdata     7     0  -
+codedrop                              8571         no  WORD  Internal   ABS    995  private  textdata     4     0  -
+codeswap                              857C         no  WORD  Internal   ABS   1001  private  textdata    19     0  -
+codedup                               8595         no  WORD  Internal   ABS   1012  private  textdata     7     0  -
+codeover                              85A3         no  WORD  Internal   ABS   1019  private  textdata     7     0  -
+coderot                               85B0         no  WORD  Internal   ABS   1026  private  textdata    25     0  -
+codenrot                              85D0         no  WORD  Internal   ABS   1039  private  textdata    25     0  -
+code2drop                             85F1         no  WORD  Internal   ABS   1052  private  textdata     7     0  -
+code2swap                             8600         no  WORD  Internal   ABS   1059  private  textdata    37     0  -
+codeqdup                              862C         no  WORD  Internal   ABS   1076  private  textdata     8     0  -
+codeincr                              863A         no  WORD  Internal   ABS   1085  private  textdata     8     0  -
+codedecr                              8647         no  WORD  Internal   ABS   1092  private  textdata     8     0  -
+code2incr                             8654         no  WORD  Internal   ABS   1099  private  textdata    12     0  -
+code2decr                             8665         no  WORD  Internal   ABS   1107  private  textdata    12     0  -
+codeadd                               8675         no  WORD  Internal   ABS   1115  private  textdata    20     0  -
+codesub                               868D         no  WORD  Internal   ABS   1126  private  textdata    20     0  -
+codenop                               86A7         no  WORD  Internal   ABS   1137  private  textdata     1     0  -
+
+dmbk1re                               7F90         no  WORD  Internal   ABS    311  private  bss          1     1  -
+dmbk1rh                               7F91         no  WORD  Internal   ABS    312  private  bss          1     1  -
+dmbk1rl                               7F92         no  WORD  Internal   ABS    313  private  bss          1     1  -
+dmbk2re                               7F93         no  WORD  Internal   ABS    314  private  bss          1     1  -
+dmbk2rh                               7F94         no  WORD  Internal   ABS    315  private  bss          1     1  -
+dmbk2rl                               7F95         no  WORD  Internal   ABS    316  private  bss          1     1  -
+dmcr1                                 7F96         no  WORD  Internal   ABS    317  private  bss          1     1  -
+dmcr2                                 7F97         no  WORD  Internal   ABS    318  private  bss          1     1  -
+dmcsr1                                7F98         no  WORD  Internal   ABS    319  private  bss          1     1  -
+dmcsr2                                7F99         no  WORD  Internal   ABS    320  private  bss          1     1  -
+dmenfctr                              7F9A         no  WORD  Internal   ABS    321  private  bss          1     1  -
+dumb                                  806C         no  WORD  Internal   ABS    350  private  textdata     1     0  -
+dsp                                   0044         no  WORD  Internal   ABS    448  private  bss          2     2  -
+dss                                   8119         no  WORD  Internal   ABS    453  private  textdata     2     2  -
+dsm                                   811B         no  WORD  Internal   ABS    454  private  textdata     2     2  -
+decdsp                                8146         no  WORD  Internal   ABS    473  private  textdata    19     0  -
+decrsp                                816C         no  WORD  Internal   ABS    487  private  textdata    19     0  -
+dictionarystart                       81DB         no  WORD  Internal   ABS    554  private  textdata     5     2  -
+
+error                                 81DA         no  WORD  Internal   ABS    544  private  textdata     1     0  -
+
+flashcr1                              505A         no  WORD  Internal   ABS     51  private  bss          1     1  -
+flashcr2                              505B         no  WORD  Internal   ABS     52  private  bss          1     1  -
+flashncr2                             505C         no  WORD  Internal   ABS     53  private  bss          1     1  -
+flashfpr                              505D         no  WORD  Internal   ABS     54  private  bss          1     1  -
+flashnfpr                             505E         no  WORD  Internal   ABS     55  private  bss          1     1  -
+flashiapsr                            505F         no  WORD  Internal   ABS     56  private  bss          1     1  -
+flashpukr                             5062         no  WORD  Internal   ABS     58  private  bss          1     1  -
+flashdukr                             5064         no  WORD  Internal   ABS     60  private  bss          1     1  -
+ftl0                                  8634         no  WORD  Internal   ABS   1080  private  textdata     1     0  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 28  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+
+gpioaodr                              5000         no  WORD  Internal   ABS      5  private  bss          1     1  -
+gpioaidr                              5001         no  WORD  Internal   ABS      6  private  bss          1     1  -
+gpioaddr                              5002         no  WORD  Internal   ABS      7  private  bss          1     1  -
+gpioacr1                              5003         no  WORD  Internal   ABS      8  private  bss          1     1  -
+gpioacr2                              5004         no  WORD  Internal   ABS      9  private  bss          1     1  -
+gpiobodr                              5005         no  WORD  Internal   ABS     10  private  bss          1     1  -
+gpiobidr                              5006         no  WORD  Internal   ABS     11  private  bss          1     1  -
+gpiobddr                              5007         no  WORD  Internal   ABS     12  private  bss          1     1  -
+gpiobcr1                              5008         no  WORD  Internal   ABS     13  private  bss          1     1  -
+gpiobcr2                              5009         no  WORD  Internal   ABS     14  private  bss          1     1  -
+gpiocodr                              500A         no  WORD  Internal   ABS     15  private  bss          1     1  -
+gpiocidr                              500B         no  WORD  Internal   ABS     16  private  bss          1     1  -
+gpiocddr                              500C         no  WORD  Internal   ABS     17  private  bss          1     1  -
+gpioccr1                              500D         no  WORD  Internal   ABS     18  private  bss          1     1  -
+gpioccr2                              500E         no  WORD  Internal   ABS     19  private  bss          1     1  -
+gpiododr                              500F         no  WORD  Internal   ABS     20  private  bss          1     1  -
+gpiodidr                              5010         no  WORD  Internal   ABS     21  private  bss          1     1  -
+gpiodddr                              5011         no  WORD  Internal   ABS     22  private  bss          1     1  -
+gpiodcr1                              5012         no  WORD  Internal   ABS     23  private  bss          1     1  -
+gpiodcr2                              5013         no  WORD  Internal   ABS     24  private  bss          1     1  -
+gpioeodr                              5014         no  WORD  Internal   ABS     25  private  bss          1     1  -
+gpioeidr                              5015         no  WORD  Internal   ABS     26  private  bss          1     1  -
+gpioeddr                              5016         no  WORD  Internal   ABS     27  private  bss          1     1  -
+gpioecr1                              5017         no  WORD  Internal   ABS     28  private  bss          1     1  -
+gpioecr2                              5018         no  WORD  Internal   ABS     29  private  bss          1     1  -
+gpiofodr                              5019         no  WORD  Internal   ABS     30  private  bss          1     1  -
+gpiofidr                              501A         no  WORD  Internal   ABS     31  private  bss          1     1  -
+gpiofddr                              501B         no  WORD  Internal   ABS     32  private  bss          1     1  -
+gpiofcr1                              501C         no  WORD  Internal   ABS     33  private  bss          1     1  -
+gpiofcr2                              501D         no  WORD  Internal   ABS     34  private  bss          1     1  -
+gpiogodr                              501E         no  WORD  Internal   ABS     35  private  bss          1     1  -
+gpiogidr                              501F         no  WORD  Internal   ABS     36  private  bss          1     1  -
+gpiogddr                              5020         no  WORD  Internal   ABS     37  private  bss          1     1  -
+gpiogcr1                              5021         no  WORD  Internal   ABS     38  private  bss          1     1  -
+gpiogcr2                              5022         no  WORD  Internal   ABS     39  private  bss          1     1  -
+gpiohodr                              5023         no  WORD  Internal   ABS     40  private  bss          1     1  -
+gpiohidr                              5024         no  WORD  Internal   ABS     41  private  bss          1     1  -
+gpiohddr                              5025         no  WORD  Internal   ABS     42  private  bss          1     1  -
+gpiohcr1                              5026         no  WORD  Internal   ABS     43  private  bss          1     1  -
+gpiohcr2                              5027         no  WORD  Internal   ABS     44  private  bss          1     1  -
+gpioiodr                              5028         no  WORD  Internal   ABS     45  private  bss          1     1  -
+gpioiidr                              5029         no  WORD  Internal   ABS     46  private  bss          1     1  -
+gpioiddr                              502A         no  WORD  Internal   ABS     47  private  bss          1     1  -
+gpioicr1                              502B         no  WORD  Internal   ABS     48  private  bss          1     1  -
+gpioicr2                              502C         no  WORD  Internal   ABS     49  private  bss          1     1  -
+
+here                                  004E         no  WORD  Internal   ABS    549  private  bss          2     2  -
+herelabel                             86A8         no  WORD  Internal   ABS   1139  private  textdata     0     0  -
+
+itcexticr1                            50A0         no  WORD  Internal   ABS     62  private  bss          1     1  -
+itcexticr2                            50A1         no  WORD  Internal   ABS     63  private  bss          1     1  -
+iwdgkr                                50E0         no  WORD  Internal   ABS     85  private  bss          1     1  -
+iwdgpr                                50E1         no  WORD  Internal   ABS     86  private  bss          1     1  -
+iwdgrlr                               50E2         no  WORD  Internal   ABS     87  private  bss          1     1  -
+i2ccr1                                5210         no  WORD  Internal   ABS    103  private  bss          1     1  -
+i2ccr2                                5211         no  WORD  Internal   ABS    104  private  bss          1     1  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 29  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+i2cfreqr                              5212         no  WORD  Internal   ABS    105  private  bss          1     1  -
+i2coarl                               5213         no  WORD  Internal   ABS    106  private  bss          1     1  -
+i2coarh                               5214         no  WORD  Internal   ABS    107  private  bss          1     1  -
+i2cdr                                 5216         no  WORD  Internal   ABS    109  private  bss          1     1  -
+i2csr1                                5217         no  WORD  Internal   ABS    110  private  bss          1     1  -
+i2csr2                                5218         no  WORD  Internal   ABS    111  private  bss          1     1  -
+i2csr3                                5219         no  WORD  Internal   ABS    112  private  bss          1     1  -
+i2citr                                521A         no  WORD  Internal   ABS    113  private  bss          1     1  -
+i2cccrl                               521B         no  WORD  Internal   ABS    114  private  bss          1     1  -
+i2cccrh                               521C         no  WORD  Internal   ABS    115  private  bss          1     1  -
+i2ctriser                             521D         no  WORD  Internal   ABS    116  private  bss          1     1  -
+itcspr1                               7F70         no  WORD  Internal   ABS    300  private  bss          1     1  -
+itcspr2                               7F71         no  WORD  Internal   ABS    301  private  bss          1     1  -
+itcspr3                               7F72         no  WORD  Internal   ABS    302  private  bss          1     1  -
+itcspr4                               7F73         no  WORD  Internal   ABS    303  private  bss          1     1  -
+itcspr5                               7F74         no  WORD  Internal   ABS    304  private  bss          1     1  -
+itcspr6                               7F75         no  WORD  Internal   ABS    305  private  bss          1     1  -
+itcspr7                               7F76         no  WORD  Internal   ABS    306  private  bss          1     1  -
+itcspr8                               7F77         no  WORD  Internal   ABS    307  private  bss          1     1  -
+interruptreset                        8000         no  WORD  Internal   ABS    323  private  textdata     4     4  -
+interrupttrap                         8004         no  WORD  Internal   ABS    324  private  textdata     4     4  -
+interrupttli                          8008         no  WORD  Internal   ABS    325  private  textdata     4     4  -
+interruptawu                          800C         no  WORD  Internal   ABS    326  private  textdata     4     4  -
+interruptclk                          8010         no  WORD  Internal   ABS    327  private  textdata     4     4  -
+interruptexti0                        8014         no  WORD  Internal   ABS    328  private  textdata     4     4  -
+interruptexti1                        8018         no  WORD  Internal   ABS    329  private  textdata     4     4  -
+interruptexti2                        801C         no  WORD  Internal   ABS    330  private  textdata     4     4  -
+interruptexti3                        8020         no  WORD  Internal   ABS    331  private  textdata     4     4  -
+interruptexti4                        8024         no  WORD  Internal   ABS    332  private  textdata     4     4  -
+interruptcanrx                        8028         no  WORD  Internal   ABS    333  private  textdata     4     4  -
+interruptcantx                        802C         no  WORD  Internal   ABS    334  private  textdata     4     4  -
+interruptspi                          8030         no  WORD  Internal   ABS    335  private  textdata     4     4  -
+interrupttim1u                        8034         no  WORD  Internal   ABS    336  private  textdata     4     4  -
+interrupttim1c                        8038         no  WORD  Internal   ABS    337  private  textdata     4     4  -
+interrupttim2u                        803C         no  WORD  Internal   ABS    338  private  textdata     4     4  -
+interrupttim2c                        8040         no  WORD  Internal   ABS    339  private  textdata     4     4  -
+interrupttim3u                        8044         no  WORD  Internal   ABS    340  private  textdata     4     4  -
+interrupttim3c                        8048         no  WORD  Internal   ABS    341  private  textdata     4     4  -
+interruptuart1tx                      804C         no  WORD  Internal   ABS    342  private  textdata     4     4  -
+interruptuart1rx                      8050         no  WORD  Internal   ABS    343  private  textdata     4     4  -
+interrupti2c                          8054         no  WORD  Internal   ABS    344  private  textdata     4     4  -
+interruptuart3tx                      8058         no  WORD  Internal   ABS    345  private  textdata     4     4  -
+interruptuart3rx                      805C         no  WORD  Internal   ABS    346  private  textdata     4     4  -
+interruptadc1                         8060         no  WORD  Internal   ABS    347  private  textdata     4     4  -
+interrupttim4u                        8064         no  WORD  Internal   ABS    348  private  textdata     4     4  -
+interruptflash                        8068         no  WORD  Internal   ABS    349  private  textdata     4     4  -
+init                                  80AE         no  WORD  Internal   ABS    409  private  text         8     0  -
+incdsp                                8132         no  WORD  Internal   ABS    464  private  textdata    19     0  -
+incrsp                                8159         no  WORD  Internal   ABS    480  private  textdata    19     0  -
+
+loop                                  8112         no  WORD  Internal   ABS    443  private  text         7     0  -
+latest                                0050         no  WORD  Internal   ABS    550  private  bss          2     2  -
+linkbl                                81DB         no  WORD  Internal   ABS    555  private  textdata     5     2  -
+linkconstant                          81E7         no  WORD  Internal   ABS    562  private  textdata    11     2  -
+linkrtib                              81F3         no  WORD  Internal   ABS    567  private  textdata     7     2  -
+linktib                               8201         no  WORD  Internal   ABS    574  private  textdata     6     2  -
+links0                                820E         no  WORD  Internal   ABS    581  private  textdata     5     2  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 30  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+linkbase                              821A         no  WORD  Internal   ABS    588  private  textdata     7     2  -
+linklatest                            8228         no  WORD  Internal   ABS    595  private  textdata     9     2  -
+linkhere                              8238         no  WORD  Internal   ABS    602  private  textdata     7     2  -
+linkstate                             8246         no  WORD  Internal   ABS    609  private  textdata     8     2  -
+linkvariable                          8255         no  WORD  Internal   ABS    616  private  textdata    11     2  -
+linkallot                             826B         no  WORD  Internal   ABS    625  private  textdata     8     2  -
+linklit                               827E         no  WORD  Internal   ABS    633  private  textdata     6     2  -
+linkcfa                               8294         no  WORD  Internal   ABS    643  private  textdata     7     2  -
+linkfind                              82B0         no  WORD  Internal   ABS    658  private  textdata     7     2  -
+linkkey                               82B8         no  WORD  Internal   ABS    663  private  textdata     6     2  -
+linkemit                              82C7         no  WORD  Internal   ABS    672  private  textdata     7     2  -
+linkcr                                82D6         no  WORD  Internal   ABS    680  private  textdata     5     2  -
+linktype                              82E1         no  WORD  Internal   ABS    687  private  textdata     7     2  -
+linkword                              8300         no  WORD  Internal   ABS    705  private  textdata     7     2  -
+linknumber                            8308         no  WORD  Internal   ABS    710  private  textdata     9     2  -
+linkbranch                            8312         no  WORD  Internal   ABS    715  private  textdata     9     2  -
+link0branch                           8325         no  WORD  Internal   ABS    723  private  textdata    10     2  -
+linkqbranch                           8330         no  WORD  Internal   ABS    728  private  textdata    10     2  -
+linksemicolon                         8353         no  WORD  Internal   ABS    741  private  textdata     4     2  -
+linkcolon                             8357         no  WORD  Internal   ABS    745  private  textdata     4     2  -
+linkcomma                             835C         no  WORD  Internal   ABS    750  private  textdata     4     2  -
+linkshtrih                            8370         no  WORD  Internal   ABS    759  private  textdata     4     2  -
+linkbshtrih                           8374         no  WORD  Internal   ABS    763  private  textdata     6     2  -
+linkimmediate                         8387         no  WORD  Internal   ABS    772  private  textdata    12     2  -
+linkcreate                            839D         no  WORD  Internal   ABS    781  private  textdata     9     2  -
+linkbegin                             83A7         no  WORD  Internal   ABS    786  private  textdata     8     2  -
+linkagain                             83B0         no  WORD  Internal   ABS    791  private  textdata     8     2  -
+linkif                                83B9         no  WORD  Internal   ABS    796  private  textdata     5     2  -
+linkthen                              83D1         no  WORD  Internal   ABS    807  private  textdata     7     2  -
+linkelse                              83E2         no  WORD  Internal   ABS    815  private  textdata     7     2  -
+linkexecute                           8405         no  WORD  Internal   ABS    829  private  textdata    10     2  -
+linkbcompile                          8414         no  WORD  Internal   ABS    836  private  textdata    12     2  -
+linkcompile                           8427         no  WORD  Internal   ABS    843  private  textdata    10     2  -
+linkget                               8444         no  WORD  Internal   ABS    854  private  textdata     4     2  -
+linkput                               8450         no  WORD  Internal   ABS    862  private  textdata     4     2  -
+linkincput                            845F         no  WORD  Internal   ABS    871  private  textdata     5     2  -
+linkdpl                               8478         no  WORD  Internal   ABS    884  private  textdata     6     2  -
+linkliteral                           847F         no  WORD  Internal   ABS    889  private  textdata    10     2  -
+linktwoliteral                        849F         no  WORD  Internal   ABS    901  private  textdata    11     2  -
+linklbrac                             84AB         no  WORD  Internal   ABS    906  private  textdata     4     2  -
+linkrbrac                             84B4         no  WORD  Internal   ABS    912  private  textdata     4     2  -
+linkdecimal                           84BD         no  WORD  Internal   ABS    918  private  textdata    10     2  -
+linkhex                               84CC         no  WORD  Internal   ABS    924  private  textdata     6     2  -
+linktick                              84D7         no  WORD  Internal   ABS    930  private  textdata     4     2  -
+linkinterpret                         84DC         no  WORD  Internal   ABS    935  private  textdata    12     2  -
+linktor                               8546         no  WORD  Internal   ABS    971  private  textdata     5     2  -
+linkfromr                             8552         no  WORD  Internal   ABS    978  private  textdata     5     2  -
+linkrget                              855E         no  WORD  Internal   ABS    985  private  textdata     5     2  -
+linkdrop                              856A         no  WORD  Internal   ABS    992  private  textdata     7     2  -
+linkswap                              8575         no  WORD  Internal   ABS    998  private  textdata     7     2  -
+linkdup                               858F         no  WORD  Internal   ABS   1009  private  textdata     6     2  -
+linkover                              859C         no  WORD  Internal   ABS   1016  private  textdata     7     2  -
+linkrot                               85AA         no  WORD  Internal   ABS   1023  private  textdata     6     2  -
+linknrot                              85C9         no  WORD  Internal   ABS   1036  private  textdata     7     2  -
+link2drop                             85E9         no  WORD  Internal   ABS   1049  private  textdata     8     2  -
+link2swap                             85F8         no  WORD  Internal   ABS   1056  private  textdata     8     2  -
+linkqdup                              8625         no  WORD  Internal   ABS   1073  private  textdata     7     2  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 31  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+linkincr                              8635         no  WORD  Internal   ABS   1082  private  textdata     5     2  -
+linkdecr                              8642         no  WORD  Internal   ABS   1089  private  textdata     5     2  -
+link2incr                             864F         no  WORD  Internal   ABS   1096  private  textdata     5     2  -
+link2decr                             8660         no  WORD  Internal   ABS   1104  private  textdata     5     2  -
+linkadd                               8671         no  WORD  Internal   ABS   1112  private  textdata     4     2  -
+linksub                               8689         no  WORD  Internal   ABS   1123  private  textdata     4     2  -
+linknop                               86A1         no  WORD  Internal   ABS   1134  private  textdata     6     2  -
+
+nxt                                   0048         no  WORD  Internal   ABS    450  private  bss          2     2  -
+
+optionopt0                            4800         no  WORD  Internal   ABS    267  private  bss          1     1  -
+optionopt1                            4801         no  WORD  Internal   ABS    268  private  bss          1     1  -
+optionnopt1                           4802         no  WORD  Internal   ABS    269  private  bss          1     1  -
+optionopt2                            4803         no  WORD  Internal   ABS    270  private  bss          1     1  -
+optionnopt2                           4804         no  WORD  Internal   ABS    271  private  bss          1     1  -
+optionopt3                            4805         no  WORD  Internal   ABS    272  private  bss          1     1  -
+optionnopt3                           4806         no  WORD  Internal   ABS    273  private  bss          1     1  -
+optionopt4                            4807         no  WORD  Internal   ABS    274  private  bss          1     1  -
+optionnopt4                           4808         no  WORD  Internal   ABS    275  private  bss          1     1  -
+optionopt5                            4809         no  WORD  Internal   ABS    276  private  bss          1     1  -
+optionnopt5                           480A         no  WORD  Internal   ABS    277  private  bss          1     1  -
+optionopt6                            480B         no  WORD  Internal   ABS    278  private  bss          1     1  -
+optionnopt6                           480C         no  WORD  Internal   ABS    279  private  bss          1     1  -
+optionopt7                            480D         no  WORD  Internal   ABS    280  private  bss          1     1  -
+optionnopt7                           480E         no  WORD  Internal   ABS    281  private  bss          1     1  -
+
+peekdsp0                              817F         no  WORD  Internal   ABS    494  private  textdata     5     0  -
+peekdsp1                              8184         no  WORD  Internal   ABS    497  private  textdata     3     0  -
+peekdsp2                              818B         no  WORD  Internal   ABS    502  private  textdata     5     0  -
+peekdsp3                              8190         no  WORD  Internal   ABS    505  private  textdata     5     0  -
+pokedsp0                              8195         no  WORD  Internal   ABS    508  private  textdata     6     0  -
+pokedsp1                              819B         no  WORD  Internal   ABS    511  private  textdata     4     0  -
+pokedsp2                              81A4         no  WORD  Internal   ABS    516  private  textdata     6     0  -
+pokedsp3                              81AA         no  WORD  Internal   ABS    519  private  textdata     6     0  -
+peekrsp0                              81B0         no  WORD  Internal   ABS    522  private  textdata     5     0  -
+pokersp0                              81B5         no  WORD  Internal   ABS    525  private  textdata     5     0  -
+pushdsp                               81BA         no  WORD  Internal   ABS    528  private  textdata     8     0  -
+popdsp                                81C2         no  WORD  Internal   ABS    532  private  textdata     8     0  -
+pushrsp                               81CA         no  WORD  Internal   ABS    536  private  textdata     8     0  -
+poprsp                                81D2         no  WORD  Internal   ABS    540  private  textdata     8     0  -
+
+rstsr                                 50B3         no  WORD  Internal   ABS     65  private  bss          1     1  -
+rstart                                0000         no  WORD  Internal   ABS    353  private  bss          1     1  -
+rend                                  0001         no  WORD  Internal   ABS    354  private  bss          1     1  -
+rsize                                 0002         no  WORD  Internal   ABS    355  private  bss          1     1  -
+rlen                                  0003         no  WORD  Internal   ABS    356  private  bss          1     1  -
+rbuf                                  0004         no  WORD  Internal   ABS    357  private  bss         64     1  -
+ringbuftoa                            8088         no  WORD  Internal   ABS    380  private  text        16     0  -
+ringbuftoa_notzero                    8098         no  WORD  Internal   ABS    391  private  text         4     0  -
+ringbuftoa_end                        809C         no  WORD  Internal   ABS    394  private  text         4     0  -
+ringbufready                          80A0         no  WORD  Internal   ABS    398  private  text         7     0  -
+ringbufready_ifzero                   80A7         no  WORD  Internal   ABS    403  private  text         1     0  -
+rsp                                   0046         no  WORD  Internal   ABS    449  private  bss          2     2  -
+rss                                   811D         no  WORD  Internal   ABS    455  private  textdata     2     2  -
+rsm                                   811F         no  WORD  Internal   ABS    456  private  textdata     2     2  -
+
+spicr1                                5200         no  WORD  Internal   ABS     94  private  bss          1     1  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 32  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+spicr2                                5201         no  WORD  Internal   ABS     95  private  bss          1     1  -
+spiicr                                5202         no  WORD  Internal   ABS     96  private  bss          1     1  -
+spisr                                 5203         no  WORD  Internal   ABS     97  private  bss          1     1  -
+spidr                                 5204         no  WORD  Internal   ABS     98  private  bss          1     1  -
+spicrcpr                              5205         no  WORD  Internal   ABS     99  private  bss          1     1  -
+spirxcrcr                             5206         no  WORD  Internal   ABS    100  private  bss          1     1  -
+spitxcrcr                             5207         no  WORD  Internal   ABS    101  private  bss          1     1  -
+swimcsr                               7F80         no  WORD  Internal   ABS    309  private  bss          1     1  -
+start                                 80F5         no  WORD  Internal   ABS    431  private  text        29     0  -
+svminit                               8121         no  WORD  Internal   ABS    457  private  textdata    17     0  -
+state                                 004C         no  WORD  Internal   ABS    547  private  bss          1     1  -
+
+tim1cr1                               5250         no  WORD  Internal   ABS    141  private  bss          1     1  -
+tim1cr2                               5251         no  WORD  Internal   ABS    142  private  bss          1     1  -
+tim1smcr                              5252         no  WORD  Internal   ABS    143  private  bss          1     1  -
+tim1etr                               5253         no  WORD  Internal   ABS    144  private  bss          1     1  -
+tim1ier                               5254         no  WORD  Internal   ABS    145  private  bss          1     1  -
+tim1sr1                               5255         no  WORD  Internal   ABS    146  private  bss          1     1  -
+tim1sr2                               5256         no  WORD  Internal   ABS    147  private  bss          1     1  -
+tim1egr                               5257         no  WORD  Internal   ABS    148  private  bss          1     1  -
+tim1ccmr1                             5258         no  WORD  Internal   ABS    149  private  bss          1     1  -
+tim1ccmr2                             5259         no  WORD  Internal   ABS    150  private  bss          1     1  -
+tim1ccmr3                             525A         no  WORD  Internal   ABS    151  private  bss          1     1  -
+tim1ccmr4                             525B         no  WORD  Internal   ABS    152  private  bss          1     1  -
+tim1ccer1                             525C         no  WORD  Internal   ABS    153  private  bss          1     1  -
+tim1ccer2                             525D         no  WORD  Internal   ABS    154  private  bss          1     1  -
+tim1cntrh                             525E         no  WORD  Internal   ABS    155  private  bss          1     1  -
+tim1cntrl                             525F         no  WORD  Internal   ABS    156  private  bss          1     1  -
+tim1pscrh                             5260         no  WORD  Internal   ABS    157  private  bss          1     1  -
+tim1pscrl                             5261         no  WORD  Internal   ABS    158  private  bss          1     1  -
+tim1arrh                              5262         no  WORD  Internal   ABS    159  private  bss          1     1  -
+tim1arrl                              5263         no  WORD  Internal   ABS    160  private  bss          1     1  -
+tim1rcr                               5264         no  WORD  Internal   ABS    161  private  bss          1     1  -
+tim1ccr1h                             5265         no  WORD  Internal   ABS    162  private  bss          1     1  -
+tim1ccr1l                             5266         no  WORD  Internal   ABS    163  private  bss          1     1  -
+tim1ccr2h                             5267         no  WORD  Internal   ABS    164  private  bss          1     1  -
+tim1ccr2l                             5268         no  WORD  Internal   ABS    165  private  bss          1     1  -
+tim1ccr3h                             5269         no  WORD  Internal   ABS    166  private  bss          1     1  -
+tim1ccr3l                             526A         no  WORD  Internal   ABS    167  private  bss          1     1  -
+tim1ccr4h                             526B         no  WORD  Internal   ABS    168  private  bss          1     1  -
+tim1ccr4l                             526C         no  WORD  Internal   ABS    169  private  bss          1     1  -
+tim1bkr                               526D         no  WORD  Internal   ABS    170  private  bss          1     1  -
+tim1dtr                               526E         no  WORD  Internal   ABS    171  private  bss          1     1  -
+tim1oisr                              526F         no  WORD  Internal   ABS    172  private  bss          1     1  -
+tim2cr1                               5300         no  WORD  Internal   ABS    174  private  bss          1     1  -
+tim2ier                               5301         no  WORD  Internal   ABS    175  private  bss          1     1  -
+tim2sr1                               5302         no  WORD  Internal   ABS    176  private  bss          1     1  -
+tim2sr2                               5303         no  WORD  Internal   ABS    177  private  bss          1     1  -
+tim2egr                               5304         no  WORD  Internal   ABS    178  private  bss          1     1  -
+tim2ccmr1                             5305         no  WORD  Internal   ABS    179  private  bss          1     1  -
+tim2ccmr2                             5306         no  WORD  Internal   ABS    180  private  bss          1     1  -
+tim2ccmr3                             5307         no  WORD  Internal   ABS    181  private  bss          1     1  -
+tim2ccer1                             5308         no  WORD  Internal   ABS    182  private  bss          1     1  -
+tim2ccer2                             5309         no  WORD  Internal   ABS    183  private  bss          1     1  -
+tim2cntrh                             530A         no  WORD  Internal   ABS    184  private  bss          1     1  -
+tim2cntrl                             530B         no  WORD  Internal   ABS    185  private  bss          1     1  -
+tim2pscr                              530C         no  WORD  Internal   ABS    186  private  bss          1     1  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 33  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+tim2arrh                              530D         no  WORD  Internal   ABS    187  private  bss          1     1  -
+tim2arrl                              530E         no  WORD  Internal   ABS    188  private  bss          1     1  -
+tim2ccr1h                             530F         no  WORD  Internal   ABS    189  private  bss          1     1  -
+tim2ccr1l                             5310         no  WORD  Internal   ABS    190  private  bss          1     1  -
+tim2ccr2h                             5311         no  WORD  Internal   ABS    191  private  bss          1     1  -
+tim2ccr2l                             5312         no  WORD  Internal   ABS    192  private  bss          1     1  -
+tim2ccr3h                             5313         no  WORD  Internal   ABS    193  private  bss          1     1  -
+tim2ccr3l                             5314         no  WORD  Internal   ABS    194  private  bss          1     1  -
+tim3cr1                               5320         no  WORD  Internal   ABS    196  private  bss          1     1  -
+tim3ier                               5321         no  WORD  Internal   ABS    197  private  bss          1     1  -
+tim3sr1                               5322         no  WORD  Internal   ABS    198  private  bss          1     1  -
+tim3sr2                               5323         no  WORD  Internal   ABS    199  private  bss          1     1  -
+tim3egr                               5324         no  WORD  Internal   ABS    200  private  bss          1     1  -
+tim3ccmr1                             5325         no  WORD  Internal   ABS    201  private  bss          1     1  -
+tim3ccmr2                             5326         no  WORD  Internal   ABS    202  private  bss          1     1  -
+tim3ccer1                             5327         no  WORD  Internal   ABS    203  private  bss          1     1  -
+tim3cntrh                             5328         no  WORD  Internal   ABS    204  private  bss          1     1  -
+tim3cntrl                             5329         no  WORD  Internal   ABS    205  private  bss          1     1  -
+tim3pscr                              532A         no  WORD  Internal   ABS    206  private  bss          1     1  -
+tim3arrh                              532B         no  WORD  Internal   ABS    207  private  bss          1     1  -
+tim3arrl                              532C         no  WORD  Internal   ABS    208  private  bss          1     1  -
+tim3ccr1h                             532D         no  WORD  Internal   ABS    209  private  bss          1     1  -
+tim3ccr1l                             532E         no  WORD  Internal   ABS    210  private  bss          1     1  -
+tim3ccr2h                             532F         no  WORD  Internal   ABS    211  private  bss          1     1  -
+tim3ccr2l                             5330         no  WORD  Internal   ABS    212  private  bss          1     1  -
+tim4cr1                               5340         no  WORD  Internal   ABS    214  private  bss          1     1  -
+tim4ier                               5341         no  WORD  Internal   ABS    215  private  bss          1     1  -
+tim4sr                                5342         no  WORD  Internal   ABS    216  private  bss          1     1  -
+tim4egr                               5343         no  WORD  Internal   ABS    217  private  bss          1     1  -
+tim4cntr                              5344         no  WORD  Internal   ABS    218  private  bss          1     1  -
+tim4pscr                              5345         no  WORD  Internal   ABS    219  private  bss          1     1  -
+tim4arr                               5346         no  WORD  Internal   ABS    220  private  bss          1     1  -
+tmp                                   004A         no  WORD  Internal   ABS    451  private  bss          2     2  -
+tl0                                   8145         no  WORD  Internal   ABS    471  private  textdata     1     0  -
+tl1                                   8187         no  WORD  Internal   ABS    499  private  textdata     4     0  -
+tl2                                   819F         no  WORD  Internal   ABS    513  private  textdata     5     0  -
+tib                                   0052         no  WORD  Internal   ABS    551  private  bss         81     1  -
+temp                                  00A3         no  WORD  Internal   ABS    552  private  bss          2     2  -
+tl4                                   82F2         no  WORD  Internal   ABS    695  private  textdata    10     0  -
+tl3                                   82FC         no  WORD  Internal   ABS    702  private  textdata     4     0  -
+
+uart1sr                               5230         no  WORD  Internal   ABS    118  private  bss          1     1  -
+uart1dr                               5231         no  WORD  Internal   ABS    119  private  bss          1     1  -
+uart1brr1                             5232         no  WORD  Internal   ABS    120  private  bss          1     1  -
+uart1brr2                             5233         no  WORD  Internal   ABS    121  private  bss          1     1  -
+uart1cr1                              5234         no  WORD  Internal   ABS    122  private  bss          1     1  -
+uart1cr2                              5235         no  WORD  Internal   ABS    123  private  bss          1     1  -
+uart1cr3                              5236         no  WORD  Internal   ABS    124  private  bss          1     1  -
+uart1cr4                              5237         no  WORD  Internal   ABS    125  private  bss          1     1  -
+uart1cr5                              5238         no  WORD  Internal   ABS    126  private  bss          1     1  -
+uart1gtr                              5239         no  WORD  Internal   ABS    127  private  bss          1     1  -
+uart1pstr                             523A         no  WORD  Internal   ABS    128  private  bss          1     1  -
+uart3sr                               5240         no  WORD  Internal   ABS    130  private  bss          1     1  -
+uart3dr                               5241         no  WORD  Internal   ABS    131  private  bss          1     1  -
+uart3brr1                             5242         no  WORD  Internal   ABS    132  private  bss          1     1  -
+uart3brr2                             5243         no  WORD  Internal   ABS    133  private  bss          1     1  -
+uart3cr1                              5244         no  WORD  Internal   ABS    134  private  bss          1     1  -
+STMicroelectronics list file postprocessor v1.01   (C)2009-2017   Wed Dec 20 18:00:05 2017
+Page 34  Assembler
+                                               d:\naive\projects\stm8s\forth\out\forth.asm
+
+uart3cr2                              5245         no  WORD  Internal   ABS    135  private  bss          1     1  -
+uart3cr3                              5246         no  WORD  Internal   ABS    136  private  bss          1     1  -
+uart3cr4                              5247         no  WORD  Internal   ABS    137  private  bss          1     1  -
+uart3cr6                              5249         no  WORD  Internal   ABS    139  private  bss          1     1  -
+unicidx                               48CD         no  WORD  Internal   ABS    256  private  bss          2     2  -
+unicidy                               48CF         no  WORD  Internal   ABS    257  private  bss          2     2  -
+unicidwafer                           48D1         no  WORD  Internal   ABS    258  private  bss          1     1  -
+unicidlot0                            48D2         no  WORD  Internal   ABS    259  private  bss          1     1  -
+unicidlot1                            48D3         no  WORD  Internal   ABS    260  private  bss          1     1  -
+unicidlot2                            48D4         no  WORD  Internal   ABS    261  private  bss          1     1  -
+unicidlot3                            48D5         no  WORD  Internal   ABS    262  private  bss          1     1  -
+unicidlot4                            48D6         no  WORD  Internal   ABS    263  private  bss          1     1  -
+unicidlot5                            48D7         no  WORD  Internal   ABS    264  private  bss          1     1  -
+unicidlot6                            48D8         no  WORD  Internal   ABS    265  private  bss          1     1  -
+uart1rx                               80A8         no  WORD  Internal   ABS    405  private  text         6     0  -
+
+wwdgcr                                50D1         no  WORD  Internal   ABS     82  private  bss          1     1  -
+wwdgwr                                50D2         no  WORD  Internal   ABS     83  private  bss          1     1  -
+wait1                                 80B6         no  WORD  Internal   ABS    412  private  text        13     0  -
+wait2                                 80C3         no  WORD  Internal   ABS    416  private  text        50     0  -
+
+
+514 labels
+No errors on assembly of 'd:\naive\projects\stm8s\forth\out\forth.asm'

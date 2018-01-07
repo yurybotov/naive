@@ -1,0 +1,90 @@
+
+Segment List
+------------
+
+d:\naive\projects\stm8l\template\out\template.asm[1]    4-    6      4910 -     4911          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[2]    7-   52      5000 -     502C          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[3]   53-   55      5050 -     5051          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[4]   56-   57      5062 -     5062          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[5]   58-   60      5064 -     5065          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[6]   61-   63      5070 -     5071          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[7]   64-   69      5075 -     5079          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[8]   70-   72      507B -     507C          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[9]   73-   78      507F -     5083          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[10]   79-   81      5085 -     5086          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[11]   82-   87      5089 -     508D          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[12]   88-   90      508F -     5090          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[13]   91-   99      5093 -     509A          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[14]  100-  103      509D -     509F          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[15]  104-  110      50A0 -     50A5          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[16]  111-  113      50AA -     50AB          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[17]  114-  118      50A6 -     50A9          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[18]  119-  121      50B0 -     50B1          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[19]  122-  124      50B2 -     50B3          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[20]  125-  142      50C0 -     50D0          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[21]  143-  145      50D3 -     50D4          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[22]  146-  149      50E0 -     50E2          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[23]  150-  151      50F0 -     50F0          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[24]  152-  153      50F3 -     50F3          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[25]  154-  157      5140 -     5142          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[26]  158-  161      5144 -     5146          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[27]  162-  165      5148 -     514A          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[28]  166-  168      514C -     514D          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[29]  169-  172      5150 -     5152          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[30]  173-  175      5154 -     5155          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[31]  176-  185      5157 -     515F          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[32]  186-  189      5164 -     5166          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[33]  190-  194      516A -     516D          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[34]  195-  196      5190 -     5190          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[35]  197-  205      5200 -     5207          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[36]  206-  221      5210 -     521E          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[37]  222-  233      5230 -     523A          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[38]  234-  257      5250 -     5266          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[39]  258-  281      5280 -     5296          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[40]  282-  317      52B0 -     52D2          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[41]  318-  328      52E0 -     52E9          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[42]  329-  330      52FF -     52FF          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[43]  331-  354      5300 -     5316          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[44]  355-  371      5340 -     534F          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[45]  372-  378      5380 -     5385          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[46]  379-  381      5388 -     5389          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[47]  382-  383      5390 -     5390          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[48]  384-  386      5394 -     5395          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[49]  387-  389      5398 -     5399          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[50]  390-  391      539C -     539C          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[51]  392-  400      53A0 -     53A7          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[52]  401-  403      53AC -     53AD          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[53]  404-  406      53B0 -     53B1          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[54]  407-  415      53C0 -     53C7          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[55]  416-  427      53E0 -     53EA          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[56]  428-  439      53F0 -     53FA          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[57]  440-  450      5400 -     5409          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[58]  451-  473      540C -     5421          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[59]  474-  475      542F -     542F          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[60]  476-  491      5430 -     543E          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[61]  492-  497      1540 -     1544          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[62]  498-  509      7F00 -     7F0A          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[63]  510-  511      7F60 -     7F60          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[64]  512-  520      7F70 -     7F77          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[65]  521-  522      7F80 -     7F80          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[66]  523-  534      7F90 -     7F9A          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[67]  535-  545      4926 -     4931          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[68]  546-  553      4800 -     4807          ports  'ports'  [void]
+d:\naive\projects\stm8l\template\out\template.asm[69]  554-  594      8000 -     8083          flash  'rom'  [textdata]
+
+
+Class List
+----------
+
+0 '       ports'   byte from     4910 to     4807 (lim FFFFFFFF) =  0% D *** OVERRUN ***
+0 '         rom'   byte from     8000 to     8083 (lim     9FFF) =  1% CS
+
+
+
+External Label list
+-------------------
+
+Symbol Name                       Value     Scope  Def(line)
+
+
+0 labels

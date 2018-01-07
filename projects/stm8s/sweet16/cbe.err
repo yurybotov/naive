@@ -1,0 +1,8 @@
+No errors on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'
+No errors on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'
+d:\naive\projects\stm8s\sweet16\out\sweet16.asm(537): as2 : Error 46: Illegal undefined label 'Or0,y)		; Or0[y]++ in sweet16.stm8s._ : 93'
+1 error on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'
+d:\naive\projects\stm8s\sweet16\out\sweet16.asm(537): as2 : Error 46: Illegal undefined label 'Or0,y)		; Or0[y]++ in sweet16.stm8s._ : 93'
+1 error on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'
+d:\naive\projects\stm8s\sweet16\out\sweet16.asm(537): as2 : Error 46: Illegal undefined label 'Or0,y)		; Or0[y]++ in sweet16.stm8s._ : 93'
+1 error on assembly of 'd:\naive\projects\stm8s\sweet16\out\sweet16.asm'

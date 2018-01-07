@@ -1,0 +1,60 @@
+// select (uncomment) chip family
+
+include stm8s003._
+//include stm8s103x2._
+//include stm8s103x3._
+//include stm8s105x4._
+//include stm8s105x6._
+//include stm8s207x6._
+//include stm8s207x8._
+//include stm8s207xb._
+
+//
+// application template
+// 
+//
+
+// interrupt vectors
+interrupt reset@0x8000: (f32) {0x82000000+start}
+interrupt trap:         (f32) {0x82000000+dumb}
+interrupt tli:          (f32) {0x82000000+dumb}
+interrupt awu:          (f32) {0x82000000+dumb}
+interrupt clk:          (f32) {0x82000000+dumb}
+interrupt exti0:        (f32) {0x82000000+dumb}
+interrupt exti1:        (f32) {0x82000000+dumb}
+interrupt exti2:        (f32) {0x82000000+dumb}
+interrupt exti3:        (f32) {0x82000000+dumb}
+interrupt exti4:        (f32) {0x82000000+dumb}
+interrupt canrx:        (f32) {0x82000000+dumb}
+interrupt cantx:        (f32) {0x82000000+dumb}
+interrupt spi:          (f32) {0x82000000+dumb}
+interrupt tim1u:        (f32) {0x82000000+dumb}
+interrupt tim1c:        (f32) {0x82000000+dumb}
+interrupt tim2u:        (f32) {0x82000000+dumb}
+interrupt tim2c:        (f32) {0x82000000+dumb}
+interrupt tim3u:        (f32) {0x82000000+dumb}
+interrupt tim3c:        (f32) {0x82000000+dumb}
+interrupt uart1tx:      (f32) {0x82000000+dumb}
+interrupt uart1rx:      (f32) {0x82000000+dumb}
+interrupt i2c:          (f32) {0x82000000+dumb}
+interrupt uart3tx:      (f32) {0x82000000+dumb}
+interrupt uart3rx:      (f32) {0x82000000+dumb}
+interrupt adc1:         (f32) {0x82000000+dumb}
+interrupt tim4u:        (f32) {0x82000000+dumb}
+interrupt flash:        (f32) {0x82000000+dumb}
+
+dumb: iret
+
+// main block
+start:	x = #ramend; sp = x                       	// initialise stack pointer (it is assembler!!!)
+
+	// here init code
+
+loop:   nop              
+	
+	// here repeated code
+                               
+	go loop						// forever cycle
+
+ 
+ 

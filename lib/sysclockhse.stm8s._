@@ -1,0 +1,32 @@
+//
+// Stm8 system clock init on external quarz speed
+//
+
+// set external quarz clock
+// divider is summa of 2 part:
+// 0 - fmaster = hsi
+// 8 - fmaster = hsi/2
+// 16 - fmaster = hsi/4
+// 24 - fmaster = hsi/8
+// +
+// 0 - fcpu = fmaster
+// 1 - fcpu = fmaster/2
+// 2 - fcpu = fmaster/4
+// 3 - fcpu = fmaster/8
+// 4 - fcpu = fmaster/16
+// 5 - fcpu = fmaster/32
+// 6 - fcpu = fmaster/64
+// 7 - fcpu = fmaster/128
+define externalClock(divider) clkeckr#0=#1;clkswcr#1=#1;@1: if clkeckr#1==0 @1;clkckdivr=#divider;clkswr=#0xb4;@2: if clkswcr#3==0 @2
+
+// set internal clock
+// divider is:
+// 0 - fcpu = fmaster
+// 1 - fcpu = fmaster/2
+// 2 - fcpu = fmaster/4
+// 3 - fcpu = fmaster/8
+// 4 - fcpu = fmaster/16
+// 5 - fcpu = fmaster/32
+// 6 - fcpu = fmaster/64
+// 7 - fcpu = fmaster/128
+define internalClock(divider) clkickr#0=#1;@1: if clkickr#1==0 @1; clkckdivr=#0

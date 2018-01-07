@@ -1,0 +1,122 @@
+// select (uncomment) chip family
+
+include stm8s003._
+//include stm8s103x2._
+//include stm8s103x3._
+//include stm8s105x4._
+//include stm8s105x6._
+//include stm8s207x6._
+//include stm8s207x8._
+//include stm8s207xb._
+
+//
+// application template
+// 
+//
+
+// interrupt vectors
+interrupt reset@0x8000: (f32) {0x82000000+start}
+interrupt trap:         (f32) {0x82000000+sweet16}
+interrupt tli:          (f32) {0x82000000+dumb}
+interrupt awu:          (f32) {0x82000000+dumb}
+interrupt clk:          (f32) {0x82000000+dumb}
+interrupt exti0:        (f32) {0x82000000+dumb}
+interrupt exti1:        (f32) {0x82000000+dumb}
+interrupt exti2:        (f32) {0x82000000+dumb}
+interrupt exti3:        (f32) {0x82000000+dumb}
+interrupt exti4:        (f32) {0x82000000+dumb}
+interrupt canrx:        (f32) {0x82000000+dumb}
+interrupt cantx:        (f32) {0x82000000+dumb}
+interrupt spi:          (f32) {0x82000000+dumb}
+interrupt tim1u:        (f32) {0x82000000+dumb}
+interrupt tim1c:        (f32) {0x82000000+dumb}
+interrupt tim2u:        (f32) {0x82000000+dumb}
+interrupt tim2c:        (f32) {0x82000000+dumb}
+interrupt tim3u:        (f32) {0x82000000+dumb}
+interrupt tim3c:        (f32) {0x82000000+dumb}
+interrupt uart1tx:      (f32) {0x82000000+dumb}
+interrupt uart1rx:      (f32) {0x82000000+dumb}
+interrupt i2c:          (f32) {0x82000000+dumb}
+interrupt uart3tx:      (f32) {0x82000000+dumb}
+interrupt uart3rx:      (f32) {0x82000000+dumb}
+interrupt adc1:         (f32) {0x82000000+dumb}
+interrupt tim4u:        (f32) {0x82000000+dumb}
+interrupt flash:        (f32) {0x82000000+dumb}
+dumb: iret
+
+// Sweet16 interpreter for stm8s (like Woznyak for appleII)
+
+define sw_acc	r0
+define sw_sp	rc
+define sw_cmp	rd
+define sw_stat	re
+define sw_pc	rf
+
+r0:(r16);r1:(r16);r2:(r16);r3:(r16);r4:(r16);r5:(r16);r6:(r16)
+r7:(r16);r8:(r16);r9:(r16);ra:(r16);rb:(r16);rc:(r16);rd:(r16);re:(r16);rf:(r16)
+sw_stack:(r8)[15];sw_tos:(r8)
+
+lcmds:(f16)sw_rtn;(f16)sw_br;(f16)sw_bnc;(f16)sw_bc;(f16)sw_bp;(f16)sw_bm;(f16)sw_bz;(f16)sw_bnz;(f16)sw_bm1
+	(f16)sw_bnm1;(f16)sw_bk;(f16)sw_rs;(f16)sw_bs;(f16)sw_err;(f16)sw_err;(f16)sw_err
+scmds:(f16)sw_set;(f16)sw_ldr;(f16)sw_str;(f16)sw_ldi;(f16)sw_sti;(f16)sw_ldd;(f16)sw_std;(f16)sw_pop;(f16)sw_stp
+	(f16)sw_add;(f16)sw_sub;(f16)sw_popd;(f16)sw_cpr;(f16)sw_inr;(f16)sw_dcr;(f16)sw_err
+
+sw_rtn: x=sw_pc; x++; sp[8]=x; iret
+sw_br: call near next1x; y+=sw_pc; sw_pc=y; go near sweetnext
+sw_bnc: go near sweetnext
+sw_bc: go near sweetnext
+sw_bp: go near sweetnext
+sw_bm: go near sweetnext
+sw_bz: go near sweetnext
+sw_bnz: go near sweetnext
+sw_bm1: go near sweetnext
+sw_bnm1: go near sweetnext
+sw_bk: go near sweetnext
+sw_rs: sw_sp++;sw_sp++; x=[sw_sp]; sw_pc=x; go near sweetnext
+sw_bs: call near next1x; x=sw_pc; [sw_sp]=x; sw_sp--; sw_sp--; y+=sw_pc; sw_pc=y;go near sweetnext
+sw_err: go near sweetnext
+
+sweetnext: x = sw_pc; x++; a = [x]; a&?#0xf0
+	if z==0 shortcmd
+	push a; swap a; x=#0; a&=#0x0f; xl=a; pop a; go lcmds[x]
+shortcmd: x=#0; a&=0x0f; xl=a; go scmds[x]
+next2x: x=sw_pc; x++;x++;x++; sw_pc=x; x--;x--; x=[x]; a&=#0x0f; y=#0; yl=a; c<<0 y; ret
+next1x: x=sw_pc; x++;x++; sw_pc=x; x--; a=[x]; y=#0; yl=a; ret
+cur1x: a&=#0x0f; y=#0; yl=a; c<<0 y; ret
+
+sw_set: call near next2x; r0[y]=x; go near sweetnext
+sw_ldr: call near cur1x; y=r0[y]; r0=y; go near sweetnext
+sw_str: call near cur1x; x=r0; r0[y]=x; go near sweetnext
+sw_ldi: call near cur1x; a=[r0[y]]; x=#0; xl=a; r0=x; r0[y]++; go near sweetnext
+sw_sti: call near cur1x; x=r0; a=xl; [r0[y]]=a; r0[y]++; go near sweetnext
+sw_ldd: call cur1x; y=[r0[y]]; r0=y; r0[y]++;r0[y]++; go sweetnext
+sw_std: call cur1x; x=r0; [r0[y]]=x; r0[y]++;r0[y]++; go sweetnext
+sw_pop: call cur1x; a=[r0[y]]; x=#0; xl=a; r0=x; r0[y]--; go sweetnext
+sw_stp: call cur1x; x=r0; a=xl; [r0[y]]=a; r0[y]--;go sweetnext
+sw_add: call cur1x; y=r0[y]; y+=r0; r0=y; go sweetnext
+sw_sub: call cur1x; y=r0[y]; y-=r0; -y; r0=y; go sweetnext
+sw_popd: call cur1x; r0[y]--;r0[y]--; x=r0; [r0[y]]=x; go sweetnext
+sw_cpr: call cur1x; y=r0[y]; y?r0; push cc;pop a; x=#0; xl=a; sw_stat=x; go sweetnext
+sw_inr: call cur1x; r0[y]++; go sweetnext
+sw_dcr: call cur1x; r0[y]--; go sweetnext
+
+sweet16:
+	x = sp[8]; sw_pc = x;
+	x = #sw_stack; sw_sp = x; 
+	go sweetnext
+
+// main block
+start:	x = #ramend; sp = x                       	// initialise stack pointer (it is assembler!!!)
+	
+	trap // go to sweet16
+	(f8)[3] 0x10,0x55,0xaa
+	(f8) 0x00
+
+loop:   nop              
+	
+	// here repeated code
+                               
+	go loop						// forever cycle
+
+ 
+ 

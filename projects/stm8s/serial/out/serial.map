@@ -1,0 +1,52 @@
+
+Segment List
+------------
+
+d:\naive\projects\stm8s\serial\out\serial.asm[1]    4-   49      5000 -     502C          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[2]   50-   56      505A -     505F          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[3]   57-   58      5062 -     5062          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[4]   59-   60      5064 -     5064          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[5]   61-   63      50A0 -     50A1          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[6]   64-   65      50B3 -     50B3          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[7]   66-   68      50C0 -     50C1          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[8]   69-   80      50C3 -     50CD          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[9]   81-   83      50D1 -     50D2          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[10]   84-   87      50E0 -     50E2          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[11]   88-   92      50F0 -     50F3          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[12]   93-  101      5200 -     5207          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[13]  102-  107      5210 -     5214          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[14]  108-  116      5216 -     521D          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[15]  117-  128      5230 -     523A          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[16]  129-  141      5240 -     524B          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[17]  142-  174      5250 -     526F          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[18]  175-  196      5300 -     5314          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[19]  197-  214      5320 -     5330          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[20]  215-  222      5340 -     5346          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[21]  223-  231      5400 -     5407          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[22]  232-  256      5420 -     5437          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[23]  257-  267      48CD -     48D8          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[24]  268-  283      4800 -     480E          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[25]  284-  286      487E -     487F          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[26]  287-  298      7F00 -     7F0A          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[27]  299-  300      7F60 -     7F60          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[28]  301-  309      7F70 -     7F77          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[29]  310-  311      7F80 -     7F80          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[30]  312-  323      7F90 -     7F9A          ports  'ports'  [void]
+d:\naive\projects\stm8s\serial\out\serial.asm[31]  324-  409      8000 -     8107          flash  'rom'  [textdata]
+
+
+Class List
+----------
+
+0 '       ports'   byte from     5000 to     7F9A (lim FFFFFFFF) =  0% D
+0 '         rom'   byte from     8000 to     8107 (lim     9FFF) =  3% CS
+
+
+
+External Label list
+-------------------
+
+Symbol Name                       Value     Scope  Def(line)
+
+
+0 labels

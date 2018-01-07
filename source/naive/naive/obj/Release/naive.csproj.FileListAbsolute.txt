@@ -1,0 +1,6 @@
+C:\prg\pc\naive\naive\naive\bin\Release\naive.exe.config
+C:\prg\pc\naive\naive\naive\bin\Release\naive.exe
+C:\prg\pc\naive\naive\naive\bin\Release\naive.pdb
+C:\prg\pc\naive\naive\naive\obj\Release\naive.csproj.CoreCompileInputs.cache
+C:\prg\pc\naive\naive\naive\obj\Release\naive.exe
+C:\prg\pc\naive\naive\naive\obj\Release\naive.pdb

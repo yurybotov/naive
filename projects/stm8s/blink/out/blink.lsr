@@ -1,0 +1,736 @@
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 1  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+   1                         stm8      
+   2                         
+   3                         
+   4                         ports     segment  byte at 5000 'ports'
+   5  005000                       gpioaodr  ds.b     
+   6  005001                       gpioaidr  ds.b     
+   7  005002                       gpioaddr  ds.b     
+   8  005003                       gpioacr1  ds.b     
+   9  005004                       gpioacr2  ds.b     
+  10  005005                       gpiobodr  ds.b     
+  11  005006                       gpiobidr  ds.b     
+  12  005007                       gpiobddr  ds.b     
+  13  005008                       gpiobcr1  ds.b     
+  14  005009                       gpiobcr2  ds.b     
+  15  00500A                       gpiocodr  ds.b     
+  16  00500B                       gpiocidr  ds.b     
+  17  00500C                       gpiocddr  ds.b     
+  18  00500D                       gpioccr1  ds.b     
+  19  00500E                       gpioccr2  ds.b     
+  20  00500F                       gpiododr  ds.b     
+  21  005010                       gpiodidr  ds.b     
+  22  005011                       gpiodddr  ds.b     
+  23  005012                       gpiodcr1  ds.b     
+  24  005013                       gpiodcr2  ds.b     
+  25  005014                       gpioeodr  ds.b     
+  26  005015                       gpioeidr  ds.b     
+  27  005016                       gpioeddr  ds.b     
+  28  005017                       gpioecr1  ds.b     
+  29  005018                       gpioecr2  ds.b     
+  30  005019                       gpiofodr  ds.b     
+  31  00501A                       gpiofidr  ds.b     
+  32  00501B                       gpiofddr  ds.b     
+  33  00501C                       gpiofcr1  ds.b     
+  34  00501D                       gpiofcr2  ds.b     
+  35  00501E                       gpiogodr  ds.b     
+  36  00501F                       gpiogidr  ds.b     
+  37  005020                       gpiogddr  ds.b     
+  38  005021                       gpiogcr1  ds.b     
+  39  005022                       gpiogcr2  ds.b     
+  40  005023                       gpiohodr  ds.b     
+  41  005024                       gpiohidr  ds.b     
+  42  005025                       gpiohddr  ds.b     
+  43  005026                       gpiohcr1  ds.b     
+  44  005027                       gpiohcr2  ds.b     
+  45  005028                       gpioiodr  ds.b     
+  46  005029                       gpioiidr  ds.b     
+  47  00502A                       gpioiddr  ds.b     
+  48  00502B                       gpioicr1  ds.b     
+  49  00502C                       gpioicr2  ds.b     
+  50                         ports     segment  byte at 505A 'ports'
+  51  00505A                       flashcr1  ds.b     
+  52  00505B                       flashcr2  ds.b     
+  53  00505C                       flashncr2  ds.b     
+  54  00505D                       flashfpr  ds.b     
+  55  00505E                       flashnfpr  ds.b     
+  56  00505F                       flashiapsr  ds.b     
+  57                         ports     segment  byte at 5062 'ports'
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 2  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+  58  005062                       flashpukr  ds.b     
+  59                         ports     segment  byte at 5064 'ports'
+  60  005064                       flashdukr  ds.b     
+  61                         ports     segment  byte at 50A0 'ports'
+  62  0050A0                       itcexticr1  ds.b     
+  63  0050A1                       itcexticr2  ds.b     
+  64                         ports     segment  byte at 50B3 'ports'
+  65  0050B3                       rstsr     ds.b     
+  66                         ports     segment  byte at 50C0 'ports'
+  67  0050C0                       clkickr   ds.b     
+  68  0050C1                       clkeckr   ds.b     
+  69                         ports     segment  byte at 50C3 'ports'
+  70  0050C3                       clkcmsr   ds.b     
+  71  0050C4                       clkswr    ds.b     
+  72  0050C5                       clkswcr   ds.b     
+  73  0050C6                       clkckdivr  ds.b     
+  74  0050C7                       clkpckenr1  ds.b     
+  75  0050C8                       clkcssr   ds.b     
+  76  0050C9                       clkccor   ds.b     
+  77  0050CA                       clkpckenr2  ds.b     
+  78  0050CB                       clkcanccr  ds.b     
+  79  0050CC                       clkhsitrimr  ds.b     
+  80  0050CD                       clkswimccr  ds.b     
+  81                         ports     segment  byte at 50D1 'ports'
+  82  0050D1                       wwdgcr    ds.b     
+  83  0050D2                       wwdgwr    ds.b     
+  84                         ports     segment  byte at 50E0 'ports'
+  85  0050E0                       iwdgkr    ds.b     
+  86  0050E1                       iwdgpr    ds.b     
+  87  0050E2                       iwdgrlr   ds.b     
+  88                         ports     segment  byte at 50F0 'ports'
+  89  0050F0                       awucsr1   ds.b     
+  90  0050F1                       awuapr    ds.b     
+  91  0050F2                       awutbr    ds.b     
+  92  0050F3                       beepcsr   ds.b     
+  93                         ports     segment  byte at 5200 'ports'
+  94  005200                       spicr1    ds.b     
+  95  005201                       spicr2    ds.b     
+  96  005202                       spiicr    ds.b     
+  97  005203                       spisr     ds.b     
+  98  005204                       spidr     ds.b     
+  99  005205                       spicrcpr  ds.b     
+ 100  005206                       spirxcrcr  ds.b     
+ 101  005207                       spitxcrcr  ds.b     
+ 102                         ports     segment  byte at 5210 'ports'
+ 103  005210                       i2ccr1    ds.b     
+ 104  005211                       i2ccr2    ds.b     
+ 105  005212                       i2cfreqr  ds.b     
+ 106  005213                       i2coarl   ds.b     
+ 107  005214                       i2coarh   ds.b     
+ 108                         ports     segment  byte at 5216 'ports'
+ 109  005216                       i2cdr     ds.b     
+ 110  005217                       i2csr1    ds.b     
+ 111  005218                       i2csr2    ds.b     
+ 112  005219                       i2csr3    ds.b     
+ 113  00521A                       i2citr    ds.b     
+ 114  00521B                       i2cccrl   ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 3  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+ 115  00521C                       i2cccrh   ds.b     
+ 116  00521D                       i2ctriser  ds.b     
+ 117                         ports     segment  byte at 5230 'ports'
+ 118  005230                       uart1sr   ds.b     
+ 119  005231                       uart1dr   ds.b     
+ 120  005232                       uart1brr1  ds.b     
+ 121  005233                       uart1brr2  ds.b     
+ 122  005234                       uart1cr1  ds.b     
+ 123  005235                       uart1cr2  ds.b     
+ 124  005236                       uart1cr3  ds.b     
+ 125  005237                       uart1cr4  ds.b     
+ 126  005238                       uart1cr5  ds.b     
+ 127  005239                       uart1gtr  ds.b     
+ 128  00523A                       uart1pstr  ds.b     
+ 129                         ports     segment  byte at 5240 'ports'
+ 130  005240                       uart2sr   ds.b     
+ 131  005241                       uart2dr   ds.b     
+ 132  005242                       uart2brr1  ds.b     
+ 133  005243                       uart2brr2  ds.b     
+ 134  005244                       uart2cr1  ds.b     
+ 135  005245                       uart2cr2  ds.b     
+ 136  005246                       uart2cr3  ds.b     
+ 137  005247                       uart2cr4  ds.b     
+ 138  005248                       uart2cr5  ds.b     
+ 139  005249                       uart2cr6  ds.b     
+ 140  00524A                       uart2gtr  ds.b     
+ 141  00524B                       uart2pscr  ds.b     
+ 142                         ports     segment  byte at 5240 'ports'
+ 143  005240                       uart3sr   ds.b     
+ 144  005241                       uart3dr   ds.b     
+ 145  005242                       uart3brr1  ds.b     
+ 146  005243                       uart3brr2  ds.b     
+ 147  005244                       uart3cr1  ds.b     
+ 148  005245                       uart3cr2  ds.b     
+ 149  005246                       uart3cr3  ds.b     
+ 150  005247                       uart3cr4  ds.b     
+ 151                         ports     segment  byte at 5249 'ports'
+ 152  005249                       uart3cr6  ds.b     
+ 153                         ports     segment  byte at 5250 'ports'
+ 154  005250                       tim1cr1   ds.b     
+ 155  005251                       tim1cr2   ds.b     
+ 156  005252                       tim1smcr  ds.b     
+ 157  005253                       tim1etr   ds.b     
+ 158  005254                       tim1ier   ds.b     
+ 159  005255                       tim1sr1   ds.b     
+ 160  005256                       tim1sr2   ds.b     
+ 161  005257                       tim1egr   ds.b     
+ 162  005258                       tim1ccmr1  ds.b     
+ 163  005259                       tim1ccmr2  ds.b     
+ 164  00525A                       tim1ccmr3  ds.b     
+ 165  00525B                       tim1ccmr4  ds.b     
+ 166  00525C                       tim1ccer1  ds.b     
+ 167  00525D                       tim1ccer2  ds.b     
+ 168  00525E                       tim1cntrh  ds.b     
+ 169  00525F                       tim1cntrl  ds.b     
+ 170  005260                       tim1pscrh  ds.b     
+ 171  005261                       tim1pscrl  ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 4  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+ 172  005262                       tim1arrh  ds.b     
+ 173  005263                       tim1arrl  ds.b     
+ 174  005264                       tim1rcr   ds.b     
+ 175  005265                       tim1ccr1h  ds.b     
+ 176  005266                       tim1ccr1l  ds.b     
+ 177  005267                       tim1ccr2h  ds.b     
+ 178  005268                       tim1ccr2l  ds.b     
+ 179  005269                       tim1ccr3h  ds.b     
+ 180  00526A                       tim1ccr3l  ds.b     
+ 181  00526B                       tim1ccr4h  ds.b     
+ 182  00526C                       tim1ccr4l  ds.b     
+ 183  00526D                       tim1bkr   ds.b     
+ 184  00526E                       tim1dtr   ds.b     
+ 185  00526F                       tim1oisr  ds.b     
+ 186                         ports     segment  byte at 5300 'ports'
+ 187  005300                       tim2cr1   ds.b     
+ 188  005301                       tim2ier   ds.b     
+ 189  005302                       tim2sr1   ds.b     
+ 190  005303                       tim2sr2   ds.b     
+ 191  005304                       tim2egr   ds.b     
+ 192  005305                       tim2ccmr1  ds.b     
+ 193  005306                       tim2ccmr2  ds.b     
+ 194  005307                       tim2ccmr3  ds.b     
+ 195  005308                       tim2ccer1  ds.b     
+ 196  005309                       tim2ccer2  ds.b     
+ 197  00530A                       tim2cntrh  ds.b     
+ 198  00530B                       tim2cntrl  ds.b     
+ 199  00530C                       tim2pscr  ds.b     
+ 200  00530D                       tim2arrh  ds.b     
+ 201  00530E                       tim2arrl  ds.b     
+ 202  00530F                       tim2ccr1h  ds.b     
+ 203  005310                       tim2ccr1l  ds.b     
+ 204  005311                       tim2ccr2h  ds.b     
+ 205  005312                       tim2ccr2l  ds.b     
+ 206  005313                       tim2ccr3h  ds.b     
+ 207  005314                       tim2ccr3l  ds.b     
+ 208                         ports     segment  byte at 5320 'ports'
+ 209  005320                       tim3cr1   ds.b     
+ 210  005321                       tim3ier   ds.b     
+ 211  005322                       tim3sr1   ds.b     
+ 212  005323                       tim3sr2   ds.b     
+ 213  005324                       tim3egr   ds.b     
+ 214  005325                       tim3ccmr1  ds.b     
+ 215  005326                       tim3ccmr2  ds.b     
+ 216  005327                       tim3ccer1  ds.b     
+ 217  005328                       tim3cntrh  ds.b     
+ 218  005329                       tim3cntrl  ds.b     
+ 219  00532A                       tim3pscr  ds.b     
+ 220  00532B                       tim3arrh  ds.b     
+ 221  00532C                       tim3arrl  ds.b     
+ 222  00532D                       tim3ccr1h  ds.b     
+ 223  00532E                       tim3ccr1l  ds.b     
+ 224  00532F                       tim3ccr2h  ds.b     
+ 225  005330                       tim3ccr2l  ds.b     
+ 226                         ports     segment  byte at 5340 'ports'
+ 227  005340                       tim4cr1   ds.b     
+ 228  005341                       tim4ier   ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 5  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+ 229  005342                       tim4sr    ds.b     
+ 230  005343                       tim4egr   ds.b     
+ 231  005344                       tim4cntr  ds.b     
+ 232  005345                       tim4pscr  ds.b     
+ 233  005346                       tim4arr   ds.b     
+ 234                         ports     segment  byte at 5400 'ports'
+ 235  005400                       adc2csr   ds.b     
+ 236  005401                       adc2cr1   ds.b     
+ 237  005402                       adc2cr2   ds.b     
+ 238  005403                       adc2cr3   ds.b     
+ 239  005404                       adc2drh   ds.b     
+ 240  005405                       adc2drl   ds.b     
+ 241  005406                       adc2tdrh  ds.b     
+ 242  005407                       adc2tdrl  ds.b     
+ 243                         ports     segment  byte at 5420 'ports'
+ 244  005420                       canmcr    ds.b     
+ 245  005421                       canmsr    ds.b     
+ 246  005422                       cantsr    ds.b     
+ 247  005423                       cantpr    ds.b     
+ 248  005424                       canrfr    ds.b     
+ 249  005425                       canier    ds.b     
+ 250  005426                       candgr    ds.b     
+ 251  005427                       canfpsr   ds.b     
+ 252  005428                       canp0     ds.b     
+ 253  005429                       canp1     ds.b     
+ 254  00542A                       canp2     ds.b     
+ 255  00542B                       canp3     ds.b     
+ 256  00542C                       canp4     ds.b     
+ 257  00542D                       canp5     ds.b     
+ 258  00542E                       canp6     ds.b     
+ 259  00542F                       canp7     ds.b     
+ 260  005430                       canp8     ds.b     
+ 261  005431                       canp9     ds.b     
+ 262  005432                       canpa     ds.b     
+ 263  005433                       canpb     ds.b     
+ 264  005434                       canpc     ds.b     
+ 265  005435                       canpd     ds.b     
+ 266  005436                       canpe     ds.b     
+ 267  005437                       canpf     ds.b     
+ 268                         ports     segment  byte at 48CD 'ports'
+ 269  0048CD                       unicidx   ds.w     
+ 270  0048CF                       unicidy   ds.w     
+ 271  0048D1                       unicidwafer  ds.b     
+ 272  0048D2                       unicidlot0  ds.b     
+ 273  0048D3                       unicidlot1  ds.b     
+ 274  0048D4                       unicidlot2  ds.b     
+ 275  0048D5                       unicidlot3  ds.b     
+ 276  0048D6                       unicidlot4  ds.b     
+ 277  0048D7                       unicidlot5  ds.b     
+ 278  0048D8                       unicidlot6  ds.b     
+ 279                         ports     segment  byte at 4800 'ports'
+ 280  004800                       optionopt0  ds.b     
+ 281  004801                       optionopt1  ds.b     
+ 282  004802                       optionnopt1  ds.b     
+ 283  004803                       optionopt2  ds.b     
+ 284  004804                       optionnopt2  ds.b     
+ 285  004805                       optionopt3  ds.b     
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 6  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+ 286  004806                       optionnopt3  ds.b     
+ 287  004807                       optionopt4  ds.b     
+ 288  004808                       optionnopt4  ds.b     
+ 289  004809                       optionopt5  ds.b     
+ 290  00480A                       optionnopt5  ds.b     
+ 291  00480B                       optionopt6  ds.b     
+ 292  00480C                       optionnopt6  ds.b     
+ 293  00480D                       optionopt7  ds.b     
+ 294  00480E                       optionnopt7  ds.b     
+ 295                         ports     segment  byte at 487E 'ports'
+ 296  00487E                       bootloaderoptbl  ds.b     
+ 297  00487F                       bootloadernoptbl  ds.b     
+ 298                         ports     segment  byte at 7F00 'ports'
+ 299  007F00                       cpua      ds.b     
+ 300  007F01                       cpupce    ds.b     
+ 301  007F02                       cpupch    ds.b     
+ 302  007F03                       cpupcl    ds.b     
+ 303  007F04                       cpuxh     ds.b     
+ 304  007F05                       cpuxl     ds.b     
+ 305  007F06                       cpuyh     ds.b     
+ 306  007F07                       cpuyl     ds.b     
+ 307  007F08                       cpusph    ds.b     
+ 308  007F09                       cpuspl    ds.b     
+ 309  007F0A                       cpuccr    ds.b     
+ 310                         ports     segment  byte at 7F60 'ports'
+ 311  007F60                       cpugcr    ds.b     
+ 312                         ports     segment  byte at 7F70 'ports'
+ 313  007F70                       itcspr1   ds.b     
+ 314  007F71                       itcspr2   ds.b     
+ 315  007F72                       itcspr3   ds.b     
+ 316  007F73                       itcspr4   ds.b     
+ 317  007F74                       itcspr5   ds.b     
+ 318  007F75                       itcspr6   ds.b     
+ 319  007F76                       itcspr7   ds.b     
+ 320  007F77                       itcspr8   ds.b     
+ 321                         ports     segment  byte at 7F80 'ports'
+ 322  007F80                       swimcsr   ds.b     
+ 323                         ports     segment  byte at 7F90 'ports'
+ 324  007F90                       dmbk1re   ds.b     
+ 325  007F91                       dmbk1rh   ds.b     
+ 326  007F92                       dmbk1rl   ds.b     
+ 327  007F93                       dmbk2re   ds.b     
+ 328  007F94                       dmbk2rh   ds.b     
+ 329  007F95                       dmbk2rl   ds.b     
+ 330  007F96                       dmcr1     ds.b     
+ 331  007F97                       dmcr2     ds.b     
+ 332  007F98                       dmcsr1    ds.b     
+ 333  007F99                       dmcsr2    ds.b     
+ 334  007F9A                       dmenfctr  ds.b     
+ 335                         flash     segment  byte at 8000-9FFF 'rom'
+ 336  008000   8200800B            interruptreset  dc.l     {$82000000+start}
+ 337                         delay60k  
+ 338  008004   AEFFFA                        ldw      x,#65530      ; x=#65530 in blink.stm8s._ : 
+                                                                ;25
+ 339                         delay60local  
+ 340  008007   5A                            decw     x             ; x-- in blink.stm8s._ : 26
+ 341  008008   26FD                          jrne     delay60local  ; ifz==0delay60local in 
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 7  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+                                                                ;blink.stm8s._ : 27
+ 342  00800A   81                            ret                    ; ret in blink.stm8s._ : 28
+ 343                         start     
+ 344  00800B   AE03FF                        ldw      x,#$03ff      ; x=#0x03ff in blink.stm8s._ : 
+                                                                ;44
+ 345  00800E   94                            ldw      sp,x          ; sp=x in blink.stm8s._ : 44
+ 346  00800F   72165002                      bset     gpioaddr,#3   ; gpioaddr#3=#1 in blink.stm8s._
+                                                                ; : 46
+ 347  008013   72165003                      bset     gpioacr1,#3   ; gpioacr1#3=#1 in blink.stm8s._
+                                                                ; : 46
+ 348                         loop      
+ 349  008017   ADEB                          callr    delay60k      ; callneardelay60k in 
+                                                                ;blink.stm8s._ : 48
+ 350  008019   90165000                      bcpl     gpioaodr,#3   ; !gpioaodr#3 in blink.stm8s._ :
+                                                                ; 49
+ 351  00801D   20F8                          jra      loop          ; gonearloop in blink.stm8s._ : 
+                                                                ;50
+ 352                         
+ 353  00801F                                 end      
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 8  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
+
+awucsr1                               50F0         no  WORD  Internal   ABS     89  private  bss          1     1  -
+awuapr                                50F1         no  WORD  Internal   ABS     90  private  bss          1     1  -
+awutbr                                50F2         no  WORD  Internal   ABS     91  private  bss          1     1  -
+adc2csr                               5400         no  WORD  Internal   ABS    235  private  bss          1     1  -
+adc2cr1                               5401         no  WORD  Internal   ABS    236  private  bss          1     1  -
+adc2cr2                               5402         no  WORD  Internal   ABS    237  private  bss          1     1  -
+adc2cr3                               5403         no  WORD  Internal   ABS    238  private  bss          1     1  -
+adc2drh                               5404         no  WORD  Internal   ABS    239  private  bss          1     1  -
+adc2drl                               5405         no  WORD  Internal   ABS    240  private  bss          1     1  -
+adc2tdrh                              5406         no  WORD  Internal   ABS    241  private  bss          1     1  -
+adc2tdrl                              5407         no  WORD  Internal   ABS    242  private  bss          1     1  -
+
+beepcsr                               50F3         no  WORD  Internal   ABS     92  private  bss          1     1  -
+bootloaderoptbl                       487E         no  WORD  Internal   ABS    296  private  bss          1     1  -
+bootloadernoptbl                      487F         no  WORD  Internal   ABS    297  private  bss          1     1  -
+
+clkickr                               50C0         no  WORD  Internal   ABS     67  private  bss          1     1  -
+clkeckr                               50C1         no  WORD  Internal   ABS     68  private  bss          1     1  -
+clkcmsr                               50C3         no  WORD  Internal   ABS     70  private  bss          1     1  -
+clkswr                                50C4         no  WORD  Internal   ABS     71  private  bss          1     1  -
+clkswcr                               50C5         no  WORD  Internal   ABS     72  private  bss          1     1  -
+clkckdivr                             50C6         no  WORD  Internal   ABS     73  private  bss          1     1  -
+clkpckenr1                            50C7         no  WORD  Internal   ABS     74  private  bss          1     1  -
+clkcssr                               50C8         no  WORD  Internal   ABS     75  private  bss          1     1  -
+clkccor                               50C9         no  WORD  Internal   ABS     76  private  bss          1     1  -
+clkpckenr2                            50CA         no  WORD  Internal   ABS     77  private  bss          1     1  -
+clkcanccr                             50CB         no  WORD  Internal   ABS     78  private  bss          1     1  -
+clkhsitrimr                           50CC         no  WORD  Internal   ABS     79  private  bss          1     1  -
+clkswimccr                            50CD         no  WORD  Internal   ABS     80  private  bss          1     1  -
+canmcr                                5420         no  WORD  Internal   ABS    244  private  bss          1     1  -
+canmsr                                5421         no  WORD  Internal   ABS    245  private  bss          1     1  -
+cantsr                                5422         no  WORD  Internal   ABS    246  private  bss          1     1  -
+cantpr                                5423         no  WORD  Internal   ABS    247  private  bss          1     1  -
+canrfr                                5424         no  WORD  Internal   ABS    248  private  bss          1     1  -
+canier                                5425         no  WORD  Internal   ABS    249  private  bss          1     1  -
+candgr                                5426         no  WORD  Internal   ABS    250  private  bss          1     1  -
+canfpsr                               5427         no  WORD  Internal   ABS    251  private  bss          1     1  -
+canp0                                 5428         no  WORD  Internal   ABS    252  private  bss          1     1  -
+canp1                                 5429         no  WORD  Internal   ABS    253  private  bss          1     1  -
+canp2                                 542A         no  WORD  Internal   ABS    254  private  bss          1     1  -
+canp3                                 542B         no  WORD  Internal   ABS    255  private  bss          1     1  -
+canp4                                 542C         no  WORD  Internal   ABS    256  private  bss          1     1  -
+canp5                                 542D         no  WORD  Internal   ABS    257  private  bss          1     1  -
+canp6                                 542E         no  WORD  Internal   ABS    258  private  bss          1     1  -
+canp7                                 542F         no  WORD  Internal   ABS    259  private  bss          1     1  -
+canp8                                 5430         no  WORD  Internal   ABS    260  private  bss          1     1  -
+canp9                                 5431         no  WORD  Internal   ABS    261  private  bss          1     1  -
+canpa                                 5432         no  WORD  Internal   ABS    262  private  bss          1     1  -
+canpb                                 5433         no  WORD  Internal   ABS    263  private  bss          1     1  -
+canpc                                 5434         no  WORD  Internal   ABS    264  private  bss          1     1  -
+canpd                                 5435         no  WORD  Internal   ABS    265  private  bss          1     1  -
+canpe                                 5436         no  WORD  Internal   ABS    266  private  bss          1     1  -
+canpf                                 5437         no  WORD  Internal   ABS    267  private  bss          1     1  -
+cpua                                  7F00         no  WORD  Internal   ABS    299  private  bss          1     1  -
+cpupce                                7F01         no  WORD  Internal   ABS    300  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 9  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+cpupch                                7F02         no  WORD  Internal   ABS    301  private  bss          1     1  -
+cpupcl                                7F03         no  WORD  Internal   ABS    302  private  bss          1     1  -
+cpuxh                                 7F04         no  WORD  Internal   ABS    303  private  bss          1     1  -
+cpuxl                                 7F05         no  WORD  Internal   ABS    304  private  bss          1     1  -
+cpuyh                                 7F06         no  WORD  Internal   ABS    305  private  bss          1     1  -
+cpuyl                                 7F07         no  WORD  Internal   ABS    306  private  bss          1     1  -
+cpusph                                7F08         no  WORD  Internal   ABS    307  private  bss          1     1  -
+cpuspl                                7F09         no  WORD  Internal   ABS    308  private  bss          1     1  -
+cpuccr                                7F0A         no  WORD  Internal   ABS    309  private  bss          1     1  -
+cpugcr                                7F60         no  WORD  Internal   ABS    311  private  bss          1     1  -
+
+dmbk1re                               7F90         no  WORD  Internal   ABS    324  private  bss          1     1  -
+dmbk1rh                               7F91         no  WORD  Internal   ABS    325  private  bss          1     1  -
+dmbk1rl                               7F92         no  WORD  Internal   ABS    326  private  bss          1     1  -
+dmbk2re                               7F93         no  WORD  Internal   ABS    327  private  bss          1     1  -
+dmbk2rh                               7F94         no  WORD  Internal   ABS    328  private  bss          1     1  -
+dmbk2rl                               7F95         no  WORD  Internal   ABS    329  private  bss          1     1  -
+dmcr1                                 7F96         no  WORD  Internal   ABS    330  private  bss          1     1  -
+dmcr2                                 7F97         no  WORD  Internal   ABS    331  private  bss          1     1  -
+dmcsr1                                7F98         no  WORD  Internal   ABS    332  private  bss          1     1  -
+dmcsr2                                7F99         no  WORD  Internal   ABS    333  private  bss          1     1  -
+dmenfctr                              7F9A         no  WORD  Internal   ABS    334  private  bss          1     1  -
+delay60k                              8004         no  WORD  Internal   ABS    337  private  textdata     3     0  -
+delay60local                          8007         no  WORD  Internal   ABS    339  private  textdata     4     0  -
+
+flashcr1                              505A         no  WORD  Internal   ABS     51  private  bss          1     1  -
+flashcr2                              505B         no  WORD  Internal   ABS     52  private  bss          1     1  -
+flashncr2                             505C         no  WORD  Internal   ABS     53  private  bss          1     1  -
+flashfpr                              505D         no  WORD  Internal   ABS     54  private  bss          1     1  -
+flashnfpr                             505E         no  WORD  Internal   ABS     55  private  bss          1     1  -
+flashiapsr                            505F         no  WORD  Internal   ABS     56  private  bss          1     1  -
+flashpukr                             5062         no  WORD  Internal   ABS     58  private  bss          1     1  -
+flashdukr                             5064         no  WORD  Internal   ABS     60  private  bss          1     1  -
+
+gpioaodr                              5000         no  WORD  Internal   ABS      5  private  bss          1     1  -
+gpioaidr                              5001         no  WORD  Internal   ABS      6  private  bss          1     1  -
+gpioaddr                              5002         no  WORD  Internal   ABS      7  private  bss          1     1  -
+gpioacr1                              5003         no  WORD  Internal   ABS      8  private  bss          1     1  -
+gpioacr2                              5004         no  WORD  Internal   ABS      9  private  bss          1     1  -
+gpiobodr                              5005         no  WORD  Internal   ABS     10  private  bss          1     1  -
+gpiobidr                              5006         no  WORD  Internal   ABS     11  private  bss          1     1  -
+gpiobddr                              5007         no  WORD  Internal   ABS     12  private  bss          1     1  -
+gpiobcr1                              5008         no  WORD  Internal   ABS     13  private  bss          1     1  -
+gpiobcr2                              5009         no  WORD  Internal   ABS     14  private  bss          1     1  -
+gpiocodr                              500A         no  WORD  Internal   ABS     15  private  bss          1     1  -
+gpiocidr                              500B         no  WORD  Internal   ABS     16  private  bss          1     1  -
+gpiocddr                              500C         no  WORD  Internal   ABS     17  private  bss          1     1  -
+gpioccr1                              500D         no  WORD  Internal   ABS     18  private  bss          1     1  -
+gpioccr2                              500E         no  WORD  Internal   ABS     19  private  bss          1     1  -
+gpiododr                              500F         no  WORD  Internal   ABS     20  private  bss          1     1  -
+gpiodidr                              5010         no  WORD  Internal   ABS     21  private  bss          1     1  -
+gpiodddr                              5011         no  WORD  Internal   ABS     22  private  bss          1     1  -
+gpiodcr1                              5012         no  WORD  Internal   ABS     23  private  bss          1     1  -
+gpiodcr2                              5013         no  WORD  Internal   ABS     24  private  bss          1     1  -
+gpioeodr                              5014         no  WORD  Internal   ABS     25  private  bss          1     1  -
+gpioeidr                              5015         no  WORD  Internal   ABS     26  private  bss          1     1  -
+gpioeddr                              5016         no  WORD  Internal   ABS     27  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 10  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+gpioecr1                              5017         no  WORD  Internal   ABS     28  private  bss          1     1  -
+gpioecr2                              5018         no  WORD  Internal   ABS     29  private  bss          1     1  -
+gpiofodr                              5019         no  WORD  Internal   ABS     30  private  bss          1     1  -
+gpiofidr                              501A         no  WORD  Internal   ABS     31  private  bss          1     1  -
+gpiofddr                              501B         no  WORD  Internal   ABS     32  private  bss          1     1  -
+gpiofcr1                              501C         no  WORD  Internal   ABS     33  private  bss          1     1  -
+gpiofcr2                              501D         no  WORD  Internal   ABS     34  private  bss          1     1  -
+gpiogodr                              501E         no  WORD  Internal   ABS     35  private  bss          1     1  -
+gpiogidr                              501F         no  WORD  Internal   ABS     36  private  bss          1     1  -
+gpiogddr                              5020         no  WORD  Internal   ABS     37  private  bss          1     1  -
+gpiogcr1                              5021         no  WORD  Internal   ABS     38  private  bss          1     1  -
+gpiogcr2                              5022         no  WORD  Internal   ABS     39  private  bss          1     1  -
+gpiohodr                              5023         no  WORD  Internal   ABS     40  private  bss          1     1  -
+gpiohidr                              5024         no  WORD  Internal   ABS     41  private  bss          1     1  -
+gpiohddr                              5025         no  WORD  Internal   ABS     42  private  bss          1     1  -
+gpiohcr1                              5026         no  WORD  Internal   ABS     43  private  bss          1     1  -
+gpiohcr2                              5027         no  WORD  Internal   ABS     44  private  bss          1     1  -
+gpioiodr                              5028         no  WORD  Internal   ABS     45  private  bss          1     1  -
+gpioiidr                              5029         no  WORD  Internal   ABS     46  private  bss          1     1  -
+gpioiddr                              502A         no  WORD  Internal   ABS     47  private  bss          1     1  -
+gpioicr1                              502B         no  WORD  Internal   ABS     48  private  bss          1     1  -
+gpioicr2                              502C         no  WORD  Internal   ABS     49  private  bss          1     1  -
+
+itcexticr1                            50A0         no  WORD  Internal   ABS     62  private  bss          1     1  -
+itcexticr2                            50A1         no  WORD  Internal   ABS     63  private  bss          1     1  -
+iwdgkr                                50E0         no  WORD  Internal   ABS     85  private  bss          1     1  -
+iwdgpr                                50E1         no  WORD  Internal   ABS     86  private  bss          1     1  -
+iwdgrlr                               50E2         no  WORD  Internal   ABS     87  private  bss          1     1  -
+i2ccr1                                5210         no  WORD  Internal   ABS    103  private  bss          1     1  -
+i2ccr2                                5211         no  WORD  Internal   ABS    104  private  bss          1     1  -
+i2cfreqr                              5212         no  WORD  Internal   ABS    105  private  bss          1     1  -
+i2coarl                               5213         no  WORD  Internal   ABS    106  private  bss          1     1  -
+i2coarh                               5214         no  WORD  Internal   ABS    107  private  bss          1     1  -
+i2cdr                                 5216         no  WORD  Internal   ABS    109  private  bss          1     1  -
+i2csr1                                5217         no  WORD  Internal   ABS    110  private  bss          1     1  -
+i2csr2                                5218         no  WORD  Internal   ABS    111  private  bss          1     1  -
+i2csr3                                5219         no  WORD  Internal   ABS    112  private  bss          1     1  -
+i2citr                                521A         no  WORD  Internal   ABS    113  private  bss          1     1  -
+i2cccrl                               521B         no  WORD  Internal   ABS    114  private  bss          1     1  -
+i2cccrh                               521C         no  WORD  Internal   ABS    115  private  bss          1     1  -
+i2ctriser                             521D         no  WORD  Internal   ABS    116  private  bss          1     1  -
+itcspr1                               7F70         no  WORD  Internal   ABS    313  private  bss          1     1  -
+itcspr2                               7F71         no  WORD  Internal   ABS    314  private  bss          1     1  -
+itcspr3                               7F72         no  WORD  Internal   ABS    315  private  bss          1     1  -
+itcspr4                               7F73         no  WORD  Internal   ABS    316  private  bss          1     1  -
+itcspr5                               7F74         no  WORD  Internal   ABS    317  private  bss          1     1  -
+itcspr6                               7F75         no  WORD  Internal   ABS    318  private  bss          1     1  -
+itcspr7                               7F76         no  WORD  Internal   ABS    319  private  bss          1     1  -
+itcspr8                               7F77         no  WORD  Internal   ABS    320  private  bss          1     1  -
+interruptreset                        8000         no  WORD  Internal   ABS    336  private  textdata     4     4  -
+
+loop                                  8017         no  WORD  Internal   ABS    348  private  textdata     8     0  -
+
+optionopt0                            4800         no  WORD  Internal   ABS    280  private  bss          1     1  -
+optionopt1                            4801         no  WORD  Internal   ABS    281  private  bss          1     1  -
+optionnopt1                           4802         no  WORD  Internal   ABS    282  private  bss          1     1  -
+optionopt2                            4803         no  WORD  Internal   ABS    283  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 11  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+optionnopt2                           4804         no  WORD  Internal   ABS    284  private  bss          1     1  -
+optionopt3                            4805         no  WORD  Internal   ABS    285  private  bss          1     1  -
+optionnopt3                           4806         no  WORD  Internal   ABS    286  private  bss          1     1  -
+optionopt4                            4807         no  WORD  Internal   ABS    287  private  bss          1     1  -
+optionnopt4                           4808         no  WORD  Internal   ABS    288  private  bss          1     1  -
+optionopt5                            4809         no  WORD  Internal   ABS    289  private  bss          1     1  -
+optionnopt5                           480A         no  WORD  Internal   ABS    290  private  bss          1     1  -
+optionopt6                            480B         no  WORD  Internal   ABS    291  private  bss          1     1  -
+optionnopt6                           480C         no  WORD  Internal   ABS    292  private  bss          1     1  -
+optionopt7                            480D         no  WORD  Internal   ABS    293  private  bss          1     1  -
+optionnopt7                           480E         no  WORD  Internal   ABS    294  private  bss          1     1  -
+
+rstsr                                 50B3         no  WORD  Internal   ABS     65  private  bss          1     1  -
+
+spicr1                                5200         no  WORD  Internal   ABS     94  private  bss          1     1  -
+spicr2                                5201         no  WORD  Internal   ABS     95  private  bss          1     1  -
+spiicr                                5202         no  WORD  Internal   ABS     96  private  bss          1     1  -
+spisr                                 5203         no  WORD  Internal   ABS     97  private  bss          1     1  -
+spidr                                 5204         no  WORD  Internal   ABS     98  private  bss          1     1  -
+spicrcpr                              5205         no  WORD  Internal   ABS     99  private  bss          1     1  -
+spirxcrcr                             5206         no  WORD  Internal   ABS    100  private  bss          1     1  -
+spitxcrcr                             5207         no  WORD  Internal   ABS    101  private  bss          1     1  -
+swimcsr                               7F80         no  WORD  Internal   ABS    322  private  bss          1     1  -
+start                                 800B         no  WORD  Internal   ABS    343  private  textdata    12     0  -
+
+tim1cr1                               5250         no  WORD  Internal   ABS    154  private  bss          1     1  -
+tim1cr2                               5251         no  WORD  Internal   ABS    155  private  bss          1     1  -
+tim1smcr                              5252         no  WORD  Internal   ABS    156  private  bss          1     1  -
+tim1etr                               5253         no  WORD  Internal   ABS    157  private  bss          1     1  -
+tim1ier                               5254         no  WORD  Internal   ABS    158  private  bss          1     1  -
+tim1sr1                               5255         no  WORD  Internal   ABS    159  private  bss          1     1  -
+tim1sr2                               5256         no  WORD  Internal   ABS    160  private  bss          1     1  -
+tim1egr                               5257         no  WORD  Internal   ABS    161  private  bss          1     1  -
+tim1ccmr1                             5258         no  WORD  Internal   ABS    162  private  bss          1     1  -
+tim1ccmr2                             5259         no  WORD  Internal   ABS    163  private  bss          1     1  -
+tim1ccmr3                             525A         no  WORD  Internal   ABS    164  private  bss          1     1  -
+tim1ccmr4                             525B         no  WORD  Internal   ABS    165  private  bss          1     1  -
+tim1ccer1                             525C         no  WORD  Internal   ABS    166  private  bss          1     1  -
+tim1ccer2                             525D         no  WORD  Internal   ABS    167  private  bss          1     1  -
+tim1cntrh                             525E         no  WORD  Internal   ABS    168  private  bss          1     1  -
+tim1cntrl                             525F         no  WORD  Internal   ABS    169  private  bss          1     1  -
+tim1pscrh                             5260         no  WORD  Internal   ABS    170  private  bss          1     1  -
+tim1pscrl                             5261         no  WORD  Internal   ABS    171  private  bss          1     1  -
+tim1arrh                              5262         no  WORD  Internal   ABS    172  private  bss          1     1  -
+tim1arrl                              5263         no  WORD  Internal   ABS    173  private  bss          1     1  -
+tim1rcr                               5264         no  WORD  Internal   ABS    174  private  bss          1     1  -
+tim1ccr1h                             5265         no  WORD  Internal   ABS    175  private  bss          1     1  -
+tim1ccr1l                             5266         no  WORD  Internal   ABS    176  private  bss          1     1  -
+tim1ccr2h                             5267         no  WORD  Internal   ABS    177  private  bss          1     1  -
+tim1ccr2l                             5268         no  WORD  Internal   ABS    178  private  bss          1     1  -
+tim1ccr3h                             5269         no  WORD  Internal   ABS    179  private  bss          1     1  -
+tim1ccr3l                             526A         no  WORD  Internal   ABS    180  private  bss          1     1  -
+tim1ccr4h                             526B         no  WORD  Internal   ABS    181  private  bss          1     1  -
+tim1ccr4l                             526C         no  WORD  Internal   ABS    182  private  bss          1     1  -
+tim1bkr                               526D         no  WORD  Internal   ABS    183  private  bss          1     1  -
+tim1dtr                               526E         no  WORD  Internal   ABS    184  private  bss          1     1  -
+tim1oisr                              526F         no  WORD  Internal   ABS    185  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 12  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+tim2cr1                               5300         no  WORD  Internal   ABS    187  private  bss          1     1  -
+tim2ier                               5301         no  WORD  Internal   ABS    188  private  bss          1     1  -
+tim2sr1                               5302         no  WORD  Internal   ABS    189  private  bss          1     1  -
+tim2sr2                               5303         no  WORD  Internal   ABS    190  private  bss          1     1  -
+tim2egr                               5304         no  WORD  Internal   ABS    191  private  bss          1     1  -
+tim2ccmr1                             5305         no  WORD  Internal   ABS    192  private  bss          1     1  -
+tim2ccmr2                             5306         no  WORD  Internal   ABS    193  private  bss          1     1  -
+tim2ccmr3                             5307         no  WORD  Internal   ABS    194  private  bss          1     1  -
+tim2ccer1                             5308         no  WORD  Internal   ABS    195  private  bss          1     1  -
+tim2ccer2                             5309         no  WORD  Internal   ABS    196  private  bss          1     1  -
+tim2cntrh                             530A         no  WORD  Internal   ABS    197  private  bss          1     1  -
+tim2cntrl                             530B         no  WORD  Internal   ABS    198  private  bss          1     1  -
+tim2pscr                              530C         no  WORD  Internal   ABS    199  private  bss          1     1  -
+tim2arrh                              530D         no  WORD  Internal   ABS    200  private  bss          1     1  -
+tim2arrl                              530E         no  WORD  Internal   ABS    201  private  bss          1     1  -
+tim2ccr1h                             530F         no  WORD  Internal   ABS    202  private  bss          1     1  -
+tim2ccr1l                             5310         no  WORD  Internal   ABS    203  private  bss          1     1  -
+tim2ccr2h                             5311         no  WORD  Internal   ABS    204  private  bss          1     1  -
+tim2ccr2l                             5312         no  WORD  Internal   ABS    205  private  bss          1     1  -
+tim2ccr3h                             5313         no  WORD  Internal   ABS    206  private  bss          1     1  -
+tim2ccr3l                             5314         no  WORD  Internal   ABS    207  private  bss          1     1  -
+tim3cr1                               5320         no  WORD  Internal   ABS    209  private  bss          1     1  -
+tim3ier                               5321         no  WORD  Internal   ABS    210  private  bss          1     1  -
+tim3sr1                               5322         no  WORD  Internal   ABS    211  private  bss          1     1  -
+tim3sr2                               5323         no  WORD  Internal   ABS    212  private  bss          1     1  -
+tim3egr                               5324         no  WORD  Internal   ABS    213  private  bss          1     1  -
+tim3ccmr1                             5325         no  WORD  Internal   ABS    214  private  bss          1     1  -
+tim3ccmr2                             5326         no  WORD  Internal   ABS    215  private  bss          1     1  -
+tim3ccer1                             5327         no  WORD  Internal   ABS    216  private  bss          1     1  -
+tim3cntrh                             5328         no  WORD  Internal   ABS    217  private  bss          1     1  -
+tim3cntrl                             5329         no  WORD  Internal   ABS    218  private  bss          1     1  -
+tim3pscr                              532A         no  WORD  Internal   ABS    219  private  bss          1     1  -
+tim3arrh                              532B         no  WORD  Internal   ABS    220  private  bss          1     1  -
+tim3arrl                              532C         no  WORD  Internal   ABS    221  private  bss          1     1  -
+tim3ccr1h                             532D         no  WORD  Internal   ABS    222  private  bss          1     1  -
+tim3ccr1l                             532E         no  WORD  Internal   ABS    223  private  bss          1     1  -
+tim3ccr2h                             532F         no  WORD  Internal   ABS    224  private  bss          1     1  -
+tim3ccr2l                             5330         no  WORD  Internal   ABS    225  private  bss          1     1  -
+tim4cr1                               5340         no  WORD  Internal   ABS    227  private  bss          1     1  -
+tim4ier                               5341         no  WORD  Internal   ABS    228  private  bss          1     1  -
+tim4sr                                5342         no  WORD  Internal   ABS    229  private  bss          1     1  -
+tim4egr                               5343         no  WORD  Internal   ABS    230  private  bss          1     1  -
+tim4cntr                              5344         no  WORD  Internal   ABS    231  private  bss          1     1  -
+tim4pscr                              5345         no  WORD  Internal   ABS    232  private  bss          1     1  -
+tim4arr                               5346         no  WORD  Internal   ABS    233  private  bss          1     1  -
+
+uart1sr                               5230         no  WORD  Internal   ABS    118  private  bss          1     1  -
+uart1dr                               5231         no  WORD  Internal   ABS    119  private  bss          1     1  -
+uart1brr1                             5232         no  WORD  Internal   ABS    120  private  bss          1     1  -
+uart1brr2                             5233         no  WORD  Internal   ABS    121  private  bss          1     1  -
+uart1cr1                              5234         no  WORD  Internal   ABS    122  private  bss          1     1  -
+uart1cr2                              5235         no  WORD  Internal   ABS    123  private  bss          1     1  -
+uart1cr3                              5236         no  WORD  Internal   ABS    124  private  bss          1     1  -
+uart1cr4                              5237         no  WORD  Internal   ABS    125  private  bss          1     1  -
+uart1cr5                              5238         no  WORD  Internal   ABS    126  private  bss          1     1  -
+uart1gtr                              5239         no  WORD  Internal   ABS    127  private  bss          1     1  -
+uart1pstr                             523A         no  WORD  Internal   ABS    128  private  bss          1     1  -
+STMicroelectronics assembler v4.52   (C)1987-2017   Wed Dec 27 14:10:27 2017
+Page 13  Assembler
+                                               d:\naive\projects\stm8s\blink\out\blink.asm
+
+uart2sr                               5240         no  WORD  Internal   ABS    130  private  bss          1     1  -
+uart2dr                               5241         no  WORD  Internal   ABS    131  private  bss          1     1  -
+uart2brr1                             5242         no  WORD  Internal   ABS    132  private  bss          1     1  -
+uart2brr2                             5243         no  WORD  Internal   ABS    133  private  bss          1     1  -
+uart2cr1                              5244         no  WORD  Internal   ABS    134  private  bss          1     1  -
+uart2cr2                              5245         no  WORD  Internal   ABS    135  private  bss          1     1  -
+uart2cr3                              5246         no  WORD  Internal   ABS    136  private  bss          1     1  -
+uart2cr4                              5247         no  WORD  Internal   ABS    137  private  bss          1     1  -
+uart2cr5                              5248         no  WORD  Internal   ABS    138  private  bss          1     1  -
+uart2cr6                              5249         no  WORD  Internal   ABS    139  private  bss          1     1  -
+uart2gtr                              524A         no  WORD  Internal   ABS    140  private  bss          1     1  -
+uart2pscr                             524B         no  WORD  Internal   ABS    141  private  bss          1     1  -
+uart3sr                               5240         no  WORD  Internal   ABS    143  private  bss          1     1  -
+uart3dr                               5241         no  WORD  Internal   ABS    144  private  bss          1     1  -
+uart3brr1                             5242         no  WORD  Internal   ABS    145  private  bss          1     1  -
+uart3brr2                             5243         no  WORD  Internal   ABS    146  private  bss          1     1  -
+uart3cr1                              5244         no  WORD  Internal   ABS    147  private  bss          1     1  -
+uart3cr2                              5245         no  WORD  Internal   ABS    148  private  bss          1     1  -
+uart3cr3                              5246         no  WORD  Internal   ABS    149  private  bss          1     1  -
+uart3cr4                              5247         no  WORD  Internal   ABS    150  private  bss          1     1  -
+uart3cr6                              5249         no  WORD  Internal   ABS    152  private  bss          1     1  -
+unicidx                               48CD         no  WORD  Internal   ABS    269  private  bss          2     2  -
+unicidy                               48CF         no  WORD  Internal   ABS    270  private  bss          2     2  -
+unicidwafer                           48D1         no  WORD  Internal   ABS    271  private  bss          1     1  -
+unicidlot0                            48D2         no  WORD  Internal   ABS    272  private  bss          1     1  -
+unicidlot1                            48D3         no  WORD  Internal   ABS    273  private  bss          1     1  -
+unicidlot2                            48D4         no  WORD  Internal   ABS    274  private  bss          1     1  -
+unicidlot3                            48D5         no  WORD  Internal   ABS    275  private  bss          1     1  -
+unicidlot4                            48D6         no  WORD  Internal   ABS    276  private  bss          1     1  -
+unicidlot5                            48D7         no  WORD  Internal   ABS    277  private  bss          1     1  -
+unicidlot6                            48D8         no  WORD  Internal   ABS    278  private  bss          1     1  -
+
+wwdgcr                                50D1         no  WORD  Internal   ABS     82  private  bss          1     1  -
+wwdgwr                                50D2         no  WORD  Internal   ABS     83  private  bss          1     1  -
+
+
+304 labels
+No errors on assembly of 'd:\naive\projects\stm8s\blink\out\blink.asm'
